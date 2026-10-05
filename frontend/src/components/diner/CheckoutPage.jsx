@@ -1182,7 +1182,7 @@ export default function CheckoutPage({
             </svg>
           </div>
 
-          <span className="bg-emerald-100 text-emerald-800 text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full mb-3 inline-block">
+          <span className="bg-emerald-100 text-emerald-800 text-[11px] font-black uppercase tracking-widest px-3 py-1 rounded-full mb-3 inline-block">
             🛡️ Secure Booking Verified
           </span>
           <h2 className="font-display font-black text-2xl text-gray-900 tracking-tight">
@@ -1195,7 +1195,7 @@ export default function CheckoutPage({
           <div className="my-6 bg-neutral-50 border border-neutral-100 rounded-3xl p-5 text-left space-y-4 relative">
             <div className="flex justify-between items-center border-b border-gray-200/60 pb-3">
               <div>
-                <span className="text-[9px] text-gray-400 font-black uppercase tracking-wider">
+                <span className="text-[11px] text-gray-400 font-black uppercase tracking-wider">
                   Transaction Hash
                 </span>
                 <span className="font-mono text-xs text-gray-700 block font-black">
@@ -1203,7 +1203,7 @@ export default function CheckoutPage({
                 </span>
               </div>
               <div className="text-right">
-                <span className="text-[9px] text-gray-400 font-black uppercase tracking-wider">
+                <span className="text-[11px] text-gray-400 font-black uppercase tracking-wider">
                   Secure Protocol
                 </span>
                 <span className="text-xs text-emerald-600 block font-bold flex items-center gap-1 justify-end">
@@ -1234,7 +1234,7 @@ export default function CheckoutPage({
                 <span className="text-gray-400 font-semibold">
                   Grand Total Charged
                 </span>
-                <span className="font-mono font-black text-brand-orange">
+                <span className="font-mono font-black text-orange-700">
                   ₹ {generatedOrder.total.toFixed(2)}
                 </span>
               </div>
@@ -1245,10 +1245,10 @@ export default function CheckoutPage({
                 <Truck className="h-4 w-4" />
               </div>
               <div>
-                <span className="text-[10px] text-emerald-800 font-black uppercase tracking-wider block">
+                <span className="text-[11px] text-emerald-800 font-black uppercase tracking-wider block">
                   Kitchen Notified
                 </span>
-                <p className="text-[10px] text-emerald-600 font-medium">
+                <p className="text-[11px] text-emerald-600 font-medium">
                   Chef preparing gourmet meal. Arrival estimated in 25-35 mins.
                 </p>
               </div>
@@ -1258,7 +1258,7 @@ export default function CheckoutPage({
           <div className="space-y-4">
             <div className="text-xs font-semibold text-gray-500">
               Auto-redirecting to live tracker in{" "}
-              <span className="font-mono font-black text-brand-orange text-sm">
+              <span className="font-mono font-black text-orange-700 text-sm">
                 {redirectCountdown}s
               </span>
               ...
@@ -1286,7 +1286,7 @@ export default function CheckoutPage({
   if ((!cartItems || cartItems.length === 0) && !orderSuccess) {
     return (
       <div className="max-w-2xl mx-auto px-4 py-16 text-center space-y-6 animate-fade-in">
-        <div className="mx-auto w-20 h-20 bg-orange-50 text-brand-orange rounded-full flex items-center justify-center border border-orange-100 shadow-sm">
+        <div className="mx-auto w-20 h-20 bg-orange-50 text-orange-700 rounded-full flex items-center justify-center border border-orange-100 shadow-sm">
           <ShoppingBag className="h-10 w-10" />
         </div>
         <div className="space-y-2">
@@ -1311,7 +1311,7 @@ export default function CheckoutPage({
 
   return (
     <div
-      className="max-w-6xl mx-auto px-4 py-6 sm:px-6 lg:px-8 animate-fade-in"
+      className="max-w-[1400px] mx-auto py-1 animate-fade-in"
       id="checkout-page-container"
     >
       <style>{`
@@ -1343,7 +1343,7 @@ export default function CheckoutPage({
             }
             window.history.back();
           }}
-          className="hover:text-brand-orange flex items-center gap-1.5 transition text-gray-500 text-xs font-bold uppercase tracking-wider mb-2"
+          className="hover:text-orange-700 flex items-center gap-1.5 transition text-gray-500 text-xs font-bold uppercase tracking-wider mb-2"
         >
           <ArrowLeft className="h-4 w-4" />
           <span>
@@ -1385,12 +1385,12 @@ export default function CheckoutPage({
                 id="checkout-contact-section"
               >
                 <div className="flex items-center gap-2 text-gray-800 font-extrabold text-base border-b border-gray-50 pb-2">
-                  <User className="h-5 w-5 text-brand-orange" />
+                  <User className="h-5 w-5 text-orange-700" />
                   <h3>1. Contact Details</h3>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-1">
-                    <label className="text-[10px] text-gray-400 font-black uppercase tracking-wider">
+                    <label className="text-[11px] text-gray-400 font-black uppercase tracking-wider">
                       Full Name
                     </label>
                     <input
@@ -1402,7 +1402,7 @@ export default function CheckoutPage({
                     />
                   </div>
                   <div className="space-y-1">
-                    <label className="text-[10px] text-gray-400 font-black uppercase tracking-wider">
+                    <label className="text-[11px] text-gray-400 font-black uppercase tracking-wider">
                       Phone Number
                     </label>
                     <input
@@ -1414,7 +1414,7 @@ export default function CheckoutPage({
                     />
                   </div>
                   <div className="sm:col-span-2 space-y-1">
-                    <label className="text-[10px] text-gray-400 font-black uppercase tracking-wider">
+                    <label className="text-[11px] text-gray-400 font-black uppercase tracking-wider">
                       Email Address
                     </label>
                     <input
@@ -1434,14 +1434,14 @@ export default function CheckoutPage({
               >
                 <div className="flex items-center justify-between border-b border-gray-50 pb-3">
                   <div className="flex items-center gap-2 text-gray-800 font-extrabold text-base">
-                    <MapPin className="h-5 w-5 text-brand-orange" />
+                    <MapPin className="h-5 w-5 text-orange-700" />
                     <h3>2. Delivery Address</h3>
                   </div>
                   {addresses && addresses.length > 0 && !isAddingNewAddress && (
                     <button
                       type="button"
                       onClick={openAddAddressForm}
-                      className="cursor-pointer text-xs font-bold text-brand-orange hover:text-orange-700 bg-orange-50 hover:bg-orange-100 px-3 py-1.5 rounded-xl flex items-center gap-1 transition"
+                      className="cursor-pointer text-xs font-bold text-orange-700 hover:text-orange-700 bg-orange-50 hover:bg-orange-100 px-3 py-1.5 rounded-xl flex items-center gap-1 transition"
                     >
                       <Plus className="h-3.5 w-3.5" />
                       <span>Add New Address</span>
@@ -1459,7 +1459,7 @@ export default function CheckoutPage({
                       <div className="space-y-1">
                         <h4 className="text-xs font-black text-amber-950 uppercase tracking-wider flex items-center gap-1.5 flex-wrap">
                           <span>Using Approximate Location</span>
-                          <span className="bg-amber-200 text-amber-900 text-[9px] px-2 py-0.5 rounded-full font-bold">
+                          <span className="bg-amber-200 text-amber-900 text-[11px] px-2 py-0.5 rounded-full font-bold">
                             {gpsAccuracyStatus.accuracy ? `~${gpsAccuracyStatus.accuracy}m Accuracy` : "Device GPS Disabled"}
                           </span>
                         </h4>
@@ -1535,7 +1535,7 @@ export default function CheckoutPage({
                   >
                     <div className="flex items-center justify-between">
                       <span className="text-xs font-black uppercase text-gray-800 tracking-wider flex items-center gap-1.5">
-                        <Plus className="h-4 w-4 text-brand-orange" />
+                        <Plus className="h-4 w-4 text-orange-700" />
                         Add New Delivery Address
                       </span>
                       {addresses && addresses.length > 0 && (
@@ -1551,7 +1551,7 @@ export default function CheckoutPage({
 
                     <div className="space-y-3">
                       <div>
-                        <label className="text-[10px] text-gray-400 font-black uppercase tracking-wider block mb-1.5">
+                        <label className="text-[11px] text-gray-400 font-black uppercase tracking-wider block mb-1.5">
                           Address Category
                         </label>
                         <div className="flex flex-wrap gap-2">
@@ -1593,7 +1593,7 @@ export default function CheckoutPage({
                                 <LIcon className="h-3.5 w-3.5" />
                                 <span>{lbl.id}</span>
                                 {isAlreadySaved && (
-                                  <span className="text-[8px] font-black uppercase bg-gray-200 text-gray-600 px-1 py-0.5 rounded no-underline">
+                                  <span className="text-[11px] font-black uppercase bg-gray-200 text-gray-600 px-1 py-0.5 rounded no-underline">
                                     Saved
                                   </span>
                                 )}
@@ -1605,7 +1605,7 @@ export default function CheckoutPage({
 
                       {newAddrLabel === "Other" && (
                         <div className="space-y-1 animate-fade-in">
-                          <label className="text-[10px] text-gray-400 font-black uppercase tracking-wider block">
+                          <label className="text-[11px] text-gray-400 font-black uppercase tracking-wider block">
                             Custom Label Name (e.g. Gym, Parents' House)
                           </label>
                           <input
@@ -1622,7 +1622,7 @@ export default function CheckoutPage({
                       )}
 
                       <div>
-                        <label className="text-[10px] text-gray-400 font-black uppercase tracking-wider block mb-1">
+                        <label className="text-[11px] text-gray-400 font-black uppercase tracking-wider block mb-1">
                           Full Address Details
                         </label>
                         <textarea
@@ -1636,7 +1636,7 @@ export default function CheckoutPage({
                       </div>
 
                       <div>
-                        <label className="text-[10px] text-gray-400 font-black uppercase tracking-wider block mb-1">
+                        <label className="text-[11px] text-gray-400 font-black uppercase tracking-wider block mb-1">
                           Contact Phone for Driver
                         </label>
                         <input
@@ -1715,7 +1715,7 @@ export default function CheckoutPage({
                                     {addr.label || "Address"}
                                   </span>
                                   {addr.isDefault && (
-                                    <span className="bg-emerald-100 text-emerald-800 text-[9px] font-black uppercase px-2 py-0.5 rounded-full">
+                                    <span className="bg-emerald-100 text-emerald-800 text-[11px] font-black uppercase px-2 py-0.5 rounded-full">
                                       Default
                                     </span>
                                   )}
@@ -1724,7 +1724,7 @@ export default function CheckoutPage({
                                   {addr.detail}
                                 </p>
                                 {addr.contact && (
-                                  <p className="text-[10px] text-gray-400 font-bold">
+                                  <p className="text-[11px] text-gray-400 font-bold">
                                     Phone: {addr.contact}
                                   </p>
                                 )}
@@ -1756,7 +1756,7 @@ export default function CheckoutPage({
                 id="checkout-instructions-section"
               >
                 <div className="flex items-center gap-2 text-gray-800 font-extrabold text-base border-b border-gray-50 pb-2">
-                  <Truck className="h-5 w-5 text-brand-orange" />
+                  <Truck className="h-5 w-5 text-orange-700" />
                   <h3>3. Delivery Instructions</h3>
                 </div>
                 <input
@@ -1780,12 +1780,12 @@ export default function CheckoutPage({
                     <h3 className="text-gray-800 font-black text-base">
                       Select Payment Method
                     </h3>
-                    <p className="text-[10px] text-gray-400 font-semibold">
+                    <p className="text-[11px] text-gray-400 font-semibold">
                       256-Bit SSL Secured Terminal Connection
                     </p>
                   </div>
                 </div>
-                <div className="bg-emerald-100 text-emerald-800 font-bold text-[9px] px-2.5 py-1 rounded-full uppercase tracking-wider flex items-center gap-1">
+                <div className="bg-emerald-100 text-emerald-800 font-bold text-[11px] px-2.5 py-1 rounded-full uppercase tracking-wider flex items-center gap-1">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                   ONLINE
                 </div>
@@ -1870,7 +1870,7 @@ export default function CheckoutPage({
                               {m.name}
                             </span>
                             <span
-                              className={`text-[8px] font-black uppercase tracking-wide px-1.5 py-0.5 rounded ${isSelected
+                              className={`text-[11px] font-black uppercase tracking-wide px-1.5 py-0.5 rounded ${isSelected
                                 ? "bg-orange-500 text-white"
                                 : "bg-gray-200 text-gray-600"
                                 }`}
@@ -1912,7 +1912,7 @@ export default function CheckoutPage({
                         Credit / Debit Card Details
                       </h4>
                     </div>
-                    <span className="text-[10px] font-black uppercase bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 px-2.5 py-0.5 rounded-full">
+                    <span className="text-[11px] font-black uppercase bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 px-2.5 py-0.5 rounded-full">
                       256-Bit Encrypted
                     </span>
                   </div>
@@ -1920,7 +1920,7 @@ export default function CheckoutPage({
                   <div className="space-y-4">
                     {/* Cardholder Name */}
                     <div>
-                      <label className="text-[10px] font-black uppercase tracking-wider text-neutral-400 block mb-1.5">
+                      <label className="text-[11px] font-black uppercase tracking-wider text-neutral-400 block mb-1.5">
                         Cardholder Full Name
                       </label>
                       <input
@@ -1934,7 +1934,7 @@ export default function CheckoutPage({
 
                     {/* Card Number */}
                     <div>
-                      <label className="text-[10px] font-black uppercase tracking-wider text-neutral-400 block mb-1.5">
+                      <label className="text-[11px] font-black uppercase tracking-wider text-neutral-400 block mb-1.5">
                         16-Digit Card Number
                       </label>
                       <div className="relative">
@@ -1957,7 +1957,7 @@ export default function CheckoutPage({
                     {/* Expiry & CVV Row */}
                     <div className="grid grid-cols-2 gap-4">
                       <div>
-                        <label className="text-[10px] font-black uppercase tracking-wider text-neutral-400 block mb-1.5">
+                        <label className="text-[11px] font-black uppercase tracking-wider text-neutral-400 block mb-1.5">
                           Expiry Date (MM/YY)
                         </label>
                         <input
@@ -1976,7 +1976,7 @@ export default function CheckoutPage({
                         />
                       </div>
                       <div>
-                        <label className="text-[10px] font-black uppercase tracking-wider text-neutral-400 block mb-1.5">
+                        <label className="text-[11px] font-black uppercase tracking-wider text-neutral-400 block mb-1.5">
                           CVV / CVC Code
                         </label>
                         <input
@@ -1994,7 +1994,7 @@ export default function CheckoutPage({
                     </div>
                   </div>
 
-                  <p className="text-[10px] text-neutral-400 font-medium leading-relaxed pt-1">
+                  <p className="text-[11px] text-neutral-400 font-medium leading-relaxed pt-1">
                     🔒 Card details are encrypted using PCI-DSS 256-Bit SSL standard before being forwarded to Razorpay checkout terminal.
                   </p>
                 </div>
@@ -2033,7 +2033,7 @@ export default function CheckoutPage({
             id="checkout-coupon-section"
           >
             <div className="flex items-center gap-2 text-gray-800 font-extrabold text-base border-b border-gray-50 pb-2">
-              <Ticket className="h-5 w-5 text-brand-orange" />
+              <Ticket className="h-5 w-5 text-orange-700" />
               <h3>Coupons & Promo Codes</h3>
             </div>
 
@@ -2083,7 +2083,7 @@ export default function CheckoutPage({
                 <button
                   type="button"
                   onClick={() => navigate("/cart")}
-                  className="text-xs font-bold text-brand-orange hover:underline shrink-0 bg-white border border-orange-200 px-3 py-1.5 rounded-xl hover:bg-orange-50 transition cursor-pointer"
+                  className="text-xs font-bold text-orange-700 hover:underline shrink-0 bg-white border border-orange-200 px-3 py-1.5 rounded-xl hover:bg-orange-50 transition cursor-pointer"
                 >
                   Go to Cart
                 </button>
@@ -2124,7 +2124,7 @@ export default function CheckoutPage({
               {currentTip > 0 && (
                 <div className="flex justify-between text-gray-500 font-semibold">
                   <span>Delivery Tip</span>
-                  <span className="font-mono text-brand-orange">
+                  <span className="font-mono text-orange-700">
                     + ₹ {currentTip}
                   </span>
                 </div>
@@ -2147,11 +2147,11 @@ export default function CheckoutPage({
                 <span className="font-display font-black text-lg text-gray-900 block">
                   Grand Total
                 </span>
-                <span className="text-[10px] text-gray-400 font-semibold uppercase">
+                <span className="text-[11px] text-gray-400 font-semibold uppercase">
                   VAT Inclusive
                 </span>
               </div>
-              <span className="font-mono font-black text-2xl text-brand-orange">
+              <span className="font-mono font-black text-2xl text-orange-700">
                 ₹ {grandTotal.toFixed(2)}
               </span>
             </div>

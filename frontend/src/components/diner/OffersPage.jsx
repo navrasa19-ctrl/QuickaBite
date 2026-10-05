@@ -41,7 +41,7 @@ export default function OffersPage({
           discountType: item.discountType,
           discountValue: item.discountValue,
           minOrder: item.minimumOrderAmount || item.minOrder || 0,
-          accentColor: item.accentColor || "bg-orange-100 text-brand-orange border border-orange-200",
+          accentColor: item.accentColor || "bg-orange-100 text-orange-700 border border-orange-200",
         }));
 
         if (isMock) {
@@ -65,7 +65,7 @@ export default function OffersPage({
 
   return (
     <div
-      className="space-y-10 max-w-5xl mx-auto py-6 px-4 animate-fade-in"
+      className="space-y-10 max-w-[1400px] mx-auto py-1 animate-fade-in"
       id="offers-viewport"
     >
       <div className="text-center max-w-xl mx-auto space-y-3">
@@ -188,7 +188,7 @@ export default function OffersPage({
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6">
                 {sectionOffers.map((offer) => {
                   const isApplied =
                     (appliedCoupon && appliedCoupon.code === offer.code) ||
@@ -205,11 +205,11 @@ export default function OffersPage({
                       <div className="space-y-3">
                         <div className="flex items-start justify-between">
                           <span
-                            className={`text-[10px] font-black uppercase px-2.5 py-1 rounded-full ${offer.accentColor}`}
+                            className={`text-[11px] font-black uppercase px-2.5 py-1 rounded-full ${offer.accentColor}`}
                           >
                             {offer.discount}
                           </span>
-                          <span className="text-[10px] text-gray-400 font-semibold flex items-center gap-1">
+                          <span className="text-[11px] text-gray-400 font-semibold flex items-center gap-1">
                             <HiCalendar className="text-xs text-gray-400" />
                             <span>{offer.expiry}</span>
                           </span>
@@ -234,7 +234,7 @@ export default function OffersPage({
                           title="Click to copy code"
                         >
                           {offer.code}
-                          <span className="text-[10px] text-orange-400 font-normal">
+                          <span className="text-[11px] text-orange-400 font-normal">
                             (Copy)
                           </span>
                         </button>

@@ -144,7 +144,7 @@ export default function AdminSupportManagementTab() {
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div>
             <h2 className="text-2xl font-display font-black text-white flex items-center gap-2.5 tracking-tight">
-              <Award className="w-7 h-7 text-brand-orange" />
+              <Award className="w-7 h-7 text-orange-700" />
               Global Support Tickets & User Loyalty Audit
             </h2>
             <p className="text-xs text-neutral-400 mt-1 max-w-2xl leading-relaxed">
@@ -155,7 +155,7 @@ export default function AdminSupportManagementTab() {
             onClick={fetchIssues}
             className="px-4 py-2 bg-neutral-900 hover:bg-neutral-800 border border-neutral-700 rounded-2xl text-xs font-bold text-neutral-300 hover:text-white transition flex items-center gap-2 cursor-pointer shadow-sm"
           >
-            <RefreshCw className="w-4 h-4 text-brand-orange" />
+            <RefreshCw className="w-4 h-4 text-orange-700" />
             Refresh Data
           </button>
         </div>
@@ -163,7 +163,7 @@ export default function AdminSupportManagementTab() {
         {/* Filter Controls */}
         <div className="flex flex-wrap items-center gap-3 pt-4 border-t border-neutral-800 text-xs">
           <div className="flex items-center gap-1.5 text-neutral-400 font-bold uppercase tracking-wider">
-            <Filter className="w-4 h-4 text-brand-orange" /> Filter By:
+            <Filter className="w-4 h-4 text-orange-700" /> Filter By:
           </div>
 
           <div className="flex flex-wrap items-center gap-1.5">
@@ -199,7 +199,7 @@ export default function AdminSupportManagementTab() {
       {/* Tickets List Table */}
       {loading ? (
         <div className="p-12 text-center text-neutral-500 text-xs bg-white border border-neutral-200 rounded-3xl">
-          <RefreshCw className="w-6 h-6 animate-spin mx-auto text-brand-orange mb-2" />
+          <RefreshCw className="w-6 h-6 animate-spin mx-auto text-orange-700 mb-2" />
           Loading global support tickets...
         </div>
       ) : issues.length === 0 ? (
@@ -226,7 +226,7 @@ export default function AdminSupportManagementTab() {
                 {issues.map((issue) => (
                   <tr key={issue._id} className="hover:bg-orange-50/30 transition-colors">
                     <td className="p-4 sm:px-6">
-                      <span className="font-mono font-black text-brand-orange text-xs block">
+                      <span className="font-mono font-black text-orange-700 text-xs block">
                         #{issue.ticketNumber}
                       </span>
                       <span className="text-neutral-500 font-mono text-[11px]">
@@ -269,7 +269,7 @@ export default function AdminSupportManagementTab() {
             <div className="p-6 border-b border-neutral-800 bg-neutral-950 text-white flex items-center justify-between">
               <div>
                 <h3 className="text-lg font-display font-black text-white flex items-center gap-2">
-                  <Award className="w-5 h-5 text-brand-orange" />
+                  <Award className="w-5 h-5 text-orange-700" />
                   Admin Audit: Ticket #{selectedIssue.ticketNumber}
                 </h3>
                 <p className="text-xs text-neutral-400 mt-1 font-medium">
@@ -289,7 +289,7 @@ export default function AdminSupportManagementTab() {
               {/* User Loyalty & History Audit Card */}
               <div className="p-5 bg-orange-50/50 border border-orange-200/80 rounded-2xl space-y-4">
                 <div className="flex flex-wrap items-center justify-between gap-2 border-b border-orange-200/60 pb-3">
-                  <h4 className="text-xs font-black text-brand-orange uppercase tracking-wider flex items-center gap-1.5">
+                  <h4 className="text-xs font-black text-orange-700 uppercase tracking-wider flex items-center gap-1.5">
                     <User className="w-4 h-4" /> Customer Loyalty & Trust Score Audit
                   </h4>
 
@@ -354,7 +354,7 @@ export default function AdminSupportManagementTab() {
                             <div key={iss._id} className="p-2.5 bg-white border border-neutral-200 rounded-xl text-xs flex justify-between items-center">
                               <div>
                                 <div className="flex items-center gap-2">
-                                  <span className="font-mono font-bold text-brand-orange text-[10px]">#{iss.ticketNumber}</span>
+                                  <span className="font-mono font-bold text-orange-700 text-[10px]">#{iss.ticketNumber}</span>
                                   <span className="font-bold text-neutral-900 text-[11px]">{iss.selectedQuestion}</span>
                                 </div>
                                 <span className="text-[10px] text-neutral-400 font-semibold block mt-0.5">
@@ -416,8 +416,8 @@ export default function AdminSupportManagementTab() {
               {/* ADMIN OVERRIDE FORM */}
               <form onSubmit={handleAdminOverrideSubmit} className="p-6 bg-orange-50/40 border border-orange-200/90 rounded-3xl text-neutral-900 space-y-5 shadow-xs">
                 <div className="flex items-center justify-between border-b border-orange-200/60 pb-3">
-                  <h4 className="text-xs font-display font-black text-brand-orange uppercase tracking-wider flex items-center gap-2">
-                    <ShieldCheck className="w-4.5 h-4.5 text-brand-orange" /> Admin Executive Override Decision
+                  <h4 className="text-xs font-display font-black text-orange-700 uppercase tracking-wider flex items-center gap-2">
+                    <ShieldCheck className="w-4.5 h-4.5 text-orange-700" /> Admin Executive Override Decision
                   </h4>
                   <span className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest bg-white px-2.5 py-1 rounded-full border border-neutral-200">
                     High Authority Action

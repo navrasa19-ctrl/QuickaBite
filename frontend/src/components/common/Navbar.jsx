@@ -84,16 +84,16 @@ export default function Navbar({
   return (
     <>
       <header
-        className="sticky top-0 z-40 w-full bg-white/80 backdrop-blur-xl border-b border-gray-200/50 shadow-xs transition-all duration-300 hover:bg-white/95"
+        className="sticky top-0 z-40 w-full bg-white/95 backdrop-blur-xl border-b border-gray-200"
         id="global-header"
       >
-        <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 sm:h-20 gap-1.5 sm:gap-4">
+        <div className="page-container">
+          <div className="flex flex-wrap xl:flex-nowrap items-center gap-x-3 gap-y-2.5 py-2.5 xl:py-3">
             {/* Logo */}
             <div
               onClick={() => setActiveTab("home")}
               id="brand-logo-container"
-              className="cursor-pointer shrink-0"
+              className="cursor-pointer shrink-0 order-1"
             >
               <QuikaBiteLogo size="md" />
             </div>
@@ -101,7 +101,7 @@ export default function Navbar({
             {/* Location Selector (Desktop + Compact Mobile Button) */}
             {userRole !== "admin" && userRole !== "manager" && (
               <div
-                className="relative shrink-0"
+                className="relative order-3 md:order-2 w-full md:w-auto md:flex-1 xl:flex-none xl:w-[250px] 2xl:w-[290px] min-w-0"
                 id="location-selector-container"
               >
                 <button
@@ -111,19 +111,19 @@ export default function Navbar({
                     }
                     setShowLocationMenu(!showLocationMenu);
                   }}
-                  className={`flex items-center gap-1.5 px-2.5 sm:px-3.5 py-1.5 sm:py-2.5 rounded-full text-[11px] sm:text-xs font-bold transition shrink-0 max-w-[135px] min-[360px]:max-w-[165px] xs:max-w-[200px] sm:max-w-[260px] cursor-pointer ${
+                  className={`flex items-center gap-2 min-h-11 px-3.5 rounded-xl text-xs sm:text-[13px] font-semibold transition w-full md:w-auto md:max-w-full xl:w-full cursor-pointer ${
                     !currentLocation
-                      ? "bg-red-50 text-red-700 border-2 border-red-300 animate-pulse hover:bg-red-100 shadow-xs"
-                      : "bg-gray-50 hover:bg-gray-100 text-gray-700 border border-gray-150"
+                      ? "bg-amber-50 text-amber-900 border border-amber-300 hover:bg-amber-100"
+                      : "bg-white hover:bg-orange-50 text-gray-800 border border-gray-200"
                   }`}
                   id="location-trigger"
                   title={currentLocation ? `Location: ${currentLocation}` : "Location Not Detected • Tap to grant location permission"}
                 >
-                  <MapPin className={`h-3.5 w-3.5 sm:h-4 sm:w-4 shrink-0 ${!currentLocation ? "text-red-600 animate-bounce" : "text-brand-orange"}`} />
+                  <MapPin className={`h-4 w-4 shrink-0 ${!currentLocation ? "text-amber-600" : "text-brand-orange"}`} />
                   <span className="truncate">
-                    {currentLocation || "Location Not Detected • Tap to grant GPS"}
+                    {currentLocation || "Set delivery location"}
                   </span>
-                  <ChevronDown className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-gray-500 shrink-0" />
+                  <ChevronDown className="h-4 w-4 text-gray-500 shrink-0 ml-auto" />
                 </button>
 
                 {showLocationMenu && (
@@ -190,7 +190,7 @@ export default function Navbar({
                             >
                               <Icon
                                 className={`h-4 w-4 mt-0.5 shrink-0 ${isSelected
-                                  ? "text-brand-orange"
+                                  ? "text-orange-700"
                                   : "text-gray-400"
                                   }`}
                               />
@@ -198,7 +198,7 @@ export default function Navbar({
                                 <div className="flex items-center gap-1.5">
                                   <span
                                     className={`font-bold text-xs ${isSelected
-                                      ? "text-brand-orange"
+                                      ? "text-orange-700"
                                       : "text-gray-800"
                                       }`}
                                   >
@@ -207,7 +207,7 @@ export default function Navbar({
                                       : addr.label || "Address"}
                                   </span>
                                   {addr.isDefault && (
-                                    <span className="text-[9px] bg-orange-100 text-brand-orange font-bold px-1.5 py-0.5 rounded-full">
+                                    <span className="text-[11px] bg-orange-100 text-orange-700 font-bold px-1.5 py-0.5 rounded-full">
                                       Default
                                     </span>
                                   )}
@@ -232,7 +232,7 @@ export default function Navbar({
                             });
                             setShowLocationMenu(false);
                           }}
-                          className="w-full text-left px-3 py-2 text-xs font-bold text-brand-orange hover:bg-orange-50 rounded-xl transition flex items-center gap-1.5 cursor-pointer"
+                          className="w-full text-left px-3 py-2 text-xs font-bold text-orange-700 hover:bg-orange-50 rounded-xl transition flex items-center gap-1.5 cursor-pointer"
                         >
                           <Plus className="h-3.5 w-3.5" />
                           <span>Add / Manage Saved Addresses</span>
@@ -246,13 +246,13 @@ export default function Navbar({
 
             {/* Core Search input with Glassmorphism */}
             <div
-              className="hidden md:block flex-1 max-w-lg relative"
+              className="hidden md:block order-4 xl:order-3 w-full xl:w-auto xl:flex-1 xl:min-w-[280px] xl:max-w-2xl relative"
               id="search-input-container"
             >
               <div className="relative">
                 <input
                   type="text"
-                  placeholder="Search for restaurants, cuisines, dishes..."
+                  placeholder="Search dishes or restaurants"
                   value={searchQuery}
                   onChange={(e) => {
                     setSearchQuery(e.target.value);
@@ -260,13 +260,13 @@ export default function Navbar({
                       setActiveTab("search");
                     }
                   }}
-                  className="w-full pl-11 pr-12 py-3 glass-search rounded-full text-sm placeholder-gray-500 text-gray-800 focus:ring-2 focus:ring-brand-orange/20 outline-none transition shadow-sm"
+                  className="w-full h-11 pl-11 pr-16 bg-orange-50/60 border border-orange-100 rounded-xl text-sm placeholder-gray-500 text-gray-900 focus:bg-white focus:border-orange-400 focus:ring-4 focus:ring-orange-500/15 outline-none transition"
                 />
-                <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-brand-orange" />
+                <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-500" />
                 {searchQuery && (
                   <button
                     onClick={() => setSearchQuery("")}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 text-xs font-bold text-gray-500 hover:text-brand-orange transition"
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-semibold text-gray-500 hover:text-orange-700 transition cursor-pointer"
                   >
                     Clear
                   </button>
@@ -276,14 +276,38 @@ export default function Navbar({
 
             {/* Desktop Navigation & Actions */}
             <div
-              className="flex items-center gap-3 shrink-0"
+              className="order-2 md:order-3 xl:order-4 ml-auto xl:ml-0 flex items-center gap-2 shrink-0"
               id="desktop-actions"
             >
+              {/* Primary navigation (wide screens; smaller screens use the bottom bar) */}
+              {userRole !== "admin" && userRole !== "manager" && (
+                <nav className="hidden xl:flex items-center gap-1 mr-2" aria-label="Primary">
+                  {[
+                    { id: "home", label: "Home" },
+                    { id: "offers", label: "Offers" },
+                    { id: "orders", label: "Orders" },
+                  ].map((item) => (
+                    <button
+                      key={item.id}
+                      onClick={() => setActiveTab(item.id)}
+                      aria-current={activeTab === item.id ? "page" : undefined}
+                      className={`h-11 px-4 rounded-xl text-sm font-semibold transition cursor-pointer ${
+                        activeTab === item.id
+                          ? "bg-orange-50 text-orange-700"
+                          : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
+                      }`}
+                    >
+                      {item.label}
+                    </button>
+                  ))}
+                </nav>
+              )}
+
               {/* Favorites Header Action */}
               {userRole !== "admin" && userRole !== "manager" && (
                 <button
                   onClick={() => setActiveTab("favorites")}
-                  className={`hidden md:flex items-center gap-2 font-bold text-xs px-3.5 py-2.5 rounded-full transition border cursor-pointer ${activeTab === "favorites" ? "bg-orange-50 text-brand-orange border-orange-200 shadow-sm" : "bg-gray-50 hover:bg-gray-100 text-gray-700 border-gray-100"}`}
+                  className={`hidden md:flex items-center justify-center gap-2 h-11 min-w-11 px-3 xl:px-4 rounded-xl font-semibold text-sm transition border cursor-pointer ${activeTab === "favorites" ? "bg-orange-50 text-orange-700 border-orange-200" : "bg-white hover:bg-gray-50 text-gray-700 border-gray-200"}`}
                   id="navbar-favorites-btn"
                   title="Favorites"
                 >
@@ -292,12 +316,12 @@ export default function Navbar({
                       className={`h-4.5 w-4.5 ${favoritesCount > 0 ? "fill-brand-orange text-brand-orange" : "text-gray-600"}`}
                     />
                     {favoritesCount > 0 && (
-                      <span className="absolute -top-2 -right-2.5 bg-brand-orange text-white text-[9px] font-black h-4 w-4 rounded-full flex items-center justify-center border border-white shadow-xs">
+                      <span className="absolute -top-2 -right-2.5 bg-brand-orange text-white text-[11px] font-black h-4 w-4 rounded-full flex items-center justify-center border border-white shadow-xs">
                         {favoritesCount}
                       </span>
                     )}
                   </div>
-                  <span className="font-extrabold">Favorites</span>
+                  <span className="hidden xl:inline">Favorites</span>
                 </button>
               )}
 
@@ -307,19 +331,19 @@ export default function Navbar({
                   onClick={() =>
                     onCartToggle ? onCartToggle() : setActiveTab("cart")
                   }
-                  className={`hidden md:flex items-center gap-2 font-bold text-xs px-3.5 py-2.5 rounded-full transition border cursor-pointer ${activeTab === "cart" ? "bg-orange-50 text-brand-orange border-orange-200 shadow-sm" : "bg-gray-50 hover:bg-gray-100 text-gray-700 border-gray-100"}`}
+                  className={`hidden md:flex items-center justify-center gap-2 h-11 min-w-11 px-3 xl:px-4 rounded-xl font-semibold text-sm transition border cursor-pointer ${activeTab === "cart" ? "bg-orange-50 text-orange-700 border-orange-200" : "bg-white hover:bg-gray-50 text-gray-700 border-gray-200"}`}
                   id="navbar-cart-btn"
                   title="Cart"
                 >
                   <div className="relative flex items-center justify-center">
                     <ShoppingCart className="h-4.5 w-4.5 text-gray-600" />
                     {cartCount > 0 && (
-                      <span className="absolute -top-2 -right-2.5 bg-brand-orange text-white text-[9px] font-black h-4 w-4 rounded-full flex items-center justify-center border border-white shadow-xs">
+                      <span className="absolute -top-2 -right-2.5 bg-brand-orange text-white text-[11px] font-black h-4 w-4 rounded-full flex items-center justify-center border border-white shadow-xs">
                         {cartCount}
                       </span>
                     )}
                   </div>
-                  <span className="font-extrabold">Cart</span>
+                  <span className="hidden xl:inline">Cart</span>
                 </button>
               )}
               {/* Admin Desk Direct Shortcut */}
@@ -349,14 +373,14 @@ export default function Navbar({
               {!isLoggedIn ? (
                 <button
                   onClick={() => setActiveTab("profile")}
-                  className="bg-brand-orange hover:bg-orange-700 text-white font-extrabold text-xs px-3 sm:px-5 py-2 sm:py-2.5 rounded-full transition shadow-md cursor-pointer flex items-center gap-1.5 shrink-0"
+                  className="bg-brand-orange hover:bg-orange-600 text-white font-bold text-sm h-11 px-4 sm:px-5 rounded-xl transition cursor-pointer flex items-center gap-2 shrink-0"
                   id="navbar-signin-btn"
                   title="Profile / Sign In"
                 >
                   <User className="h-4 w-4 shrink-0" />
-                  <span className="text-[11px] sm:text-xs">
-                    <span className="inline sm:hidden">Sign In</span>
-                    <span className="hidden sm:inline">Profile / Sign In</span>
+                  <span className="text-sm">
+                    <span className="inline sm:hidden">Sign in</span>
+                    <span className="hidden sm:inline">Sign in</span>
                   </span>
                 </button>
               ) : (
@@ -395,12 +419,12 @@ export default function Navbar({
                                 </span>
                               )}
                               {userRole === "admin" && (
-                                <span className="text-[9px] bg-neutral-950 text-brand-orange font-black px-1.5 py-0.5 rounded-sm uppercase tracking-wider inline-block mt-1">
+                                <span className="text-[11px] bg-neutral-950 text-brand-orange font-black px-1.5 py-0.5 rounded-sm uppercase tracking-wider inline-block mt-1">
                                   Administrator
                                 </span>
                               )}
                               {userRole === "manager" && (
-                                <span className="text-[9px] bg-neutral-950 text-brand-orange font-black px-1.5 py-0.5 rounded-sm uppercase tracking-wider inline-block mt-1">
+                                <span className="text-[11px] bg-neutral-950 text-brand-orange font-black px-1.5 py-0.5 rounded-sm uppercase tracking-wider inline-block mt-1">
                                   Operations Manager
                                 </span>
                               )}
@@ -411,7 +435,7 @@ export default function Navbar({
                           setActiveTab("admin");
                           setShowProfileMenu(false);
                         }}
-                        className="w-full text-left px-4 py-2 text-sm text-neutral-900 font-bold hover:bg-orange-50 hover:text-brand-orange transition flex items-center gap-2"
+                        className="w-full text-left px-4 py-2 text-sm text-neutral-900 font-bold hover:bg-orange-50 hover:text-orange-700 transition flex items-center gap-2"
                       >
                         <span>👑</span>
                         <span>Admin Control Desk</span>
@@ -423,7 +447,7 @@ export default function Navbar({
                                 setActiveTab("manager");
                                 setShowProfileMenu(false);
                               }}
-                              className="w-full text-left px-4 py-2 text-sm text-neutral-900 font-bold hover:bg-orange-50 hover:text-brand-orange transition flex items-center gap-2"
+                              className="w-full text-left px-4 py-2 text-sm text-neutral-900 font-bold hover:bg-orange-50 hover:text-orange-700 transition flex items-center gap-2"
                             >
                               <span>🧑‍💼</span>
                               <span>Manager Control Desk</span>
@@ -435,7 +459,7 @@ export default function Navbar({
                                 setActiveTab("profile");
                                 setShowProfileMenu(false);
                               }}
-                              className="cursor-pointer w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-brand-orange transition flex items-center gap-2"
+                              className="cursor-pointer w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-700 transition flex items-center gap-2"
                             >
                               <User className="h-4 w-4" />
                               <span>My Profile</span>
@@ -446,7 +470,7 @@ export default function Navbar({
                                   setActiveTab("support");
                                   setShowProfileMenu(false);
                                 }}
-                                className="cursor-pointer w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-brand-orange transition flex items-center gap-2"
+                                className="cursor-pointer w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-700 transition flex items-center gap-2"
                               >
                                 <LifeBuoy className="h-4 w-4" />
                                 <span>Support Helpdesk</span>

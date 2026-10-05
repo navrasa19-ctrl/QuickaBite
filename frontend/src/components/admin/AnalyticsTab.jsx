@@ -213,7 +213,7 @@ export default function AnalyticsTab({
           <div className="absolute top-0 right-0 w-16 h-16 bg-orange-50 rounded-full -mr-6 -mt-6 opacity-60 blur-lg group-hover:scale-110 transition duration-300" />
           <div className="flex justify-between items-start">
             <span className="text-[10px] font-black uppercase tracking-wider text-gray-400">Total Orders</span>
-            <div className="h-7 w-7 bg-orange-50 text-brand-orange rounded-lg flex items-center justify-center">
+            <div className="h-7 w-7 bg-orange-50 text-orange-700 rounded-lg flex items-center justify-center">
               <ShoppingBag className="h-4 w-4" />
             </div>
           </div>
@@ -253,9 +253,9 @@ export default function AnalyticsTab({
             </div>
           </div>
           <div className="mt-3 relative z-10">
-            <h3 className="text-xl font-black text-gray-900">{activeRestaurantsCount} Restaurants</h3>
+            <h3 className="text-xl font-black text-gray-900">{activeRestaurantsCount}</h3>
             <p className="text-[9px] font-semibold text-amber-600 mt-1">
-              Active registered partners
+              Active restaurant partners
             </p>
           </div>
         </div>
@@ -333,7 +333,7 @@ export default function AnalyticsTab({
                 })}
 
                 <path d={areaD} fill="url(#brand-revenue-gradient)" opacity="0.15" />
-                <path d={pathD} fill="none" stroke="#0B8A3E" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
+                <path d={pathD} fill="none" stroke="#FF6B35" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
 
                 {points.map((p, idx) => (
                   <g key={idx} className="group cursor-pointer">
@@ -352,7 +352,7 @@ export default function AnalyticsTab({
                       cy={p.y}
                       r="5"
                       fill="white"
-                      stroke="#0B8A3E"
+                      stroke="#FF6B35"
                       strokeWidth="3"
                       className="transition-transform duration-200 group-hover:scale-150"
                       onMouseEnter={() => setHoveredNode({ x: p.day, y: p.val, label: `₹ ${Number(p.val).toFixed(2)}` })}
@@ -366,8 +366,8 @@ export default function AnalyticsTab({
 
                 <defs>
                   <linearGradient id="brand-revenue-gradient" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="#0B8A3E" />
-                    <stop offset="100%" stopColor="#0B8A3E" stopOpacity="0" />
+                    <stop offset="0%" stopColor="#FF6B35" />
+                    <stop offset="100%" stopColor="#FF6B35" stopOpacity="0" />
                   </linearGradient>
                 </defs>
               </svg>
@@ -396,7 +396,7 @@ export default function AnalyticsTab({
                 <h4 className="text-xs font-black uppercase tracking-wider text-gray-800">Orders Transacted</h4>
                 <p className="text-[9px] text-gray-400 font-medium">Daily order frequency curve</p>
               </div>
-              <span className="text-[9px] font-black bg-orange-50 text-brand-orange border border-orange-100 px-2 py-0.5 rounded-full font-mono">
+              <span className="text-[9px] font-black bg-orange-50 text-orange-700 border border-orange-100 px-2 py-0.5 rounded-full font-mono">
                 {totalOrders} Total
               </span>
             </div>
@@ -632,7 +632,7 @@ export default function AnalyticsTab({
                     <span className="text-xs font-black text-gray-900 block font-mono">
                       ₹ {Number(customer.totalSpent || 0).toFixed(2)}
                     </span>
-                    <span className="text-[9px] font-bold text-brand-orange">
+                    <span className="text-[9px] font-bold text-orange-700">
                       {customer.ordersCount || 0} orders
                     </span>
                   </div>
@@ -650,7 +650,7 @@ export default function AnalyticsTab({
             <button
               type="button"
               onClick={handleViewDirectory}
-              className="text-brand-orange hover:underline cursor-pointer flex items-center gap-0.5 font-bold outline-none bg-transparent border-none focus:outline-none"
+              className="text-orange-700 hover:underline cursor-pointer flex items-center gap-0.5 font-bold outline-none bg-transparent border-none focus:outline-none"
             >
               <span>View Directory</span>
               <ChevronRight className="h-3.5 w-3.5" />

@@ -367,7 +367,7 @@ export default function ShoppingCartPage({
   };
   return (
     <div
-      className="max-w-6xl mx-auto px-4 py-6 sm:px-6 lg:px-8 animate-fade-in"
+      className="max-w-[1400px] mx-auto py-1 animate-fade-in"
       id="shopping-cart-page-view"
     >
       {/* Page Header banner */}
@@ -376,17 +376,17 @@ export default function ShoppingCartPage({
           <div className="flex items-center gap-2 text-gray-500 text-xs font-bold uppercase tracking-wider">
             <button
               onClick={() => navigate("/home")}
-              className="hover:text-brand-orange flex items-center gap-1 transition"
+              className="hover:text-orange-700 flex items-center gap-1 transition"
             >
               <ArrowLeft className="h-4 w-4" />
               <span>Back to home</span>
             </button>
             <span>/</span>
-            <span className="text-brand-orange">My Basket</span>
+            <span className="text-orange-700">My Basket</span>
           </div>
           <h1 className="font-display font-black text-3xl text-gray-900 tracking-tight flex items-center gap-2">
-            <ShoppingBag className="h-8 w-8 text-brand-orange" />
-            <span>Shopping Cart Page</span>
+            <ShoppingBag className="h-8 w-8 text-orange-700" />
+            <span>Your cart</span>
           </h1>
         </div>
       </div>
@@ -398,7 +398,7 @@ export default function ShoppingCartPage({
             {/* Restaurant Badge header */}
             <div className="bg-gradient-to-r from-orange-50 to-amber-50 border border-orange-100 rounded-3xl p-6 flex items-center justify-between shadow-xs">
               <div className="space-y-1">
-                <span className="text-[10px] text-brand-orange font-black uppercase tracking-wider block">
+                <span className="text-[11px] text-orange-700 font-black uppercase tracking-wider block">
                   Gourmet Feast From
                 </span>
                 <h2 className="font-display font-black text-xl text-gray-900">
@@ -410,7 +410,7 @@ export default function ShoppingCartPage({
                 </span>
               </div>
               <div className="bg-white p-3 rounded-2xl shadow-sm border border-orange-100/50 hidden sm:block">
-                <Utensils className="h-6 w-6 text-brand-orange" />
+                <Utensils className="h-6 w-6 text-orange-700" />
               </div>
             </div>
 
@@ -420,7 +420,7 @@ export default function ShoppingCartPage({
                 <h3 className="font-bold text-sm text-gray-800 uppercase tracking-wider">
                   Ordered Dishes
                 </h3>
-                <span className="bg-orange-100 text-brand-orange text-xs font-black px-2.5 py-0.5 rounded-full">
+                <span className="bg-orange-100 text-orange-700 text-xs font-black px-2.5 py-0.5 rounded-full">
                   {cartItems.reduce((acc, curr) => acc + curr.quantity, 0)}{" "}
                   Items
                 </span>
@@ -522,7 +522,7 @@ export default function ShoppingCartPage({
             {/* Promo Codes Entry Card */}
             <div className="bg-white border border-gray-100 rounded-3xl p-6 space-y-4 shadow-xs">
               <div className="flex items-center gap-1.5">
-                <Ticket className="h-5 w-5 text-brand-orange" />
+                <Ticket className="h-5 w-5 text-orange-700" />
                 <h3 className="font-display font-extrabold text-base text-gray-800">
                   Coupons & Promo Codes
                 </h3>
@@ -576,7 +576,7 @@ export default function ShoppingCartPage({
 
                   {/* Available fast vouchers helper */}
                   <div className="space-y-2 pt-2 border-t border-gray-50">
-                    <p className="text-[10px] text-gray-400 font-bold uppercase tracking-wider">
+                    <p className="text-[11px] text-gray-400 font-bold uppercase tracking-wider">
                       Recommended Promo Codes
                     </p>
                     <div className="space-y-2">
@@ -591,14 +591,14 @@ export default function ShoppingCartPage({
                           className="w-full text-left p-2.5 bg-gray-50 hover:bg-orange-50/50 hover:border-orange-100 border border-transparent rounded-xl transition flex items-center justify-between group"
                         >
                           <div className="space-y-0.5">
-                            <span className="font-mono font-black text-xs text-gray-800 group-hover:text-brand-orange">
+                            <span className="font-mono font-black text-xs text-gray-800 group-hover:text-orange-700">
                               {coup.code}
                             </span>
-                            <p className="text-[10px] text-gray-400 font-medium">
+                            <p className="text-[11px] text-gray-400 font-medium">
                               {coup.desc}
                             </p>
                           </div>
-                          <span className="text-[9px] text-brand-orange font-bold uppercase group-hover:underline">
+                          <span className="text-[11px] text-orange-700 font-bold uppercase group-hover:underline">
                             Apply ✦
                           </span>
                         </button>
@@ -661,7 +661,7 @@ export default function ShoppingCartPage({
                       <span className="font-mono">₹ {currentTip}</span>
                       <button
                         onClick={handleRemoveTip}
-                        className="text-[10px] text-gray-400 hover:text-red-500 font-bold underline transition"
+                        className="text-[11px] text-gray-400 hover:text-red-500 font-bold underline transition"
                         title="Remove tip"
                       >
                         Remove
@@ -675,11 +675,11 @@ export default function ShoppingCartPage({
                     <span className="font-display font-black text-lg text-gray-900 block">
                       Grand Total
                     </span>
-                    <span className="text-[10px] text-gray-400 font-semibold uppercase">
+                    <span className="text-[11px] text-gray-400 font-semibold uppercase">
                       VAT Inclusive
                     </span>
                   </div>
-                  <span className="font-mono font-black text-2xl text-brand-orange">
+                  <span className="font-mono font-black text-2xl text-orange-700">
                     ₹ {grandTotal.toFixed(2)}
                   </span>
                 </div>
@@ -692,7 +692,7 @@ export default function ShoppingCartPage({
                   <span className="font-extrabold text-gray-700">
                     Premium Hygiene & Safety Certified
                   </span>
-                  <p className="text-gray-400 leading-relaxed text-[10px]">
+                  <p className="text-gray-400 leading-relaxed text-[11px]">
                     No-contact delivery, double sanitization steps, and
                     thermally isolated cargo ensure supreme food security.
                   </p>
@@ -734,7 +734,7 @@ export default function ShoppingCartPage({
       ) : (
         /* Empty State */
         <div className="max-w-md mx-auto text-center py-16 px-4 bg-white border border-gray-100 rounded-3xl shadow-xs space-y-6">
-          <div className="h-20 w-20 bg-orange-50 text-brand-orange rounded-full flex items-center justify-center mx-auto shadow-sm">
+          <div className="h-20 w-20 bg-orange-50 text-orange-700 rounded-full flex items-center justify-center mx-auto shadow-sm">
             <ShoppingBag className="h-10 w-10" />
           </div>
 

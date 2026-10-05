@@ -722,7 +722,7 @@ export default function OrderManagementTab({
     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
       {isLoadingDispatch ? (
         <div className="col-span-1 md:col-span-2 xl:col-span-3 text-center py-20 bg-white border border-dashed border-neutral-200 rounded-3xl space-y-3">
-          <Loader2 className="h-10 w-10 text-brand-orange animate-spin mx-auto" />
+          <Loader2 className="h-10 w-10 text-orange-700 animate-spin mx-auto" />
           <h4 className="text-xs font-black text-neutral-800 uppercase tracking-wider">Fetching Live Dispatch Board...</h4>
           <p className="text-[10px] text-neutral-400">Loading live dispatch data...</p>
         </div>
@@ -900,7 +900,7 @@ export default function OrderManagementTab({
         <div className="text-xs font-semibold text-neutral-500">
           Showing page<span className="font-black text-neutral-900">{paginationInfo.page || currentPage}</span> of{" "}
           <span className="font-black text-neutral-900">{paginationInfo.totalPages || 1}</span> (Total{" "}
-          <span className="font-black text-brand-orange">{paginationInfo.total || dispatchOrders.length}</span>)
+          <span className="font-black text-orange-700">{paginationInfo.total || dispatchOrders.length}</span>)
         </div>
 
         <div className="flex items-center gap-2">
@@ -1091,7 +1091,7 @@ export default function OrderManagementTab({
                         </div>
                         <div className="flex justify-between text-sm font-black text-neutral-950 pt-2 border-t border-neutral-150">
                           <span>Grand Total</span>
-                          <span className="font-mono text-brand-orange">₹ {Number(selectedOrder.total || 0).toFixed(2)}</span>
+                          <span className="font-mono text-orange-700">₹ {Number(selectedOrder.total || 0).toFixed(2)}</span>
                         </div>
                       </div>
                     </div>

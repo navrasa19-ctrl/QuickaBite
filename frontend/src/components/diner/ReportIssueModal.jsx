@@ -136,13 +136,13 @@ export default function ReportIssueModal({ isOpen, onClose, order, onSuccess }) 
         <div className="px-6 py-4.5 border-b border-orange-100/80 flex items-center justify-between bg-white/95 backdrop-blur-md shrink-0 shadow-soft">
           <div className="max-w-5xl mx-auto w-full flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="h-10 w-10 bg-orange-100 text-brand-orange rounded-2xl flex items-center justify-center font-black shadow-xs">
-                <HelpCircle className="w-5 h-5 text-brand-orange" />
+              <div className="h-10 w-10 bg-orange-100 text-orange-700 rounded-2xl flex items-center justify-center font-black shadow-xs">
+                <HelpCircle className="w-5 h-5 text-orange-700" />
               </div>
               <div>
                 <h2 className="text-xl md:text-2xl font-display font-black text-neutral-900 flex items-center gap-2">
                   <span>Report Issue for Order</span>
-                  <span className="text-brand-orange font-mono text-lg">#{order?.orderNumber || "QB-0000"}</span>
+                  <span className="text-orange-700 font-mono text-lg">#{order?.orderNumber || "QB-0000"}</span>
                 </h2>
                 <p className="text-xs text-neutral-500 font-medium">
                   Select problem category, view guidance, and submit proof directly to the manager.
@@ -170,7 +170,7 @@ export default function ReportIssueModal({ isOpen, onClose, order, onSuccess }) 
               </div>
               <h3 className="text-2xl font-black text-neutral-900">Ticket Submitted Successfully!</h3>
               <p className="text-sm text-neutral-600 max-w-md mx-auto">
-                Ticket Number: <span className="text-brand-orange font-black">#{submittedTicket.ticketNumber}</span>. Your request has been dispatched to the branch manager.
+                Ticket Number: <span className="text-orange-700 font-black">#{submittedTicket.ticketNumber}</span>. Your request has been dispatched to the branch manager.
               </p>
               <div className="bg-neutral-50 p-5 rounded-2xl text-left max-w-md mx-auto text-xs text-neutral-700 space-y-2 border border-neutral-200/80">
                 <p>• Status: <span className="px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-800 font-extrabold border border-amber-200">PENDING REVIEW</span></p>
@@ -251,7 +251,7 @@ export default function ReportIssueModal({ isOpen, onClose, order, onSuccess }) 
               {/* Automated Answer Guidance */}
               {selectedQuestion?.autoAnswer && (
                 <div className="p-4 bg-orange-50/80 border border-orange-200/90 rounded-2xl space-y-1.5">
-                  <div className="text-xs font-black text-brand-orange flex items-center gap-1.5 uppercase tracking-wider">
+                  <div className="text-xs font-black text-orange-700 flex items-center gap-1.5 uppercase tracking-wider">
                     <HelpCircle className="w-4 h-4" />
                     Support Policy & Guidance:
                   </div>
@@ -285,9 +285,9 @@ export default function ReportIssueModal({ isOpen, onClose, order, onSuccess }) 
                   ))}
 
                   {files.length < 5 && (
-                    <label className="w-20 h-20 rounded-2xl border-2 border-dashed border-neutral-300 hover:border-brand-orange bg-neutral-50 hover:bg-orange-50/50 flex flex-col items-center justify-center cursor-pointer text-neutral-500 hover:text-brand-orange transition-all">
+                    <label className="w-20 h-20 rounded-2xl border-2 border-dashed border-neutral-300 hover:border-brand-orange bg-neutral-50 hover:bg-orange-50/50 flex flex-col items-center justify-center cursor-pointer text-neutral-500 hover:text-orange-700 transition-all">
                       <Upload className="w-5 h-5 mb-1" />
-                      <span className="text-[10px] font-bold">Add Photo</span>
+                      <span className="text-[11px] font-bold">Add Photo</span>
                       <input
                         type="file"
                         accept="image/*"

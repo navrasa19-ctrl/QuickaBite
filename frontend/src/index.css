@@ -1,42 +1,90 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
 @import "tailwindcss";
 
+/* ──────────────────────────────────────────────────────────────────────────
+   Quickaa Bite design tokens (Brand Guidelines v1.0)
+   Primary  #FF6B35  · Dark #182033 · Background #FFF7F0 · Surface #FFFFFF
+   Success  #2E8B57  · Warning #F4B942 · Error #D64545 · Neutral #667085
+   ────────────────────────────────────────────────────────────────────────── */
 @theme {
-  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", Inter, Arial, ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", Inter, Arial, ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
-  
-  /* Redesigning colors: Map brand orange & friends to our premium startup greens */
-  --color-brand-orange: #0B8A3E; /* Primary Green */
-  --color-brand-orange-light: #F3F7F5; /* Secondary Background */
-  --color-brand-dark: #1D1D1D; /* Primary Text */
-  --color-cream-base: #FAFBFC; /* Background */
 
-  /* Override standard orange classes to propagate new green brand color */
-  --color-orange-50: #F3F7F5;
-  --color-orange-100: #E6F0EA;
-  --color-orange-200: #CCE1D5;
-  --color-orange-300: #99C3AA;
-  --color-orange-400: #4D9E6E;
-  --color-orange-500: #0B8A3E; /* Primary Green */
-  --color-orange-600: #0A7D38;
-  --color-orange-700: #05652D; /* Dark Green */
-  --color-orange-800: #044F23;
-  --color-orange-900: #033C1A;
-  --color-orange-950: #011E0D;
+  /* Named brand tokens */
+  --color-brand-orange: #FF6B35;
+  --color-brand-orange-light: #FFF1E9;
+  --color-brand-dark: #182033;
+  --color-cream-base: #FFF7F0;
 
-  /* Red/Yellow accents from palette */
-  --color-red-500: #E53935;
-  --color-red-600: #D32F2F;
-  --color-yellow-500: #FFC107;
-  --color-yellow-600: #FFB300;
-  
-  /* Additional neutral shades */
-  --color-gray-900: #1D1D1D;
-  --color-gray-800: #2D2D2D;
-  --color-gray-600: #666666;
-  --color-gray-400: #A3A3A3;
-  --color-gray-100: #EAEAEA;
+  /* The codebase styles "brand" with the orange-* scale, so the scale is the brand */
+  --color-orange-50: #FFF4EC;
+  --color-orange-100: #FFE6D5;
+  --color-orange-200: #FFCDAE;
+  --color-orange-300: #FFAB7E;
+  --color-orange-400: #FF8855;
+  --color-orange-500: #FF6B35;
+  --color-orange-600: #E8551F;
+  --color-orange-700: #C24418;
+  --color-orange-800: #9A3716;
+  --color-orange-900: #7A2F15;
+  --color-orange-950: #42160A;
+
+  /* Status colours (order workflow: success / pending / failed) */
+  --color-green-50: #EEF8F2;
+  --color-green-100: #D5EEDF;
+  --color-green-200: #AADCBF;
+  --color-green-300: #7AC59A;
+  --color-green-400: #4DAB77;
+  --color-green-500: #2E8B57;
+  --color-green-600: #277A4C;
+  --color-green-700: #1F6340;
+  --color-green-800: #1A4F34;
+  --color-green-900: #143D29;
+  --color-emerald-50: #EEF8F2;
+  --color-emerald-100: #D5EEDF;
+  --color-emerald-200: #AADCBF;
+  --color-emerald-300: #7AC59A;
+  --color-emerald-400: #4DAB77;
+  --color-emerald-500: #2E8B57;
+  --color-emerald-600: #277A4C;
+  --color-emerald-700: #1F6340;
+  --color-emerald-800: #1A4F34;
+  --color-emerald-900: #143D29;
+  --color-red-500: #D64545;
+  --color-red-600: #C13A3A;
+  --color-red-700: #A32F2F;
+  --color-yellow-400: #F7C766;
+  --color-yellow-500: #F4B942;
+  --color-yellow-600: #DDA12A;
+  --color-amber-400: #F4B942;
+
+  /* Navy + neutral text scale */
+  --color-gray-900: #182033;
+  --color-gray-800: #232C42;
+  --color-gray-700: #3A4459;
+  --color-gray-600: #4F596C;
+  --color-gray-500: #667085;
+  --color-gray-400: #98A2B3;
+  --color-gray-300: #D0D5DD;
+  --color-gray-200: #E7E2DC;
+  --color-gray-100: #F1ECE6;
+  --color-gray-50: #FAF6F1;
+  --color-neutral-50: #FBF8F5;
+  --color-neutral-100: #F5F1EC;
+  --color-neutral-200: #E9E3DC;
+  --color-neutral-300: #D6CFC6;
+  --color-neutral-800: #232C42;
+  --color-neutral-900: #182033;
+  --color-neutral-950: #0F1524;
+
+  /* Radius: guideline says 10–14px on cards and buttons */
+  --radius-lg: 10px;
+  --radius-xl: 12px;
+  --radius-2xl: 14px;
+  --radius-3xl: 14px;
+  --radius-4xl: 16px;
+
 }
 
 body {
@@ -45,11 +93,44 @@ body {
   color: var(--color-gray-900);
   -webkit-tap-highlight-color: transparent;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Sentence case for UI labels (brand typography rule) and calmer tracking */
+.uppercase { text-transform: none !important; }
+.tracking-widest, .tracking-wider { letter-spacing: 0.01em !important; }
+
+.font-black { font-weight: 800 !important; }
+
+/* Visible keyboard focus everywhere */
+:focus-visible {
+  outline: 2px solid var(--color-orange-500);
+  outline-offset: 2px;
+}
+
+/* Page container: fills wide laptop screens, still capped on ultra-wide */
+.page-container {
+  width: 100%;
+  max-width: 1680px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+@media (min-width: 640px)  { .page-container { padding-inline: 1.5rem; } }
+@media (min-width: 1024px) { .page-container { padding-inline: 2.5rem; } }
+@media (min-width: 1536px) { .page-container { padding-inline: 3.5rem; } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* Custom rounded corners matching 24px per instructions */
 .rounded-premium {
-  border-radius: 24px;
+  border-radius: 14px;
 }
 
 /* Premium startup glassmorphism */
@@ -73,7 +154,7 @@ body {
 }
 
 .shadow-premium {
-  box-shadow: 0 20px 50px -12px rgba(11, 138, 62, 0.08), 0 10px 24px -8px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 20px 50px -12px rgba(24, 32, 51, 0.08), 0 10px 24px -8px rgba(0, 0, 0, 0.03);
 }
 
 /* Startup glowing button style */
@@ -97,7 +178,7 @@ body {
 }
 
 .btn-glowing:hover {
-  box-shadow: 0 10px 25px -5px rgba(11, 138, 62, 0.35);
+  box-shadow: 0 10px 25px -5px rgba(255, 107, 53, 0.35);
   transform: translateY(-2px);
 }
 
@@ -135,7 +216,7 @@ body {
 
 /* Subtle tech gradient overlay to reinforce modern look */
 .tech-gradient {
-  background: radial-gradient(circle at 50% -20%, rgba(11, 138, 62, 0.06), transparent 60%);
+  background: radial-gradient(circle at 50% -20%, rgba(255, 107, 53, 0.06), transparent 60%);
 }
 
 @keyframes shimmer {
@@ -172,14 +253,14 @@ body {
 }
 
 .pac-item:hover {
-  background-color: #F3F7F5;
-  color: #1D1D1D;
+  background-color: #FFF4EC;
+  color: #182033;
 }
 
 .pac-item-query {
   font-size: 13px;
   font-weight: 700;
-  color: #1D1D1D;
+  color: #182033;
   padding-right: 4px;
 }
 

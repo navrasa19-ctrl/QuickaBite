@@ -183,7 +183,7 @@ export default function ManagerIssueManagementTab({ restaurantId }) {
           <div>
             <h2 className="text-xl md:text-2xl font-display font-black text-neutral-900 flex items-center gap-2">
               <span>Branch Order Issues & Support Tickets</span>
-              <span className="text-xs font-black bg-orange-100 text-brand-orange px-3 py-1 rounded-full border border-orange-200">
+              <span className="text-xs font-black bg-orange-100 text-orange-700 px-3 py-1 rounded-full border border-orange-200">
                 {issues.length} Tickets
               </span>
             </h2>
@@ -228,7 +228,7 @@ export default function ManagerIssueManagementTab({ restaurantId }) {
           <FileText className="h-10 w-10 text-neutral-300 mx-auto mb-2" />
           <p className="text-sm font-black text-neutral-800">No Support Tickets Found</p>
           <p className="text-xs text-neutral-500 font-medium">
-            No claims matched the filter: <span className="text-brand-orange font-bold uppercase">{statusFilter}</span>
+            No claims matched the filter: <span className="text-orange-700 font-bold uppercase">{statusFilter}</span>
           </p>
         </div>
       ) : (
@@ -250,7 +250,7 @@ export default function ManagerIssueManagementTab({ restaurantId }) {
                         {initial}
                       </div>
                       <div>
-                        <span className="text-xs font-black text-brand-orange bg-orange-50 px-2.5 py-0.5 rounded-full border border-orange-100 font-mono">
+                        <span className="text-xs font-black text-orange-700 bg-orange-50 px-2.5 py-0.5 rounded-full border border-orange-100 font-mono">
                           Ticket #{issue.ticketNumber}
                         </span>
                         <p className="text-[11px] font-mono font-bold text-neutral-400 mt-0.5">
@@ -263,7 +263,7 @@ export default function ManagerIssueManagementTab({ restaurantId }) {
 
                   {/* Body Content */}
                   <div className="space-y-2">
-                    <h4 className="text-sm font-black text-neutral-900 group-hover:text-brand-orange transition-colors">
+                    <h4 className="text-sm font-black text-neutral-900 group-hover:text-orange-700 transition-colors">
                       {issue.selectedQuestion}
                     </h4>
                     <p className="text-xs text-neutral-500 font-medium leading-relaxed">
@@ -314,12 +314,12 @@ export default function ManagerIssueManagementTab({ restaurantId }) {
               <div className="max-w-7xl mx-auto w-full flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="h-8 w-8 bg-neutral-950 text-brand-orange rounded-xl flex items-center justify-center font-black shadow-xs">
-                    <FileText className="w-4.5 h-4.5 text-brand-orange" />
+                    <FileText className="w-4.5 h-4.5 text-orange-700" />
                   </div>
                   <div>
                     <h3 className="text-base font-display font-black text-neutral-900 flex items-center gap-2">
                       <span>Inspect Ticket</span>
-                      <span className="text-brand-orange font-mono">#{selectedIssue.ticketNumber}</span>
+                      <span className="text-orange-700 font-mono">#{selectedIssue.ticketNumber}</span>
                     </h3>
                     <p className="text-[10px] text-neutral-500 font-medium hidden sm:block">
                       Order #{selectedIssue.order?.orderNumber || "QB-0000"}
@@ -365,7 +365,7 @@ export default function ManagerIssueManagementTab({ restaurantId }) {
                       </div>
                       <div className="bg-neutral-50 p-3 rounded-2xl border border-neutral-150">
                         <span className="text-neutral-400 font-extrabold uppercase tracking-wider text-[9px] block">Order Financials</span>
-                        <span className="font-black text-brand-orange text-sm block mt-0.5">₹{selectedIssue.order?.totalAmount || 0}</span>
+                        <span className="font-black text-orange-700 text-sm block mt-0.5">₹{selectedIssue.order?.totalAmount || 0}</span>
                         <span className="text-neutral-500 text-[10px] uppercase font-bold block">Status: {selectedIssue.order?.paymentStatus || "PAID"}</span>
                       </div>
                     </div>

@@ -424,7 +424,7 @@ export default function HomePage({
           {setActiveTab && (
             <button
               onClick={() => setActiveTab("offers")}
-              className="text-xs font-black text-brand-orange hover:underline flex items-center gap-1 cursor-pointer"
+              className="text-xs font-black text-orange-700 hover:underline flex items-center gap-1 cursor-pointer"
             >
               <span>View All Offers</span>
               <ChevronRight className="h-4 w-4" />
@@ -472,10 +472,10 @@ export default function HomePage({
 
                 {/* Top Category Badge */}
                 <div className="relative z-10 p-4 flex items-center justify-between">
-                  <span className="bg-white/90 backdrop-blur-md text-gray-900 text-[9px] font-black uppercase tracking-widest px-2.5 py-1 rounded-full shadow-md">
+                  <span className="bg-white/90 backdrop-blur-md text-gray-900 text-[11px] font-black uppercase tracking-widest px-2.5 py-1 rounded-full shadow-md">
                     {coupon.campaignCategory || "PROMO"}
                   </span>
-                  <span className="bg-orange-500/90 text-white backdrop-blur-md text-[9px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full shadow-md border border-orange-400/40">
+                  <span className="bg-orange-500/90 text-white backdrop-blur-md text-[11px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full shadow-md border border-orange-400/40">
                     {coupon.discountLabel || "SPECIAL"}
                   </span>
                 </div>
@@ -492,7 +492,7 @@ export default function HomePage({
                   {/* Bottom Row with Promocode and Small Copy Button */}
                   <div className="flex items-center justify-between pt-3 border-t border-white/20 mt-2">
                     <div className="bg-black/50 backdrop-blur-md px-3 py-1 rounded-xl border border-white/20">
-                      <span className="text-[8px] font-bold text-neutral-400 uppercase tracking-wider block leading-none mb-0.5">
+                      <span className="text-[11px] font-bold text-neutral-400 uppercase tracking-wider block leading-none mb-0.5">
                         Code
                       </span>
                       <span className="font-mono font-black text-xs sm:text-sm text-amber-400 uppercase tracking-wider">
@@ -507,7 +507,7 @@ export default function HomePage({
                         navigator.clipboard.writeText(code);
                         triggerToast(`Coupon code '${code}' copied!`);
                       }}
-                      className="px-2.5 py-1.5 bg-orange-500 hover:bg-orange-600 text-white rounded-lg text-[9px] font-black uppercase tracking-wider transition cursor-pointer flex items-center gap-1 shadow-md shadow-orange-500/30 border border-orange-400/50"
+                      className="px-2.5 py-1.5 bg-orange-500 hover:bg-orange-600 text-white rounded-lg text-[11px] font-black uppercase tracking-wider transition cursor-pointer flex items-center gap-1 shadow-md shadow-orange-500/30 border border-orange-400/50"
                       title="Copy Coupon Code"
                     >
                       <Ticket className="h-3 w-3" />
@@ -611,7 +611,7 @@ export default function HomePage({
                         className="w-full h-full object-cover rounded-full transition-transform duration-500 group-hover:rotate-2"
                       />
                       {isSelected && (
-                        <span className="absolute bottom-1 right-1 bg-brand-orange text-white text-[10px] font-black h-6 w-6 rounded-full flex items-center justify-center border-2 border-white shadow-md">
+                        <span className="absolute bottom-1 right-1 bg-brand-orange text-white text-[11px] font-black h-6 w-6 rounded-full flex items-center justify-center border-2 border-white shadow-md">
                           ✓
                         </span>
                       )}
@@ -619,7 +619,7 @@ export default function HomePage({
 
                     {/* Label */}
                     <span
-                      className={`text-xs sm:text-sm font-extrabold tracking-tight transition-colors ${isSelected ? "text-brand-orange" : "text-gray-700 group-hover:text-gray-900"
+                      className={`text-xs sm:text-sm font-extrabold tracking-tight transition-colors ${isSelected ? "text-orange-700" : "text-gray-700 group-hover:text-gray-900"
                         }`}
                     >
                       {item.label}
@@ -707,11 +707,11 @@ export default function HomePage({
 
                   {/* Details */}
                   <div className="p-3.5 space-y-1">
-                    <h4 className="font-display font-extrabold text-base text-gray-900 truncate group-hover:text-brand-orange transition">
+                    <h4 className="font-display font-extrabold text-base text-gray-900 truncate group-hover:text-orange-700 transition">
                       {res.name}
                     </h4>
                     <div className="flex items-center gap-1.5 text-xs font-bold text-gray-800">
-                      <span className="flex items-center gap-0.5 bg-emerald-600 text-white px-1.5 py-0.5 rounded text-[10px] font-black">
+                      <span className="flex items-center gap-0.5 bg-emerald-600 text-white px-1.5 py-0.5 rounded text-[11px] font-black">
                         ★ {ratingDisplay}
                       </span>
                       <span>•</span>
@@ -744,7 +744,7 @@ export default function HomePage({
           {reelsList && reelsList.length > 0 && (
             <button
               onClick={() => setActiveReelId(reelsList[0].id || reelsList[0]._id)}
-              className="flex items-center gap-1 text-xs font-black text-brand-orange hover:underline cursor-pointer"
+              className="flex items-center gap-1 text-xs font-black text-orange-700 hover:underline cursor-pointer"
             >
               <span>See All</span>
               <ChevronRight className="h-3.5 w-3.5" />
@@ -758,18 +758,8 @@ export default function HomePage({
           id="reels-scroller"
         >
           {displayReels.map((reel, idx) => {
-            /* Cycle through vibrant gradient overlays */
-            const OVERLAYS = [
-              "from-orange-900/90 via-orange-700/40 to-transparent",
-              "from-pink-900/90 via-pink-700/40 to-transparent",
-              "from-teal-900/90 via-teal-700/40 to-transparent",
-              "from-red-900/90 via-red-700/40 to-transparent",
-              "from-yellow-900/90 via-yellow-700/40 to-transparent",
-              "from-purple-900/90 via-purple-700/40 to-transparent",
-              "from-amber-900/90 via-amber-700/40 to-transparent",
-              "from-sky-900/90 via-sky-700/40 to-transparent",
-            ];
-            const overlay = OVERLAYS[idx % OVERLAYS.length];
+            /* One navy scrim for every reel keeps the cards on-brand */
+            const overlay = "from-brand-dark/90 via-brand-dark/35 to-transparent";
 
             return (
               <div
@@ -792,14 +782,14 @@ export default function HomePage({
                 {/* Top row: tag badge + play button */}
                 <div className="absolute top-3 left-3 right-3 flex items-start justify-between z-10">
                   {reel.tag && (
-                    <span className={`${reel.tagColor || "bg-red-500"} text-white text-[9px] font-black px-2 py-0.5 rounded-full uppercase tracking-wide shadow-md`}>
+                    <span className={`bg-brand-orange text-white text-[11px] font-black px-2 py-0.5 rounded-full uppercase tracking-wide shadow-md`}>
                       {reel.tag}
                     </span>
                   )}
                   {/* Animated play icon */}
                   <div className="relative h-8 w-8 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center shadow-md group-hover:bg-white/35 transition ml-auto shrink-0">
                     <span className="text-white text-xs ml-0.5">▶</span>
-                    <span className="absolute inset-0 rounded-full border-2 border-white/50 animate-ping opacity-40" />
+                    
                   </div>
                 </div>
 
@@ -807,10 +797,10 @@ export default function HomePage({
                 <div className="absolute bottom-0 left-0 right-0 p-3 z-10 space-y-2">
                   {/* Restaurant logo + name */}
                   <div className="flex items-center gap-2">
-                    <div className={`h-7 w-7 rounded-full bg-gradient-to-br ${reel.logoColor || "from-orange-500 to-red-500"} flex items-center justify-center text-white text-[9px] font-black shadow-md border-2 border-white/30 shrink-0`}>
+                    <div className={`h-7 w-7 rounded-full bg-brand-orange flex items-center justify-center text-white text-[11px] font-black shadow-md border-2 border-white/30 shrink-0`}>
                       {reel.logo}
                     </div>
-                    <span className="text-white/90 text-[10px] font-bold truncate leading-tight">
+                    <span className="text-white/90 text-[11px] font-bold truncate leading-tight">
                       {reel.restaurantName}
                     </span>
                   </div>
@@ -823,12 +813,12 @@ export default function HomePage({
                   {/* Rating + delivery time */}
                   <div className="flex items-center gap-2">
                     {reel.rating && (
-                      <span className="flex items-center gap-0.5 bg-black/30 backdrop-blur-sm text-white text-[9px] font-black px-1.5 py-0.5 rounded-md">
+                      <span className="flex items-center gap-0.5 bg-black/30 backdrop-blur-sm text-white text-[11px] font-black px-1.5 py-0.5 rounded-md">
                         ⭐ {reel.rating}
                       </span>
                     )}
                     {reel.deliveryTime && (
-                      <span className="flex items-center gap-0.5 bg-black/30 backdrop-blur-sm text-white text-[9px] font-black px-1.5 py-0.5 rounded-md">
+                      <span className="flex items-center gap-0.5 bg-black/30 backdrop-blur-sm text-white text-[11px] font-black px-1.5 py-0.5 rounded-md">
                         🕐 {reel.deliveryTime}
                       </span>
                     )}
@@ -836,7 +826,7 @@ export default function HomePage({
 
                   {/* Offer badge */}
                   {reel.offer && (
-                    <span className={`${reel.offerColor || "bg-orange-500"} text-white text-[9px] font-black px-2 py-0.5 rounded-md uppercase tracking-wide inline-block shadow-sm`}>
+                    <span className={`${reel.offerColor || "bg-orange-500"} text-white text-[11px] font-black px-2 py-0.5 rounded-md uppercase tracking-wide inline-block shadow-sm`}>
                       🏷 {reel.offer}
                     </span>
                   )}
@@ -847,7 +837,7 @@ export default function HomePage({
                       e.stopPropagation();
                       setActiveReelId(reel.id || reel._id);
                     }}
-                    className="w-full bg-white text-gray-900 font-extrabold text-[10px] py-2 rounded-xl shadow-md hover:bg-orange-500 hover:text-white active:scale-95 transition-all duration-200 cursor-pointer text-center block mt-1"
+                    className="w-full bg-white text-gray-900 font-extrabold text-[11px] py-2 rounded-xl shadow-md hover:bg-orange-500 hover:text-white active:scale-95 transition-all duration-200 cursor-pointer text-center block mt-1"
                   >
                     Order Now →
                   </button>
@@ -888,7 +878,7 @@ export default function HomePage({
         {/* Empty State when no restaurants deliver to location */}
         {activeRestaurantsList.length === 0 && (
           <div className="bg-white p-10 rounded-3xl border border-neutral-100 text-center space-y-3 my-6 shadow-sm">
-            <div className="h-16 w-16 bg-orange-50 rounded-2xl flex items-center justify-center mx-auto text-brand-orange">
+            <div className="h-16 w-16 bg-orange-50 rounded-2xl flex items-center justify-center mx-auto text-orange-700">
               <MapPin className="h-8 w-8 animate-bounce" />
             </div>
             <h4 className="font-display font-black text-lg text-gray-900">
@@ -969,7 +959,7 @@ export default function HomePage({
                   No dishes currently available for the selected category. Try selecting "All Cuisines" or clearing active filters.
                 </div>
               ) : (
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-5">
                   {displayDishes.map((dish, i) => {
                     const isDishFav = (favoriteDishes || []).some(
                       (fId) => String(fId) === String(dish.id) || String(fId) === String(dish._id)
@@ -1006,14 +996,14 @@ export default function HomePage({
                                 className={`h-2 w-2 rounded-full ${dish.isVeg ? "bg-emerald-500" : "bg-red-500"
                                   }`}
                               />
-                              <span className="text-[9px] font-black uppercase text-gray-700">
+                              <span className="text-[11px] font-black uppercase text-gray-700">
                                 {dish.isVeg ? "VEG" : "NON-VEG"}
                               </span>
                             </div>
 
                             {/* Bestseller ribbon */}
                             {dish.isBestseller && (
-                              <span className="absolute bottom-2.5 left-2.5 bg-amber-500 text-white text-[9px] font-black px-2 py-0.5 rounded-md uppercase shadow-xs">
+                              <span className="absolute bottom-2.5 left-2.5 bg-amber-500 text-white text-[11px] font-black px-2 py-0.5 rounded-md uppercase shadow-xs">
                                 ⭐ BESTSELLER
                               </span>
                             )}
@@ -1041,7 +1031,7 @@ export default function HomePage({
 
                           {/* Content details */}
                           <div className="p-3.5 space-y-1">
-                            <h4 className="font-display font-black text-sm sm:text-base text-gray-900 line-clamp-1 group-hover:text-brand-orange transition">
+                            <h4 className="font-display font-black text-sm sm:text-base text-gray-900 line-clamp-1 group-hover:text-orange-700 transition">
                               {dish.name}
                             </h4>
                             <p className="text-xs text-gray-400 font-semibold truncate">
@@ -1103,49 +1093,49 @@ export default function HomePage({
         id="value-props-bar"
       >
         <div className="flex items-center gap-3">
-          <div className="h-10 w-10 rounded-full bg-orange-50 text-brand-orange flex items-center justify-center shrink-0">
+          <div className="h-10 w-10 rounded-full bg-orange-50 text-orange-700 flex items-center justify-center shrink-0">
             <MapPin className="h-5 w-5" />
           </div>
           <div>
             <h4 className="font-bold text-gray-800 text-xs">
               Live Order Tracking
             </h4>
-            <p className="text-[10px] text-gray-400 mt-0.5">
+            <p className="text-[11px] text-gray-400 mt-0.5">
               Track your order in real-time
             </p>
           </div>
         </div>
         <div className="flex items-center gap-3">
-          <div className="h-10 w-10 rounded-full bg-orange-50 text-brand-orange flex items-center justify-center shrink-0">
+          <div className="h-10 w-10 rounded-full bg-orange-50 text-orange-700 flex items-center justify-center shrink-0">
             <Zap className="h-5 w-5" />
           </div>
           <div>
             <h4 className="font-bold text-gray-800 text-xs">
               Superfast Delivery
             </h4>
-            <p className="text-[10px] text-gray-400 mt-0.5">
+            <p className="text-[11px] text-gray-400 mt-0.5">
               On-time or it is completely free
             </p>
           </div>
         </div>
         <div className="flex items-center gap-3">
-          <div className="h-10 w-10 rounded-full bg-orange-50 text-brand-orange flex items-center justify-center shrink-0">
+          <div className="h-10 w-10 rounded-full bg-orange-50 text-orange-700 flex items-center justify-center shrink-0">
             <ShieldCheck className="h-5 w-5" />
           </div>
           <div>
             <h4 className="font-bold text-gray-800 text-xs">Best Quality</h4>
-            <p className="text-[10px] text-gray-400 mt-0.5">
+            <p className="text-[11px] text-gray-400 mt-0.5">
               100% gourmet hygienic standards
             </p>
           </div>
         </div>
         <div className="flex items-center gap-3">
-          <div className="h-10 w-10 rounded-full bg-orange-50 text-brand-orange flex items-center justify-center shrink-0">
+          <div className="h-10 w-10 rounded-full bg-orange-50 text-orange-700 flex items-center justify-center shrink-0">
             <MessageSquare className="h-5 w-5" />
           </div>
           <div>
             <h4 className="font-bold text-gray-800 text-xs">24/7 Support</h4>
-            <p className="text-[10px] text-gray-400 mt-0.5">
+            <p className="text-[11px] text-gray-400 mt-0.5">
               Dedicated experts ready to assist
             </p>
           </div>

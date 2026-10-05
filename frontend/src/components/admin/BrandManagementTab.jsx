@@ -255,7 +255,7 @@ export default function BrandManagementTab({ orders, triggerToast, managerOutlet
       >
         {/* Metric 1: Total Brands Count */}
         <div className="bg-white p-4 rounded-2xl border border-orange-100 shadow-soft flex items-center gap-4">
-          <div className="h-10 w-10 bg-orange-50 text-brand-orange rounded-xl flex items-center justify-center">
+          <div className="h-10 w-10 bg-orange-50 text-orange-700 rounded-xl flex items-center justify-center">
             <ChefHat className="h-5 w-5" />
           </div>
           <div>
@@ -379,7 +379,7 @@ export default function BrandManagementTab({ orders, triggerToast, managerOutlet
                         Orders
                       </span>
                       <span className="text-xs font-black text-gray-800 font-mono flex items-center justify-center gap-0.5">
-                        <ShoppingBag className="h-3 w-3 text-brand-orange" />
+                        <ShoppingBag className="h-3 w-3 text-orange-700" />
                         <span>{brandOrdersCount}</span>
                       </span>
                     </div>
@@ -459,9 +459,9 @@ export default function BrandManagementTab({ orders, triggerToast, managerOutlet
             <div>
               <h4 className="font-display font-black text-base text-gray-900 uppercase tracking-wider flex items-center gap-1.5">
                 {editingBrand ? (
-                  <Edit className="h-5 w-5 text-brand-orange" />
+                  <Edit className="h-5 w-5 text-orange-700" />
                 ) : (
-                  <FolderPlus className="h-5 w-5 text-brand-orange" />
+                  <FolderPlus className="h-5 w-5 text-orange-700" />
                 )}
                 <span>
                   {editingBrand
@@ -625,14 +625,14 @@ export default function BrandManagementTab({ orders, triggerToast, managerOutlet
                             type="checkbox"
                             checked={isChecked}
                             onChange={() => handleToggleRestaurantSelection(restId)}
-                            className="rounded text-brand-orange focus:ring-brand-orange h-4 w-4"
+                            className="rounded text-orange-700 focus:ring-brand-orange h-4 w-4"
                           />
                           <div>
                             <span className="block font-semibold">{rest.name || "Kitchen Outlet"}</span>
                             <span className="text-[9px] text-gray-400 block">{rest.city || "Jaipur"}</span>
                           </div>
                         </div>
-                        {isChecked && <span className="text-[10px] font-black text-brand-orange uppercase">Selected</span>}
+                        {isChecked && <span className="text-[10px] font-black text-orange-700 uppercase">Selected</span>}
                       </label>
                     );
                   })

@@ -67,7 +67,7 @@ export default function LandingLoader({ onComplete }) {
 
         {/* Loading text status indicator */}
         <div className="mt-10 flex items-center justify-center">
-          <p className="text-[#00712D] font-display font-black text-xs sm:text-sm tracking-[0.25em] uppercase animate-pulse">
+          <p className="text-[#FF6B35] font-display font-black text-xs sm:text-sm tracking-[0.25em] uppercase animate-pulse">
             Loading...
           </p>
         </div>
@@ -76,7 +76,7 @@ export default function LandingLoader({ onComplete }) {
         <div className="w-56 sm:w-64 h-1 bg-neutral-100 border border-neutral-200/50 rounded-full overflow-hidden mt-4 relative">
           {/* Fill indicator */}
           <motion.div
-            className="h-full bg-gradient-to-r from-[#00712D] via-emerald-600 to-[#00712D] rounded-full"
+            className="h-full bg-gradient-to-r from-[#FF6B35] via-emerald-600 to-[#FF6B35] rounded-full"
             style={{ width: `${progress}%` }}
           />
           {/* Subtle light shimmer sweep across progress bar */}
@@ -84,15 +84,15 @@ export default function LandingLoader({ onComplete }) {
         </div>
 
         {/* Progress Percentage Display */}
-        <span className="text-[10px] font-mono font-bold text-neutral-400 mt-2.5 tracking-wider">
+        <span className="text-[11px] font-mono font-bold text-neutral-400 mt-2.5 tracking-wider">
           {Math.round(progress)}%
         </span>
       </div>
 
       {/* Footer Branding */}
       <div className="absolute bottom-8 left-0 right-0 text-center pointer-events-none z-10">
-        <p className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-neutral-400 font-bold">
-          © 2026 QuickaBite ae • Quick, Tasty & Always Fresh
+        <p className="text-[11px] sm:text-xs uppercase tracking-[0.2em] text-neutral-400 font-bold">
+          © 2026 Quickaa Bite • Quick, tasty and always fresh
         </p>
       </div>
     </motion.div>

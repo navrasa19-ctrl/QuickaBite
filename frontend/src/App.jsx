@@ -17,7 +17,6 @@ import HomePage from "./components/diner/HomePage";
 import CloudKitchenSection from "./components/diner/CloudKitchenSection";
 import BottomNavbar from "./components/common/BottomNavbar";
 import CartConflictModal from "./components/diner/CartConflictModal";
-import FloatingDecorations from "./components/common/FloatingDecorations";
 import LandingLoader from "./components/common/LandingLoader";
 
 // Lazy-loaded page view components & heavy overlays
@@ -820,11 +819,10 @@ function AppContent() {
         )}
       </AnimatePresence>
       <div
-        className={`min-h-screen flex flex-col font-sans relative overflow-x-hidden ${(userRole === "admin" || userRole === "manager" || activeTab === "admin" || activeTab === "manager") ? "pb-0 bg-neutral-100" : "bg-cream-base pb-32 sm:pb-20"}`}
+        className={`min-h-screen flex flex-col font-sans relative overflow-x-hidden ${(userRole === "admin" || userRole === "manager" || activeTab === "admin" || activeTab === "manager") ? "pb-0 bg-neutral-100" : "bg-cream-base pb-28 xl:pb-12"}`}
         id="main-globaleats-app"
       >
         {/* Decorative floating spices/ingredients and herb illustrations in background */}
-        <FloatingDecorations />
 
         {/* 1. Global Navigation Bar */}
         <Navbar
@@ -850,15 +848,15 @@ function AppContent() {
 
         {/* GPS Permission Warning / Location Banner */}
         {isGpsDenied && activeTab === "home" && userRole !== "admin" && userRole !== "manager" && (
-          <div className="bg-neutral-900 text-neutral-300 text-xs px-4 py-2.5 text-center font-medium border-b border-neutral-800 flex items-center justify-center gap-2">
-            <span className="h-2 w-2 rounded-full bg-amber-400 animate-pulse shrink-0" />
+          <div className="hidden md:flex bg-amber-50 text-amber-900 text-sm px-4 py-2 text-center font-medium border-b border-amber-200 items-center justify-center gap-2">
+            <span className="h-2 w-2 rounded-full bg-amber-500 shrink-0" />
             <span>Showing all restaurants. Enable location permission to see outlets that deliver to you.</span>
           </div>
         )}
 
         {/* Main Core View Area */}
         <main
-          className={`flex-1 w-full relative ${(userRole === "admin" || userRole === "manager" || activeTab === "admin" || activeTab === "manager") ? "max-w-none px-0 py-0" : "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6"}`}
+          className={`flex-1 w-full relative ${(userRole === "admin" || userRole === "manager" || activeTab === "admin" || activeTab === "manager") ? "max-w-none px-0 py-0" : "page-container py-5 sm:py-6 lg:py-8"}`}
           id="viewports-stage"
         >
           <Suspense fallback={
@@ -1197,7 +1195,7 @@ function AppContent() {
             className="fixed bottom-20 left-1/2 -translate-x-1/2 z-[9999] bg-gray-900 text-white font-bold text-xs px-5 py-3.5 rounded-full shadow-2xl flex items-center gap-2 border border-gray-800 animate-slide-up"
             id="toast-banner"
           >
-            <span className="text-brand-orange text-sm font-black">✦</span>
+            <span className="text-orange-700 text-sm font-black">✦</span>
             <span>{toast}</span>
           </div>
         )}

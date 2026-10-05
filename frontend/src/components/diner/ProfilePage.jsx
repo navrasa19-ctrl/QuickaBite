@@ -430,14 +430,14 @@ export default function ProfilePage({
 
   return (
     <div
-      className="max-w-6xl mx-auto py-6 px-4 animate-fade-in"
+      className="max-w-[1400px] mx-auto py-1 animate-fade-in"
       id="profile-page-main"
     >
       {/* Top Welcome Title */}
       <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-8 border-b border-gray-100 pb-6 bg-white p-6 sm:p-8 rounded-3xl shadow-xs">
         <div className="flex flex-col sm:flex-row items-center gap-5 text-center sm:text-left">
           <div className="relative group">
-            <div className="h-20 w-20 bg-orange-100 border-2 border-brand-orange text-brand-orange text-2xl font-black rounded-full flex items-center justify-center shadow-md shrink-0 transition group-hover:scale-105">
+            <div className="h-20 w-20 bg-orange-100 border-2 border-brand-orange text-orange-700 text-2xl font-black rounded-full flex items-center justify-center shadow-md shrink-0 transition group-hover:scale-105">
               {profile.name
                 .split(" ")
                 .map((n) => n[0])
@@ -452,7 +452,7 @@ export default function ProfilePage({
               <h2 className="font-display font-black text-2xl text-gray-900 tracking-tight">
                 {profile.name}
               </h2>
-              <span className="bg-emerald-50 text-emerald-700 border border-emerald-200 text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full flex items-center gap-0.5">
+              <span className="bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full flex items-center gap-0.5">
                 <span>{profile.tier}</span>
               </span>
             </div>
@@ -519,7 +519,7 @@ export default function ProfilePage({
                 </div>
                 {item.count !== void 0 && item.count > 0 && (
                   <span
-                    className={`text-[10px] px-2 py-0.5 rounded-full font-black ${isActive ? "bg-white text-brand-orange" : "bg-gray-200/80 text-gray-700"}`}
+                    className={`text-[11px] px-2 py-0.5 rounded-full font-black ${isActive ? "bg-white text-orange-700" : "bg-gray-200/80 text-gray-700"}`}
                   >
                     {item.count}
                   </span>
@@ -548,7 +548,7 @@ export default function ProfilePage({
                   <div className="space-y-6">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                       <div className="space-y-1 bg-neutral-50/50 p-4 rounded-2xl border border-gray-50">
-                        <span className="text-[10px] font-black uppercase text-gray-400 tracking-wider">
+                        <span className="text-[11px] font-black uppercase text-gray-400 tracking-wider">
                           Full Name
                         </span>
                         <p className="font-extrabold text-gray-800 text-sm">
@@ -557,7 +557,7 @@ export default function ProfilePage({
                       </div>
 
                       <div className="space-y-1 bg-neutral-50/50 p-4 rounded-2xl border border-gray-50">
-                        <span className="text-[10px] font-black uppercase text-gray-400 tracking-wider">
+                        <span className="text-[11px] font-black uppercase text-gray-400 tracking-wider">
                           Email Address
                         </span>
                         <p className="font-extrabold text-gray-800 text-sm">
@@ -566,7 +566,7 @@ export default function ProfilePage({
                       </div>
 
                       <div className="space-y-1 bg-neutral-50/50 p-4 rounded-2xl border border-gray-50">
-                        <span className="text-[10px] font-black uppercase text-gray-400 tracking-wider">
+                        <span className="text-[11px] font-black uppercase text-gray-400 tracking-wider">
                           Phone Number
                         </span>
                         <p className="font-extrabold text-gray-800 text-sm">
@@ -575,10 +575,10 @@ export default function ProfilePage({
                       </div>
 
                       <div className="space-y-1 bg-neutral-50/50 p-4 rounded-2xl border border-gray-50">
-                        <span className="text-[10px] font-black uppercase text-gray-400 tracking-wider">
+                        <span className="text-[11px] font-black uppercase text-gray-400 tracking-wider">
                           Gourmet Membership Tier
                         </span>
-                        <p className="font-extrabold text-brand-orange text-sm flex items-center gap-1.5">
+                        <p className="font-extrabold text-orange-700 text-sm flex items-center gap-1.5">
                           <Award className="h-4 w-4 animate-bounce" />
                           {profile.tier}
                         </p>
@@ -716,14 +716,14 @@ export default function ProfilePage({
                   >
                     <div className="flex justify-between items-center pb-2 border-b border-neutral-200/50">
                       <h4 className="font-display font-black text-sm text-gray-800 flex items-center gap-2">
-                        <MapIcon className="h-4 w-4 text-brand-orange animate-bounce" />
+                        <MapIcon className="h-4 w-4 text-orange-700 animate-bounce" />
                         <span>
                           {editingAddrId
                             ? "Edit Delivery Destination"
                             : "Add New Delivery Destination"}
                         </span>
                       </h4>
-                      <span className="text-[10px] font-mono font-bold bg-neutral-200/70 text-neutral-600 px-2.5 py-1 rounded-md">
+                      <span className="text-[11px] font-mono font-bold bg-neutral-200/70 text-neutral-600 px-2.5 py-1 rounded-md">
                         Lat: {newAddrLat.toFixed(4)} • Lng:{" "}
                         {newAddrLng.toFixed(4)}
                       </span>
@@ -836,13 +836,13 @@ export default function ProfilePage({
                             onChange={(e) =>
                               setNewAddrIsDefault(e.target.checked)
                             }
-                            className="h-4 w-4 rounded-md border-gray-300 text-brand-orange focus:ring-brand-orange"
+                            className="h-4 w-4 rounded-md border-gray-300 text-orange-700 focus:ring-brand-orange"
                           />
                           <div className="flex flex-col">
                             <span className="text-xs font-black text-gray-700">
                               Set as default address
                             </span>
-                            <span className="text-[10px] text-gray-400">
+                            <span className="text-[11px] text-gray-400">
                               Use this address automatically for future orders
                             </span>
                           </div>
@@ -885,19 +885,19 @@ export default function ProfilePage({
                         >
                           <div className="flex items-start gap-3.5">
                             <div
-                              className={`p-3 rounded-xl shrink-0 ${addr.isDefault ? "bg-orange-100 text-brand-orange" : "bg-neutral-100 text-neutral-500"}`}
+                              className={`p-3 rounded-xl shrink-0 ${addr.isDefault ? "bg-orange-100 text-orange-700" : "bg-neutral-100 text-neutral-500"}`}
                             >
                               <MapPin className="h-5 w-5" />
                             </div>
                             <div className="space-y-1">
                               <div className="flex items-center gap-2 flex-wrap">
-                                <span className="bg-neutral-800 text-white font-mono text-[9px] font-black uppercase px-2.5 py-0.5 rounded-full tracking-wider">
+                                <span className="bg-neutral-800 text-white font-mono text-[11px] font-black uppercase px-2.5 py-0.5 rounded-full tracking-wider">
                                   {addr.label === "Other" && addr.tagName
                                     ? addr.tagName
                                     : addr.label}
                                 </span>
                                 {addr.isDefault && (
-                                  <span className="bg-emerald-100 text-emerald-800 font-bold text-[9px] px-2 py-0.5 rounded-full flex items-center gap-1">
+                                  <span className="bg-emerald-100 text-emerald-800 font-bold text-[11px] px-2 py-0.5 rounded-full flex items-center gap-1">
                                     <CheckCircle2 className="h-3 w-3" />
                                     <span>Default Address</span>
                                   </span>
@@ -908,10 +908,10 @@ export default function ProfilePage({
                               </p>
 
                               <div className="flex items-center gap-4 pt-1 flex-wrap">
-                                <p className="text-[10px] text-gray-400 font-medium font-mono">
+                                <p className="text-[11px] text-gray-400 font-medium font-mono">
                                   📞 Recipient: {addr.contact}
                                 </p>
-                                <p className="text-[10px] text-gray-400 font-mono flex items-center gap-0.5">
+                                <p className="text-[11px] text-gray-400 font-mono flex items-center gap-0.5">
                                   <Navigation className="h-3 w-3" />
                                   <span>
                                     {addr.lat.toFixed(4)}, {addr.lng.toFixed(4)}
@@ -925,7 +925,7 @@ export default function ProfilePage({
                             {!addr.isDefault && (
                               <button
                                 onClick={() => makeAddressDefault(addr.id)}
-                                className="cursor-pointer text-[10px] font-extrabold text-brand-orange hover:text-white hover:bg-brand-orange border border-brand-orange/20 hover:border-transparent px-3 py-1.5 rounded-xl transition"
+                                className="cursor-pointer text-[11px] font-extrabold text-brand-orange hover:text-white hover:bg-brand-orange border border-brand-orange/20 hover:border-transparent px-3 py-1.5 rounded-xl transition"
                                 title="Set as default address"
                               >
                                 Use Default
@@ -933,7 +933,7 @@ export default function ProfilePage({
                             )}
                             <button
                               onClick={() => startEditAddress(addr)}
-                              className="cursor-pointer text-gray-400 hover:text-brand-orange p-2 rounded-xl hover:bg-neutral-50 transition"
+                              className="cursor-pointer text-gray-400 hover:text-orange-700 p-2 rounded-xl hover:bg-neutral-50 transition"
                               title="Edit address and pin location"
                             >
                               <Edit3 className="h-4 w-4" />
@@ -963,7 +963,7 @@ export default function ProfilePage({
                         <p className="text-gray-400 text-xs font-bold">
                           Your address book is empty.
                         </p>
-                        <p className="text-gray-300 text-[10px]">
+                        <p className="text-gray-300 text-[11px]">
                           Add your delivery destination to start placing orders
                         </p>
                       </div>
@@ -1115,7 +1115,7 @@ export default function ProfilePage({
                       >
                         <div className="flex items-center gap-4">
                           <div
-                            className={`p-3 rounded-xl font-mono text-[10px] font-black uppercase text-white shadow-xs ${pay.type === "Visa" ? "bg-neutral-950" : "bg-rose-950"}`}
+                            className={`p-3 rounded-xl font-mono text-[11px] font-black uppercase text-white shadow-xs ${pay.type === "Visa" ? "bg-neutral-950" : "bg-rose-950"}`}
                           >
                             {pay.type}
                           </div>
@@ -1126,7 +1126,7 @@ export default function ProfilePage({
                             <p className="text-xs font-mono text-gray-500 mt-0.5">
                               {pay.number}
                             </p>
-                            <p className="text-[10px] text-gray-400">
+                            <p className="text-[11px] text-gray-400">
                               Expires: {pay.expiry}
                             </p>
                           </div>
@@ -1195,14 +1195,14 @@ export default function ProfilePage({
                           className="flex items-center justify-between gap-4 p-3 bg-white rounded-2xl border border-gray-50"
                         >
                           <div className="flex items-center gap-3">
-                            <div className="text-brand-orange bg-orange-50 p-2 rounded-xl">
+                            <div className="text-orange-700 bg-orange-50 p-2 rounded-xl">
                               <Icon className="h-4.5 w-4.5" />
                             </div>
                             <div>
                               <p className="text-xs font-extrabold text-gray-800">
                                 {pref.label}
                               </p>
-                              <p className="text-[10px] text-gray-400 leading-snug mt-0.5">
+                              <p className="text-[11px] text-gray-400 leading-snug mt-0.5">
                                 {pref.desc}
                               </p>
                             </div>
@@ -1252,7 +1252,7 @@ export default function ProfilePage({
                           <p className="text-[11px] text-gray-500 leading-relaxed">
                             {alert.desc}
                           </p>
-                          <span className="text-[9px] text-gray-400 block font-medium">
+                          <span className="text-[11px] text-gray-400 block font-medium">
                             {alert.time}
                           </span>
                         </div>
@@ -1285,7 +1285,7 @@ export default function ProfilePage({
                   <div className="relative z-10 space-y-6">
                     <div className="flex items-center justify-between">
                       <div className="space-y-1">
-                        <span className="bg-brand-orange text-white text-[9px] font-black uppercase tracking-widest px-2.5 py-1 rounded-full">
+                        <span className="bg-brand-orange text-white text-[11px] font-black uppercase tracking-widest px-2.5 py-1 rounded-full">
                           Member VIP Level 3
                         </span>
                         <h4 className="font-display font-black text-xl tracking-tight text-white pt-1">
@@ -1293,16 +1293,16 @@ export default function ProfilePage({
                         </h4>
                       </div>
                       <div className="h-10 w-10 bg-white/10 rounded-xl flex items-center justify-center border border-white/10">
-                        <Award className="h-6 w-6 text-brand-orange animate-spin-slow" />
+                        <Award className="h-6 w-6 text-orange-700 animate-spin-slow" />
                       </div>
                     </div>
 
                     <div className="grid grid-cols-2 gap-4 border-t border-white/10 pt-5">
                       <div>
-                        <p className="text-[10px] text-gray-400 uppercase tracking-wider">
+                        <p className="text-[11px] text-gray-400 uppercase tracking-wider">
                           Loyalty Points Balance
                         </p>
-                        <p className="font-display font-black text-2xl text-brand-orange pt-1">
+                        <p className="font-display font-black text-2xl text-orange-700 pt-1">
                           1,250{" "}
                           <span className="text-xs text-white font-medium">
                             pts
@@ -1311,7 +1311,7 @@ export default function ProfilePage({
                       </div>
 
                       <div>
-                        <p className="text-[10px] text-gray-400 uppercase tracking-wider">
+                        <p className="text-[11px] text-gray-400 uppercase tracking-wider">
                           Active Ordering Streak
                         </p>
                         <p className="font-display font-black text-2xl text-amber-400 pt-1 flex items-center gap-1.5">
@@ -1323,7 +1323,7 @@ export default function ProfilePage({
 
                     {/* Progress milestone */}
                     <div className="space-y-2 pt-2">
-                      <div className="flex justify-between text-[10px] text-gray-400">
+                      <div className="flex justify-between text-[11px] text-gray-400">
                         <span>Next Tier: Ultimate Diner (1,500 pts)</span>
                         <span>83% Completed</span>
                       </div>
@@ -1362,16 +1362,16 @@ export default function ProfilePage({
                         className="border border-dashed border-gray-250 bg-neutral-50/50 rounded-2xl p-4 flex items-center justify-between gap-4 relative overflow-hidden"
                       >
                         <div className="space-y-1">
-                          <span className="bg-brand-orange/10 text-brand-orange font-black text-[9px] px-2 py-0.5 rounded-full uppercase tracking-wider">
+                          <span className="bg-brand-orange/10 text-orange-700 font-black text-[11px] px-2 py-0.5 rounded-full uppercase tracking-wider">
                             {voucher.discount}
                           </span>
                           <h5 className="font-mono font-black text-sm text-gray-800 pt-1">
                             {voucher.code}
                           </h5>
-                          <p className="text-[10px] text-gray-400">
+                          <p className="text-[11px] text-gray-400">
                             {voucher.desc}
                           </p>
-                          <span className="text-[9px] text-gray-400 block pt-1 italic">
+                          <span className="text-[11px] text-gray-400 block pt-1 italic">
                             Expires {voucher.expires}
                           </span>
                         </div>
@@ -1381,7 +1381,7 @@ export default function ProfilePage({
                             navigator.clipboard.writeText(voucher.code);
                             triggerToast(`Copied coupon ${voucher.code}!`);
                           }}
-                          className="bg-white hover:bg-gray-100 text-gray-700 hover:text-gray-900 border border-gray-250 font-black text-[10px] px-3 py-2 rounded-xl flex items-center gap-1 transition shrink-0"
+                          className="bg-white hover:bg-gray-100 text-gray-700 hover:text-gray-900 border border-gray-250 font-black text-[11px] px-3 py-2 rounded-xl flex items-center gap-1 transition shrink-0"
                         >
                           <Copy className="h-3.5 w-3.5" />
                           <span>Copy</span>
@@ -1410,7 +1410,7 @@ export default function ProfilePage({
                 <div className="bg-orange-50/50 border border-brand-orange/25 p-5 rounded-3xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                   <div className="flex items-center gap-3.5">
                     <div className="h-11 w-11 bg-brand-orange/15 rounded-xl flex items-center justify-center shrink-0">
-                      <LifeBuoy className="h-5.5 w-5.5 text-brand-orange" />
+                      <LifeBuoy className="h-5.5 w-5.5 text-orange-700" />
                     </div>
                     <div>
                       <h4 className="font-display font-black text-sm text-gray-900 leading-tight">
@@ -1478,11 +1478,11 @@ export default function ProfilePage({
                     </div>
                     <div>
                       <h4 className="font-display font-black text-xs text-white">
-                        QuikaBite Smart Concierge
+                        Quickaa Bite concierge
                       </h4>
                       <div className="flex items-center gap-1.5 mt-0.5">
                         <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                        <span className="text-[9px] text-gray-400">
+                        <span className="text-[11px] text-gray-400">
                           Gourmet AI Assistant • Online
                         </span>
                       </div>
@@ -1503,7 +1503,7 @@ export default function ProfilePage({
                           >
                             <p>{msg.text}</p>
                             <span
-                              className={`text-[8px] block text-right mt-1 font-medium ${isBot ? "text-gray-400" : "text-orange-200"}`}
+                              className={`text-[11px] block text-right mt-1 font-medium ${isBot ? "text-gray-400" : "text-orange-200"}`}
                             >
                               {msg.time}
                             </span>

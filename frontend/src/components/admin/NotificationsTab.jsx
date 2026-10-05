@@ -272,7 +272,7 @@ export default function NotificationsTab({ notifications, setNotifications, trig
         </div>
 
         <div className="bg-white p-4 rounded-2xl border border-neutral-150 shadow-xs flex items-center gap-3">
-          <div className="p-3 bg-orange-50 text-brand-orange rounded-xl">
+          <div className="p-3 bg-orange-50 text-orange-700 rounded-xl">
             <Calendar className="h-5 w-5" />
           </div>
           <div>
@@ -292,7 +292,7 @@ export default function NotificationsTab({ notifications, setNotifications, trig
       <div className="lg:col-span-5 bg-white p-6 rounded-3xl border border-neutral-150 shadow-xs space-y-5">
         <div>
           <h3 className="text-sm font-black uppercase tracking-wider text-neutral-950 mb-1 flex items-center gap-1.5">
-            <Sparkles className="h-4.5 w-4.5 text-brand-orange" />
+            <Sparkles className="h-4.5 w-4.5 text-orange-700" />
             <span>Multi-Channel Dispatcher</span>
           </h3>
           <p className="text-[10px] font-semibold text-neutral-400">Compose, target, and schedule push notifications, SMS text, or Meta WhatsApp pings.</p>
@@ -650,7 +650,7 @@ export default function NotificationsTab({ notifications, setNotifications, trig
               let catColor = "bg-rose-50 text-rose-600 border-rose-200";
               if (n.category === "wallet") catColor = "bg-emerald-50 text-emerald-600 border-emerald-200";
               if (n.category === "orders") catColor = "bg-sky-50 text-sky-600 border-sky-200";
-              if (n.category === "offers") catColor = "bg-orange-50 text-brand-orange border-orange-200";
+              if (n.category === "offers") catColor = "bg-orange-50 text-orange-700 border-orange-200";
               return <div
                 key={n.id}
                 className={`p-4 rounded-2xl border transition flex flex-col sm:flex-row justify-between items-start gap-4 ${isScheduledItem ? "border-orange-100 bg-orange-50/20 hover:bg-orange-50/45" : "border-neutral-100 bg-neutral-50 hover:bg-white hover:shadow-xs"}`}
@@ -677,7 +677,7 @@ export default function NotificationsTab({ notifications, setNotifications, trig
                       {n.scheduledTime}
                     </span>
 
-                    {isScheduledItem && <span className="text-[8.5px] font-black uppercase px-2 py-0.5 rounded-full bg-orange-100 text-brand-orange border border-orange-200 animate-pulse">
+                    {isScheduledItem && <span className="text-[8.5px] font-black uppercase px-2 py-0.5 rounded-full bg-orange-100 text-orange-700 border border-orange-200 animate-pulse">
                       Pending Schedule
                     </span>}
                   </div>
@@ -699,7 +699,7 @@ export default function NotificationsTab({ notifications, setNotifications, trig
                       <span>Target: {n.targetSegment} ({n.recipientsCount} diner(s))</span>
                     </span>
 
-                    {n.discountCode && <span className="text-[9px] font-black bg-orange-100 text-brand-orange px-1.5 py-0.5 rounded border border-orange-200/50 flex items-center gap-1 font-mono">
+                    {n.discountCode && <span className="text-[9px] font-black bg-orange-100 text-orange-700 px-1.5 py-0.5 rounded border border-orange-200/50 flex items-center gap-1 font-mono">
                       <Tag className="h-3 w-3" />
                       <span>CODE: {n.discountCode}</span>
                     </span>}

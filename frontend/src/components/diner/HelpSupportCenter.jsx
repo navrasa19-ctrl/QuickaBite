@@ -58,12 +58,12 @@ export default function HelpSupportCenter() {
   };
 
   return (
-    <div className="max-w-5xl mx-auto px-4 py-8 space-y-8 text-neutral-900 font-sans animate-fade-in">
+    <div className="max-w-6xl mx-auto py-2 space-y-8 text-neutral-900 font-sans animate-fade-in">
       {/* Header Banner */}
       <div className="relative overflow-hidden rounded-3xl bg-neutral-950 border border-neutral-800 p-8 sm:p-10 shadow-2xl text-white">
         <div className="relative z-10 max-w-2xl space-y-3">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-brand-orange/20 border border-brand-orange/30 text-amber-400 rounded-full text-xs font-black uppercase tracking-wider">
-            <HelpCircle className="w-4 h-4 text-brand-orange" />
+            <HelpCircle className="w-4 h-4 text-orange-700" />
             <span>Customer Support Ticket Center</span>
           </div>
           <h1 className="text-3xl sm:text-4xl font-display font-black tracking-tight text-white">
@@ -78,7 +78,7 @@ export default function HelpSupportCenter() {
       {/* Header Bar */}
       <div className="flex items-center justify-between border-b border-neutral-200 pb-4">
         <div className="flex items-center gap-2 text-base font-black text-neutral-900">
-          <MessageSquare className="w-5 h-5 text-brand-orange" />
+          <MessageSquare className="w-5 h-5 text-orange-700" />
           <span>Submitted Tickets ({tickets.length})</span>
         </div>
 
@@ -86,7 +86,7 @@ export default function HelpSupportCenter() {
           onClick={fetchTickets}
           className="px-4 py-2 bg-neutral-900 hover:bg-neutral-800 text-white text-xs font-bold rounded-xl transition flex items-center gap-1.5 cursor-pointer shadow-xs"
         >
-          <RefreshCw className="w-3.5 h-3.5 text-brand-orange" />
+          <RefreshCw className="w-3.5 h-3.5 text-orange-700" />
           <span>Refresh Status</span>
         </button>
       </div>
@@ -97,7 +97,7 @@ export default function HelpSupportCenter() {
           <div className="p-12 text-center text-neutral-500 text-xs font-bold">Loading your support tickets...</div>
         ) : tickets.length === 0 ? (
           <div className="p-12 bg-white border border-neutral-200 rounded-3xl text-center space-y-3 shadow-xs">
-            <div className="w-12 h-12 bg-orange-50 text-brand-orange rounded-full flex items-center justify-center mx-auto">
+            <div className="w-12 h-12 bg-orange-50 text-orange-700 rounded-full flex items-center justify-center mx-auto">
               <FileText className="w-6 h-6" />
             </div>
             <h3 className="text-base font-black text-neutral-900">No Support Tickets Found</h3>
@@ -114,7 +114,7 @@ export default function HelpSupportCenter() {
               <div className="flex flex-wrap items-center justify-between gap-3 border-b border-neutral-100 pb-4">
                 <div>
                   <div className="flex items-center gap-2">
-                    <span className="text-xs font-black text-brand-orange bg-orange-50 px-2.5 py-0.5 rounded-full border border-orange-100">
+                    <span className="text-xs font-black text-orange-700 bg-orange-50 px-2.5 py-0.5 rounded-full border border-orange-100">
                       Ticket #{t.ticketNumber}
                     </span>
                     <span className="text-neutral-300">•</span>
@@ -129,16 +129,16 @@ export default function HelpSupportCenter() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-neutral-700 bg-neutral-50/60 p-4 rounded-2xl border border-neutral-100">
                 <div>
-                  <span className="text-neutral-400 font-bold uppercase text-[10px] tracking-wider block">Restaurant</span>
+                  <span className="text-neutral-400 font-bold uppercase text-[11px] tracking-wider block">Restaurant</span>
                   <span className="font-extrabold text-neutral-900 text-xs">{t.restaurant?.name || "N/A"}</span>
                 </div>
                 <div>
-                  <span className="text-neutral-400 font-bold uppercase text-[10px] tracking-wider block">Submitted Date</span>
+                  <span className="text-neutral-400 font-bold uppercase text-[11px] tracking-wider block">Submitted Date</span>
                   <span className="font-semibold text-neutral-800">{new Date(t.createdAt).toLocaleString()}</span>
                 </div>
                 {t.description && (
                   <div className="sm:col-span-2 border-t border-neutral-150 pt-2.5 mt-1">
-                    <span className="text-neutral-400 font-bold uppercase text-[10px] tracking-wider block">Your Comments</span>
+                    <span className="text-neutral-400 font-bold uppercase text-[11px] tracking-wider block">Your Comments</span>
                     <p className="text-neutral-800 font-medium italic mt-0.5">"{t.description}"</p>
                   </div>
                 )}
@@ -147,7 +147,7 @@ export default function HelpSupportCenter() {
               {/* Attachments Preview */}
               {t.images && t.images.length > 0 && (
                 <div>
-                  <span className="text-neutral-400 font-bold uppercase tracking-wider text-[10px] block mb-2">
+                  <span className="text-neutral-400 font-bold uppercase tracking-wider text-[11px] block mb-2">
                     Attached Photo Proof
                   </span>
                   <div className="flex flex-wrap gap-2.5">
@@ -178,7 +178,7 @@ export default function HelpSupportCenter() {
                       Resolution Response by {t.resolution.actionByRole.toUpperCase()}
                     </span>
                     {t.resolution.actionAt && (
-                      <span className="text-[10px] font-normal text-neutral-500">
+                      <span className="text-[11px] font-normal text-neutral-500">
                         {new Date(t.resolution.actionAt).toLocaleString()}
                       </span>
                     )}

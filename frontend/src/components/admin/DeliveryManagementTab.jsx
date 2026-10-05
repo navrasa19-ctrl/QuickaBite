@@ -104,7 +104,7 @@ export default function DeliveryManagementTab({ orders, setOrders, triggerToast 
           <div className="flex justify-between items-center">
             <div>
               <h3 className="text-sm font-black uppercase tracking-wider text-neutral-950 flex items-center gap-1.5">
-                <Truck className="h-4.5 w-4.5 text-brand-orange" />
+                <Truck className="h-4.5 w-4.5 text-orange-700" />
                 <span>Active Delivery Log</span>
               </h3>
               <p className="text-[10px] font-bold text-neutral-400">Monitor and track third-party dispatch statuses.</p>
@@ -254,9 +254,9 @@ export default function DeliveryManagementTab({ orders, setOrders, triggerToast 
                   <div className="flex items-center gap-2 mt-0.5">
                     <a
     href={`tel:${selectedDelivery.driverPhone || ""}`}
-    className="inline-flex items-center gap-1.5 text-xs font-black text-neutral-900 hover:text-brand-orange transition"
+    className="inline-flex items-center gap-1.5 text-xs font-black text-neutral-900 hover:text-orange-700 transition"
   >
-                      <Phone className="h-3.5 w-3.5 text-brand-orange" />
+                      <Phone className="h-3.5 w-3.5 text-orange-700" />
                       <span>{selectedDelivery.driverPhone || "No Phone"}</span>
                     </a>
                   </div>

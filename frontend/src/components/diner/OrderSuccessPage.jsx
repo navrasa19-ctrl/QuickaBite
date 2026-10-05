@@ -127,7 +127,7 @@ export default function OrderSuccessPage({ triggerToast, setActiveOrder }) {
   if (loading) {
     return (
       <div className="min-h-[70vh] flex flex-col items-center justify-center p-6 text-center space-y-4">
-        <Loader2 className="h-10 w-10 text-brand-orange animate-spin" />
+        <Loader2 className="h-10 w-10 text-orange-700 animate-spin" />
         <p className="text-sm font-bold text-gray-600">Verifying Payment & Retrieving Order Details...</p>
       </div>
     );
@@ -168,7 +168,7 @@ export default function OrderSuccessPage({ triggerToast, setActiveOrder }) {
           <CheckCircle2 className="w-12 h-12 text-emerald-600" />
         </div>
 
-        <span className="bg-emerald-100 text-emerald-800 text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full mb-3 inline-block">
+        <span className="bg-emerald-100 text-emerald-800 text-[11px] font-black uppercase tracking-widest px-3 py-1 rounded-full mb-3 inline-block">
           🛡️ UPI Payment & Order Verified
         </span>
         <h2 className="font-display font-black text-2xl text-gray-900 tracking-tight">
@@ -181,7 +181,7 @@ export default function OrderSuccessPage({ triggerToast, setActiveOrder }) {
         <div className="my-6 bg-neutral-50 border border-neutral-100 rounded-3xl p-5 text-left space-y-3 relative">
           <div className="flex justify-between items-center border-b border-gray-200/60 pb-3">
             <div>
-              <span className="text-[9px] text-gray-400 font-black uppercase tracking-wider">
+              <span className="text-[11px] text-gray-400 font-black uppercase tracking-wider">
                 Order ID
               </span>
               <span className="font-mono text-xs text-gray-800 block font-black">
@@ -189,7 +189,7 @@ export default function OrderSuccessPage({ triggerToast, setActiveOrder }) {
               </span>
             </div>
             <div className="text-right">
-              <span className="text-[9px] text-gray-400 font-black uppercase tracking-wider">
+              <span className="text-[11px] text-gray-400 font-black uppercase tracking-wider">
                 Status
               </span>
               <span className="text-xs text-emerald-600 block font-bold flex items-center gap-1 justify-end">
@@ -209,7 +209,7 @@ export default function OrderSuccessPage({ triggerToast, setActiveOrder }) {
             {order?.total !== undefined && (
               <div className="flex justify-between">
                 <span className="text-gray-400 font-semibold">Amount Paid</span>
-                <span className="font-mono font-black text-brand-orange">
+                <span className="font-mono font-black text-orange-700">
                   ₹ {Number(order.total).toFixed(2)}
                 </span>
               </div>
@@ -221,10 +221,10 @@ export default function OrderSuccessPage({ triggerToast, setActiveOrder }) {
               <Truck className="h-4 w-4" />
             </div>
             <div>
-              <span className="text-[10px] text-emerald-800 font-black uppercase tracking-wider block">
+              <span className="text-[11px] text-emerald-800 font-black uppercase tracking-wider block">
                 Preparing Order
               </span>
-              <p className="text-[10px] text-emerald-600 font-medium">
+              <p className="text-[11px] text-emerald-600 font-medium">
                 The restaurant is preparing your meal. Delivery estimated in 25-35 mins.
               </p>
             </div>

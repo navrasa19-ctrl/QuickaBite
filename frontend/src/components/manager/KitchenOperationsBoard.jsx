@@ -22,6 +22,7 @@ import {
   MessageSquare,
   Award,
   Layers,
+  Plus,
 } from "lucide-react";
 import BrandManagementTab from "../admin/BrandManagementTab";
 import { managerService } from "../../api/managerService";
@@ -782,14 +783,14 @@ export default function KitchenOperationsBoard({
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-orange opacity-75" />
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-orange" />
               </span>
-              <span className="text-[10px] font-black uppercase tracking-widest text-brand-orange flex items-center gap-1.5">
+              <span className="text-[10px] font-black uppercase tracking-widest text-orange-700 flex items-center gap-1.5">
                 <Radio className="h-3 w-3 animate-pulse" />
                 Live Kitchen Operations Feed Active
               </span>
             </div>
 
             <h1 className="text-3xl font-black tracking-tight flex items-center gap-2 uppercase">
-              <ChefHat className="h-8 w-8 text-brand-orange animate-bounce" />
+              <ChefHat className="h-8 w-8 text-orange-700 animate-bounce" />
               <span>
                 {profile?.restaurantName || profile?.restaurant?.name
                   ? `Kitchen Ops — ${profile.restaurantName || profile.restaurant?.name}`
@@ -830,7 +831,7 @@ export default function KitchenOperationsBoard({
               className="bg-neutral-900 hover:bg-neutral-800 border border-neutral-800 px-4 py-3 rounded-2xl flex items-center gap-2 text-xs font-black text-neutral-200 hover:text-white transition cursor-pointer disabled:opacity-50"
             >
               <RotateCw
-                className={`h-4 w-4 text-brand-orange ${isRefreshing ? "animate-spin" : ""}`}
+                className={`h-4 w-4 text-orange-700 ${isRefreshing ? "animate-spin" : ""}`}
               />
               <span>{isRefreshing ? "Refreshing..." : "Refresh"}</span>
             </button>
@@ -871,7 +872,7 @@ export default function KitchenOperationsBoard({
               <span className="block text-[8px] font-bold text-neutral-500 uppercase tracking-widest">
                 Active Orders
               </span>
-              <span className="text-2xl font-black text-brand-orange">
+              <span className="text-2xl font-black text-orange-700">
                 {matchedOrders.length}
               </span>
             </div>
@@ -883,7 +884,7 @@ export default function KitchenOperationsBoard({
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-neutral-400" />
               <input
                 type="text"
-                placeholder="SEARCH BY ORDER ID, CUSTOMER NAME, OR RECIPE (E.G., 'PIZZA', 'BIRYANI')"
+                placeholder="Search by order ID, customer or dish"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full bg-neutral-900 border-2 border-neutral-800 rounded-xl pl-12 pr-4 py-3.5 text-xs font-bold tracking-wide uppercase placeholder-neutral-500 outline-none focus:border-brand-orange text-white"
@@ -995,7 +996,7 @@ export default function KitchenOperationsBoard({
                             {getDisplayOrderId(order)}
                           </span>
                           <div className="flex items-center gap-1 shrink-0 bg-neutral-900 text-white px-2.5 py-1 rounded-lg text-[10px] font-mono font-bold shadow-xs">
-                            <Clock className="h-3 w-3 text-brand-orange" />
+                            <Clock className="h-3 w-3 text-orange-700" />
                             <span>{timeDisplay}</span>
                           </div>
                         </div>
@@ -1004,7 +1005,7 @@ export default function KitchenOperationsBoard({
                         <div className="flex items-center justify-between gap-2 pt-1 border-t border-neutral-100">
                           <div className="flex items-center gap-1.5 min-w-0">
                             <div className="w-6 h-6 rounded-full bg-brand-orange/10 flex items-center justify-center shrink-0">
-                              <User className="h-3 w-3 text-brand-orange" />
+                              <User className="h-3 w-3 text-orange-700" />
                             </div>
                             <span className="text-xs font-black text-neutral-900 truncate">
                               {customer.name}
@@ -1029,7 +1030,7 @@ export default function KitchenOperationsBoard({
                                     className="flex justify-between items-center text-xs font-bold text-neutral-800 gap-2"
                                   >
                                     <div className="flex items-center gap-1.5 min-w-0 flex-1">
-                                      <span className="text-brand-orange font-black text-[11px] shrink-0 bg-brand-orange/15 px-1.5 py-0.5 rounded-md font-mono">
+                                      <span className="text-orange-700 font-black text-[11px] shrink-0 bg-brand-orange/15 px-1.5 py-0.5 rounded-md font-mono">
                                         {qty}x
                                       </span>
                                       <span className="truncate leading-tight text-neutral-900">
@@ -1044,7 +1045,7 @@ export default function KitchenOperationsBoard({
                           {totalAmount > 0 && (
                             <div className="pt-2 border-t border-neutral-200/80 flex justify-between items-center text-[11px] font-black text-neutral-900">
                               <span className="text-neutral-400 uppercase tracking-wider text-[9px]">Total</span>
-                              <span className="text-brand-orange font-mono text-xs">₹ {totalAmount.toFixed(2)}</span>
+                              <span className="text-orange-700 font-mono text-xs">₹ {totalAmount.toFixed(2)}</span>
                             </div>
                           )}
                         </div>
@@ -1146,7 +1147,7 @@ export default function KitchenOperationsBoard({
                     <div className="absolute top-0 right-0 w-48 h-48 bg-orange-600/10 rounded-full blur-2xl pointer-events-none" />
                     <div className="flex items-start justify-between relative z-10">
                       <div>
-                        <span className="text-[10px] font-black uppercase tracking-widest text-brand-orange bg-brand-orange/20 px-3 py-1 rounded-md border border-brand-orange/30">
+                        <span className="text-[10px] font-black uppercase tracking-widest text-orange-700 bg-brand-orange/20 px-3 py-1 rounded-md border border-brand-orange/30">
                           Operational Ticket
                         </span>
                         <h2 className="text-2xl font-black uppercase mt-2">
@@ -1191,7 +1192,7 @@ export default function KitchenOperationsBoard({
                               className="py-3 flex items-center justify-between first:pt-0 last:pb-0"
                             >
                               <div className="flex items-center gap-3">
-                                <span className="text-base font-black bg-brand-orange/15 text-brand-orange px-3 py-1 rounded-lg">
+                                <span className="text-base font-black bg-brand-orange/15 text-orange-700 px-3 py-1 rounded-lg">
                                   {itemQty}x
                                 </span>
                                 <div>
@@ -1394,7 +1395,7 @@ export default function KitchenOperationsBoard({
                           if (isSelected) {
                             if (partner === "QuikaBite Fleet")
                               brandColor =
-                                "border-brand-orange bg-orange-50 text-brand-orange ring-2 ring-brand-orange/20 font-black";
+                                "border-brand-orange bg-orange-50 text-orange-700 ring-2 ring-brand-orange/20 font-black";
                             if (partner === "Ola")
                               brandColor =
                                 "border-emerald-500 bg-emerald-50 text-emerald-700 ring-2 ring-emerald-500/20";

@@ -254,7 +254,7 @@ export default function BannersTab({ triggerToast }) {
         maxWidth="max-w-md"
       >
         <h3 className="text-sm font-black uppercase tracking-wider text-neutral-950 mb-1 flex items-center gap-1.5">
-          <Sparkles className="h-4.5 w-4.5 text-brand-orange" />
+          <Sparkles className="h-4.5 w-4.5 text-orange-700" />
           <span>
             {editingIndex !== null ? "Edit Promo Slide" : "Configure Promo Slide"}
           </span>

@@ -336,7 +336,7 @@ ${divider}
       <!DOCTYPE html>
       <html>
         <head>
-          <title>Invoice #${order.id || "QB-0000"} - QuickaBite</title>
+          <title>Invoice #${order.id || "QB-0000"} - Quickaa Bite</title>
           <style>
             body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; padding: 40px; color: #111; max-width: 650px; margin: auto; }
             .header { text-align: center; border-bottom: 3px solid #ea580c; padding-bottom: 15px; margin-bottom: 25px; }
@@ -475,11 +475,11 @@ ${divider}
   if (isLoading) {
     return (
       <div
-        className="space-y-8 max-w-5xl mx-auto py-6 px-4 animate-pulse animate-fade-in"
+        className="space-y-8 max-w-6xl mx-auto py-1 animate-pulse animate-fade-in"
         id="orders-page-loading"
       >
         {/* Header Loading */}
-        <div className="text-center max-w-xl mx-auto space-y-3">
+        <div className="text-center max-w-xl mx-auto space-y-2 pt-4 sm:pt-6">
           <div className="h-10 w-10 bg-neutral-200 rounded-full mx-auto" />
           <div className="h-8 bg-neutral-200 rounded-full w-2/3 mx-auto" />
           <div className="h-4 bg-neutral-200 rounded-full w-1/2 mx-auto" />
@@ -515,18 +515,16 @@ ${divider}
 
   return (
     <div
-      className="space-y-8 max-w-5xl mx-auto py-6 px-4 animate-fade-in"
+      className="space-y-8 max-w-6xl mx-auto py-2 animate-fade-in"
       id="orders-page-container"
     >
       {/* Header Banner */}
       <div className="text-center max-w-xl mx-auto space-y-3">
-        <span className="text-4xl block animate-bounce">📦</span>
-        <h2 className="font-display font-black text-3xl text-gray-900 tracking-tight">
-          Your Culinary Orders
+                <h2 className="font-display font-black text-3xl text-gray-900 tracking-tight">
+          Your orders
         </h2>
         <p className="text-sm text-gray-500 max-w-md mx-auto leading-relaxed">
-          Track active food delivery states, reorder your favorite signature
-          feasts, and download authenticated PDF tax invoices.
+          Track live orders, reorder your favourites and download invoices.
         </p>
       </div>
 
@@ -540,7 +538,7 @@ ${divider}
             <Clock className="h-4 w-4" />
             Active Orders
             {activeOrdersList.length > 0 && (
-              <span className="bg-brand-orange text-white text-[10px] px-2 py-0.5 rounded-full font-black animate-pulse">
+              <span className="bg-brand-orange text-white text-[11px] px-2 py-0.5 rounded-full font-black animate-pulse">
                 {activeOrdersList.length}
               </span>
             )}
@@ -553,7 +551,7 @@ ${divider}
             <CheckCircle2 className="h-4 w-4" />
             Order History
             {pastOrdersList.length > 0 && (
-              <span className="bg-gray-200 text-gray-700 text-[10px] px-2 py-0.5 rounded-full font-bold">
+              <span className="bg-gray-200 text-gray-700 text-[11px] px-2 py-0.5 rounded-full font-bold">
                 {pastOrdersList.length}
               </span>
             )}
@@ -634,7 +632,7 @@ ${divider}
                                 const rejTime = typeof rawTime === "number" ? rawTime : new Date(rawTime).getTime();
                                 const remainingSecs = Math.max(0, Math.ceil((REJECTION_GRACE_MS - (now - (rejTime || now))) / 1000));
                                 return remainingSecs > 0 ? (
-                                  <span className="text-[10px] font-bold text-rose-700 bg-rose-150/80 px-2 py-0.5 rounded-full animate-pulse border border-rose-200">
+                                  <span className="text-[11px] font-bold text-rose-700 bg-rose-150/80 px-2 py-0.5 rounded-full animate-pulse border border-rose-200">
                                     Moving to Order History in {remainingSecs}s
                                   </span>
                                 ) : null;
@@ -763,7 +761,7 @@ ${divider}
                                   <StepIcon className="w-4 h-4" />
                                 </div>
                                 <span
-                                  className={`text-[10px] font-bold mt-2 tracking-tight ${isDone ? "text-gray-900" : "text-gray-400"}`}
+                                  className={`text-[11px] font-bold mt-2 tracking-tight ${isDone ? "text-gray-900" : "text-gray-400"}`}
                                 >
                                   {step.label}
                                 </span>
@@ -780,7 +778,7 @@ ${divider}
                         <div className="flex items-center gap-2">
                           <span className="font-extrabold text-gray-800">
                             Total amount:{" "}
-                            <span className="font-mono text-brand-orange text-lg font-black">
+                            <span className="font-mono text-orange-700 text-lg font-black">
                               ₹ {order.total}
                             </span>
                           </span>
@@ -810,7 +808,7 @@ ${divider}
                       {/* Items details collapse panel */}
                       {isExpanded && (
                         <div className="border-t border-gray-100 pt-4 mt-2 space-y-3 bg-gray-50/50 rounded-2xl p-4 animate-fade-in">
-                          <p className="text-[10px] font-black uppercase text-gray-400 tracking-wider">
+                          <p className="text-[11px] font-black uppercase text-gray-400 tracking-wider">
                             Itemized Receipt
                           </p>
                           <div className="space-y-2">
@@ -914,10 +912,9 @@ ${divider}
             </div>
           ) : (
             <div className="text-center py-16 bg-white border border-gray-100 rounded-3xl space-y-4">
-              <p className="text-gray-500 font-bold">No Active Orders found</p>
+              <p className="text-gray-500 font-bold">No active orders</p>
               <p className="text-gray-400 text-xs max-w-xs mx-auto">
-                Any gourmet dishes you order will show up here with dynamic live
-                tracking indicators!
+                Hungry? Your next order will show up here with live updates.
               </p>
               <button
                 onClick={() => {
@@ -933,7 +930,7 @@ ${divider}
                 }}
                 className="cursor-pointer bg-brand-orange hover:bg-orange-700 text-white font-extrabold text-xs px-6 py-3 rounded-full shadow-md transition"
               >
-                Order Feast Now
+                Order now
               </button>
             </div>
           )}
@@ -980,12 +977,12 @@ ${divider}
                       {/* Completed tag & price */}
                       <div className="flex flex-col sm:items-end gap-1.5 shrink-0">
                         {order.status === "rejected" || order.status === "cancelled" ? (
-                          <span className="bg-rose-50 text-rose-700 border border-rose-150 text-[10px] font-black px-3 py-1 rounded-full flex items-center gap-1 uppercase tracking-wider">
+                          <span className="bg-rose-50 text-rose-700 border border-rose-150 text-[11px] font-black px-3 py-1 rounded-full flex items-center gap-1 uppercase tracking-wider">
                             <XCircle className="h-3.5 w-3.5 text-rose-500" />
                             <span>Rejected ✕</span>
                           </span>
                         ) : (
-                          <span className="bg-emerald-50 text-emerald-700 border border-emerald-150 text-[10px] font-black px-3 py-1 rounded-full flex items-center gap-1 uppercase tracking-wider">
+                          <span className="bg-emerald-50 text-emerald-700 border border-emerald-150 text-[11px] font-black px-3 py-1 rounded-full flex items-center gap-1 uppercase tracking-wider">
                             <CheckCircle2 className="h-3.5 w-3.5 text-emerald-500" />
                             <span>Delivered ✓</span>
                           </span>
@@ -1025,7 +1022,7 @@ ${divider}
                       {/* Items collapsible details */}
                       {isExpanded && (
                         <div className="border-t border-gray-150 pt-4 mt-2 space-y-3 bg-gray-50/55 rounded-2xl p-4 animate-fade-in">
-                          <p className="text-[10px] font-black uppercase text-gray-400 tracking-wider">
+                          <p className="text-[11px] font-black uppercase text-gray-400 tracking-wider">
                             Order items & sub-breakdowns
                           </p>
                           <div className="space-y-2">
@@ -1281,7 +1278,7 @@ ${divider}
             {/* Modal Controls Bar */}
             <div className="p-4 sm:p-5 bg-neutral-950 text-white border-b border-neutral-800 flex items-center justify-between shrink-0">
               <h4 className="font-display font-black text-xs sm:text-sm uppercase tracking-wider flex items-center gap-2 text-white">
-                <Printer className="h-4.5 w-4.5 text-brand-orange shrink-0" />
+                <Printer className="h-4.5 w-4.5 text-orange-700 shrink-0" />
                 <span>Verified Tax Invoice Portal</span>
               </h4>
               <button
@@ -1303,7 +1300,7 @@ ${divider}
                 <h3 className="font-display font-black text-2xl text-gray-950 tracking-tight">
                   QUICKABITE FOODS
                 </h3>
-                <p className="text-[10px] text-gray-400 font-mono font-bold uppercase tracking-widest">
+                <p className="text-[11px] text-gray-400 font-mono font-bold uppercase tracking-widest">
                   Gourmet Cloud Kitchen Delivery Services
                 </p>
                 <p className="text-xs text-gray-500">
@@ -1339,7 +1336,7 @@ ${divider}
 
               {/* Itemized row */}
               <div className="space-y-3">
-                <p className="text-[10px] font-black uppercase tracking-wider text-gray-400">
+                <p className="text-[11px] font-black uppercase tracking-wider text-gray-400">
                   Itemized Description
                 </p>
                 <div className="space-y-2 text-xs">
@@ -1413,10 +1410,10 @@ ${divider}
               {/* Secure Stamp */}
               <div className="pt-4 flex flex-col items-center justify-center text-center space-y-1 bg-gray-50 rounded-2xl p-4">
                 <span className="text-lg">🛡️</span>
-                <p className="text-[10px] font-mono font-bold text-emerald-600 uppercase tracking-widest">
+                <p className="text-[11px] font-mono font-bold text-emerald-600 uppercase tracking-widest">
                   Secured Gateway • Paid Online
                 </p>
-                <p className="text-[9px] text-gray-400">
+                <p className="text-[11px] text-gray-400">
                   Tax Registration Number (TRN): 100459302840003
                 </p>
               </div>

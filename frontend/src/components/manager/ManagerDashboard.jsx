@@ -45,13 +45,13 @@ export default function ManagerDashboard({
         className="bg-neutral-50/70 font-sans"
         id="manager-workspace-root"
       >
-        <div className="max-w-7xl mx-auto space-y-6">
+        <div className="page-container py-5 lg:py-6 space-y-5">
           {/* Quick Header actions like Logout for manager */}
           <div className="flex justify-between items-center bg-neutral-950 text-white rounded-2xl p-4 border border-neutral-800 shadow-lg">
             <div className="flex items-center gap-2">
-              <ChefHat className="h-6 w-6 text-brand-orange animate-pulse" />
+              <ChefHat className="h-6 w-6 text-orange-700 animate-pulse" />
               <span className="font-black tracking-wider text-[10px] uppercase text-neutral-200">
-                QuikaBite Kitchen System v1.4
+                Quickaa Bite kitchen system
               </span>
             </div>
             <div className="flex gap-2">

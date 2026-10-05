@@ -398,9 +398,9 @@ export default function CloudKitchenSection({
     }
     <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
       <div>
-        <span className="text-brand-orange font-extrabold text-xs tracking-wider uppercase bg-orange-100/60 border border-brand-orange/20 px-3 py-1 rounded-full inline-flex items-center gap-1.5 mb-2 shadow-xs">
-          <Sparkles className="h-3 w-3 animate-spin text-brand-orange" />
-          <span>QuickaBite Signature Labs</span>
+        <span className="text-orange-700 font-extrabold text-xs tracking-wider uppercase bg-orange-100/60 border border-brand-orange/20 px-3 py-1 rounded-full inline-flex items-center gap-1.5 mb-2 shadow-xs">
+          <Sparkles className="h-3 w-3 animate-spin text-orange-700" />
+          <span>Quickaa Bite signature kitchens</span>
         </span>
         <h2 className="font-display font-black text-2xl sm:text-3xl text-gray-900 tracking-tight">
           Multi-Brand Cloud Kitchens
@@ -458,7 +458,7 @@ export default function CloudKitchenSection({
             <div className="flex items-center gap-1 bg-amber-50 text-amber-700 px-2.5 py-1 rounded-lg text-xs font-black border border-amber-100">
               <Star className="h-3.5 w-3.5 fill-amber-500 text-amber-500 shrink-0" />
               <span>{activeBrand.rating}</span>
-              <span className="text-[10px] text-amber-500 font-medium">({activeBrand.reviewsCount})</span>
+              <span className="text-[11px] text-amber-500 font-medium">({activeBrand.reviewsCount})</span>
             </div>
           </div>
 
@@ -492,7 +492,7 @@ export default function CloudKitchenSection({
           <div className="flex items-center gap-2">
             <Clock className="h-4.5 w-4.5 text-white/90" />
             <div className="flex flex-col">
-              <span className="text-[9px] uppercase tracking-wider text-white/70 font-black">Preps In</span>
+              <span className="text-[11px] uppercase tracking-wider text-white/70 font-black">Preps In</span>
               <span className="text-xs font-extrabold">{activeBrand.prepTime}</span>
             </div>
           </div>
@@ -502,7 +502,7 @@ export default function CloudKitchenSection({
           <div className="flex items-center gap-2">
             <ShieldCheck className="h-4.5 w-4.5 text-white/90" />
             <div className="flex flex-col">
-              <span className="text-[9px] uppercase tracking-wider text-white/70 font-black">Delivery</span>
+              <span className="text-[11px] uppercase tracking-wider text-white/70 font-black">Delivery</span>
               <span className="text-xs font-extrabold">{activeBrand.deliveryFee} Fee</span>
             </div>
           </div>
@@ -525,7 +525,7 @@ export default function CloudKitchenSection({
               {
                 /* Bestseller ribbon if present */
               }
-              {specialty.isBestseller && <span className="absolute top-3 left-3 bg-red-500 text-white font-extrabold text-[9px] px-2 py-0.5 rounded-md z-10 uppercase tracking-wider shadow-xs">
+              {specialty.isBestseller && <span className="absolute top-3 left-3 bg-red-500 text-white font-extrabold text-[11px] px-2 py-0.5 rounded-md z-10 uppercase tracking-wider shadow-xs">
                 Bestseller
               </span>}
 
@@ -545,7 +545,7 @@ export default function CloudKitchenSection({
                   {
                     /* Dietary Tag Marker */
                   }
-                  <span className={`absolute bottom-2 right-2 px-2 py-0.5 text-[9px] font-black tracking-wider rounded-md text-white flex items-center gap-1 shadow-sm ${specialty.isVeg ? "bg-emerald-600" : "bg-red-600"}`}>
+                  <span className={`absolute bottom-2 right-2 px-2 py-0.5 text-[11px] font-black tracking-wider rounded-md text-white flex items-center gap-1 shadow-sm ${specialty.isVeg ? "bg-emerald-600" : "bg-red-600"}`}>
                     <span className="h-1.5 w-1.5 rounded-full bg-white" />
                     {specialty.isVeg ? "VEG" : "NON-VEG"}
                   </span>
@@ -555,7 +555,7 @@ export default function CloudKitchenSection({
                   /* Dish Info */
                 }
                 <div className="space-y-1">
-                  <h4 className="font-display font-extrabold text-xs sm:text-sm text-gray-900 group-hover/item:text-brand-orange transition line-clamp-1">
+                  <h4 className="font-display font-extrabold text-xs sm:text-sm text-gray-900 group-hover/item:text-orange-700 transition line-clamp-1">
                     {specialty.name}
                   </h4>
                   <p className="text-[11px] text-gray-400 line-clamp-2 leading-relaxed min-h-[32px]">
@@ -569,7 +569,7 @@ export default function CloudKitchenSection({
               }
               <div className="flex items-center justify-between border-t border-gray-50 pt-3 mt-4">
                 <div className="flex flex-col">
-                  <span className="text-[9px] uppercase tracking-wider text-gray-400 font-bold">Price</span>
+                  <span className="text-[11px] uppercase tracking-wider text-gray-400 font-bold">Price</span>
                   <span className="text-sm font-black text-gray-800">₹ {specialty.price}</span>
                 </div>
 
@@ -592,13 +592,13 @@ export default function CloudKitchenSection({
 
                     <button
                       onClick={() => onAddToCart(activeBrand.id, activeBrand.name, specialty)}
-                      className="h-7 w-7 rounded-lg bg-white border border-gray-100 flex items-center justify-center hover:bg-gray-50 text-gray-600 hover:text-brand-orange transition shadow-xs focus:outline-none"
+                      className="h-7 w-7 rounded-lg bg-white border border-gray-100 flex items-center justify-center hover:bg-gray-50 text-gray-600 hover:text-orange-700 transition shadow-xs focus:outline-none"
                       aria-label="Increase quantity"
                     >
                       <Plus className="h-3 w-3" />
                     </button>
                   </div> : (specialty.isAvailable === false || specialty.availability === false) ? (
-                    <span className="bg-neutral-100 text-neutral-400 border border-neutral-200 text-[10px] font-black px-3.5 py-2 rounded-xl select-none uppercase tracking-wider text-center w-full block">
+                    <span className="bg-neutral-100 text-neutral-400 border border-neutral-200 text-[11px] font-black px-3.5 py-2 rounded-xl select-none uppercase tracking-wider text-center w-full block">
                       OUT OF STOCK
                     </span>
                   ) : (
@@ -625,7 +625,7 @@ export default function CloudKitchenSection({
             <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
             <span>Hygienic smart packaging • Temperature controlled delivery vehicles</span>
           </span>
-          <span className="hidden sm:inline text-brand-orange font-bold hover:underline cursor-pointer">Learn More</span>
+          <span className="hidden sm:inline text-orange-700 font-bold hover:underline cursor-pointer">Learn More</span>
         </div>
       </div>
 

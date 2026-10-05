@@ -1925,7 +1925,7 @@ ${newTemplateBody}`
               <div className="xl:col-span-3 bg-white p-5 rounded-2xl border border-neutral-150 shadow-xs space-y-6">
                 <div>
                   <h3 className="text-xs font-black uppercase tracking-wider text-neutral-950 mb-3 flex items-center gap-1.5">
-                    <Database className="h-4.5 w-4.5 text-brand-orange" />
+                    <Database className="h-4.5 w-4.5 text-orange-700" />
                     <span>Diner Segments</span>
                   </h3>
 
@@ -2398,7 +2398,7 @@ ${newTemplateBody}`
                     <div className="space-y-6">
                       {/* Contact Dossier Header */}
                       <div className="flex items-center gap-4 border-b border-neutral-100 pb-5">
-                        <div className="h-14 w-14 bg-orange-100 border border-brand-orange/40 text-brand-orange font-black text-lg flex items-center justify-center rounded-2xl shadow-inner uppercase">
+                        <div className="h-14 w-14 bg-orange-100 border border-brand-orange/40 text-orange-700 font-black text-lg flex items-center justify-center rounded-2xl shadow-inner uppercase">
                           {initials}
                         </div>
                         <div className="truncate flex-1 space-y-0.5">
@@ -2449,7 +2449,7 @@ ${newTemplateBody}`
                             <span className="text-[8px] text-neutral-400 uppercase font-bold block leading-tight">
                               Favorite Brand
                             </span>
-                            <span className="text-[11px] font-extrabold text-brand-orange truncate block">
+                            <span className="text-[11px] font-extrabold text-orange-700 truncate block">
                               {prefBrand}
                             </span>
                           </div>
@@ -2531,7 +2531,7 @@ ${newTemplateBody}`
                       {/* Quick Campaign/Template Sender directly to this diner */}
                       <div className="border-t border-neutral-100 pt-4 space-y-3">
                         <span className="text-[9px] font-black uppercase tracking-wider text-neutral-400 flex items-center gap-1">
-                          <Phone className="h-3 w-3 text-brand-orange" />
+                          <Phone className="h-3 w-3 text-orange-700" />
                           <span>Direct Dispatch (WhatsApp Test Node)</span>
                         </span>
 
@@ -2624,7 +2624,7 @@ ${newTemplateBody}`
                       {/* Chronological CRM Activity Timeline */}
                       <div className="border-t border-neutral-100 pt-4 space-y-3">
                         <span className="text-[9px] font-black uppercase tracking-wider text-neutral-400 flex items-center gap-1">
-                          <Clock className="h-3 w-3 text-brand-orange" />
+                          <Clock className="h-3 w-3 text-orange-700" />
                           <span>CRM Touchpoint Activity</span>
                         </span>
 
@@ -2678,7 +2678,7 @@ ${newTemplateBody}`
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-4">
                   <div>
                     <h3 className="text-xs font-black uppercase tracking-wider text-neutral-950 flex items-center gap-2">
-                      <Sparkles className="h-4 w-4 text-brand-orange animate-pulse" />
+                      <Sparkles className="h-4 w-4 text-orange-700 animate-pulse" />
                       <span>WhatsApp Template Presets</span>
                     </h3>
                     <p className="text-[10px] font-semibold text-neutral-400 mt-0.5">
@@ -2699,7 +2699,7 @@ ${newTemplateBody}`
                       className="group p-3.5 text-left rounded-xl bg-neutral-50 border border-neutral-150 hover:bg-white hover:border-brand-orange hover:shadow-sm transition duration-250 cursor-pointer relative overflow-hidden"
                     >
                       <div className="absolute top-0 right-0 h-1.5 w-12 bg-brand-orange/10 group-hover:bg-brand-orange/20 transition" />
-                      <span className="text-xs font-bold text-neutral-800 block mb-1 group-hover:text-brand-orange transition">
+                      <span className="text-xs font-bold text-neutral-800 block mb-1 group-hover:text-orange-700 transition">
                         {preset.title}
                       </span>
                       <p className="text-[9px] text-neutral-400 font-semibold line-clamp-2 leading-relaxed">
@@ -2721,7 +2721,7 @@ ${newTemplateBody}`
                     <div className="flex items-center justify-between border-b border-neutral-100 pb-3">
                       <div>
                         <h4 className="text-xs font-black uppercase tracking-wider text-neutral-950 flex items-center gap-1.5">
-                          <Plus className="h-4.5 w-4.5 text-brand-orange" />
+                          <Plus className="h-4.5 w-4.5 text-orange-700" />
                           <span>Custom Template Editor</span>
                         </h4>
                         <p className="text-[9px] text-neutral-400 font-semibold mt-0.5">
@@ -2743,7 +2743,7 @@ ${newTemplateBody}`
                           ]);
                           triggerToast("Loaded a basic drafting canvas.");
                         }}
-                        className="text-[9px] text-brand-orange hover:underline font-extrabold"
+                        className="text-[9px] text-orange-700 hover:underline font-extrabold"
                       >
                         Reset to Blank Draft
                       </button>
@@ -3473,7 +3473,7 @@ ${newTemplateBody}`
                             {activeLeads.length} Hot Leads
                           </p>
                         </div>
-                        <div className="bg-orange-50 text-brand-orange p-2.5 rounded-xl">
+                        <div className="bg-orange-50 text-orange-700 p-2.5 rounded-xl">
                           <TrendingUp className="h-5 w-5 animate-pulse" />
                         </div>
                       </div>
@@ -4004,14 +4004,14 @@ ${newTemplateBody}`
                               <div className="space-y-2">
                                 <a
                                   href={`mailto:${activeLead.email}`}
-                                  className="flex items-center gap-2 text-neutral-600 hover:text-brand-orange font-semibold"
+                                  className="flex items-center gap-2 text-neutral-600 hover:text-orange-700 font-semibold"
                                 >
                                   <Mail className="h-4 w-4 text-neutral-400" />
                                   <span>{activeLead.email}</span>
                                 </a>
                                 <a
                                   href={`tel:${activeLead.phone}`}
-                                  className="flex items-center gap-2 text-neutral-600 hover:text-brand-orange font-mono font-semibold"
+                                  className="flex items-center gap-2 text-neutral-600 hover:text-orange-700 font-mono font-semibold"
                                 >
                                   <Phone className="h-4 w-4 text-neutral-400" />
                                   <span>{activeLead.phone}</span>
@@ -4550,7 +4550,7 @@ ${newTemplateBody}`
                 {/* INITIALIZE A NEW WORKFLOW CARD */}
                 <div className="bg-white p-5 rounded-2xl border border-neutral-150 shadow-xs">
                   <h3 className="text-xs font-black uppercase tracking-wider text-neutral-950 mb-1 flex items-center gap-1.5">
-                    <Plus className="h-4.5 w-4.5 text-brand-orange" />
+                    <Plus className="h-4.5 w-4.5 text-orange-700" />
                     <span>Initialize Flow</span>
                   </h3>
                   <p className="text-[10px] font-semibold text-neutral-400 mb-4">
@@ -4650,11 +4650,11 @@ ${newTemplateBody}`
                         >
                           <div className="flex justify-between items-start gap-2">
                             <div className="space-y-1">
-                              <h4 className="font-bold text-neutral-900 text-xs leading-tight group-hover:text-brand-orange transition">
+                              <h4 className="font-bold text-neutral-900 text-xs leading-tight group-hover:text-orange-700 transition">
                                 {auto.name}
                               </h4>
                               <p className="text-[8.5px] font-black uppercase tracking-wide text-neutral-400 flex items-center gap-1">
-                                <span className="text-brand-orange">⚡</span>{" "}
+                                <span className="text-orange-700">⚡</span>{" "}
                                 {auto.triggerEvent}
                               </p>
                             </div>
@@ -4733,7 +4733,7 @@ ${newTemplateBody}`
                         <div>
                           <div className="flex items-center gap-2">
                             <h3 className="text-sm font-black uppercase tracking-wider text-neutral-950 flex items-center gap-1.5">
-                              <span className="p-1 rounded bg-orange-100 text-brand-orange font-mono text-[10px]">
+                              <span className="p-1 rounded bg-orange-100 text-orange-700 font-mono text-[10px]">
                                 Canvas
                               </span>
                               <span>{activeFlow.name}</span>
@@ -4816,7 +4816,7 @@ ${newTemplateBody}`
                             className={`w-full max-w-sm bg-white p-4 rounded-2xl border cursor-pointer relative transition duration-200 ${editingTriggerId === activeFlow.id ? "border-brand-orange ring-1 ring-brand-orange/10 shadow-md" : "border-neutral-150 shadow-xs hover:border-neutral-300 hover:shadow-xs"} ${simulationStepIndex === 0 ? "ring-2 ring-brand-orange bg-orange-50/30" : ""}`}
                           >
                             <div className="flex items-center justify-between mb-2">
-                              <span className="text-[8px] font-black uppercase text-brand-orange tracking-widest flex items-center gap-1">
+                              <span className="text-[8px] font-black uppercase text-orange-700 tracking-widest flex items-center gap-1">
                                 <Sparkles className="h-3.5 w-3.5 animate-pulse" />
                                 <span>Starting Event Trigger</span>
                               </span>
@@ -4826,7 +4826,7 @@ ${newTemplateBody}`
                             </div>
 
                             <div className="flex items-center gap-3">
-                              <div className="p-2.5 rounded-xl bg-orange-50 text-brand-orange">
+                              <div className="p-2.5 rounded-xl bg-orange-50 text-orange-700">
                                 <Cpu className="h-5 w-5" />
                               </div>
                               <div className="flex-1">
@@ -4874,7 +4874,7 @@ ${newTemplateBody}`
                                 <div className="text-[8px] text-neutral-400 font-semibold flex justify-end">
                                   <button
                                     onClick={() => setEditingTriggerId(null)}
-                                    className="text-brand-orange hover:underline font-extrabold"
+                                    className="text-orange-700 hover:underline font-extrabold"
                                   >
                                     Done 📭
                                   </button>
@@ -5177,7 +5177,7 @@ ${newTemplateBody}`
                                           onClick={() =>
                                             setSelectedEditingActionId(null)
                                           }
-                                          className="text-brand-orange hover:underline font-extrabold"
+                                          className="text-orange-700 hover:underline font-extrabold"
                                         >
                                           Collapse 🔼
                                         </button>
@@ -5221,7 +5221,7 @@ ${newTemplateBody}`
                                       "SEND_MESSAGE",
                                     )
                                   }
-                                  className="w-full text-left font-bold text-xs p-2 text-neutral-700 hover:bg-neutral-50 hover:text-brand-orange rounded-xl flex items-center gap-2 cursor-pointer"
+                                  className="w-full text-left font-bold text-xs p-2 text-neutral-700 hover:bg-neutral-50 hover:text-orange-700 rounded-xl flex items-center gap-2 cursor-pointer"
                                 >
                                   <span>💬</span> Send Message
                                 </button>
@@ -5233,7 +5233,7 @@ ${newTemplateBody}`
                                       "SEND_COUPON",
                                     )
                                   }
-                                  className="w-full text-left font-bold text-xs p-2 text-neutral-700 hover:bg-neutral-50 hover:text-brand-orange rounded-xl flex items-center gap-2 cursor-pointer"
+                                  className="w-full text-left font-bold text-xs p-2 text-neutral-700 hover:bg-neutral-50 hover:text-orange-700 rounded-xl flex items-center gap-2 cursor-pointer"
                                 >
                                   <span>🎫</span> Send Coupon
                                 </button>
@@ -5245,7 +5245,7 @@ ${newTemplateBody}`
                                       "SEND_REMINDER",
                                     )
                                   }
-                                  className="w-full text-left font-bold text-xs p-2 text-neutral-700 hover:bg-neutral-50 hover:text-brand-orange rounded-xl flex items-center gap-2 cursor-pointer"
+                                  className="w-full text-left font-bold text-xs p-2 text-neutral-700 hover:bg-neutral-50 hover:text-orange-700 rounded-xl flex items-center gap-2 cursor-pointer"
                                 >
                                   <span>⏰</span> Send Reminder
                                 </button>
@@ -5289,7 +5289,7 @@ ${newTemplateBody}`
               <div className="lg:col-span-5 bg-white p-6 rounded-2xl border border-neutral-150 flex flex-col justify-between shadow-xs">
                 <div>
                   <h3 className="text-sm font-black uppercase tracking-wider text-neutral-950 mb-1 flex items-center gap-1.5">
-                    <Tag className="h-4.5 w-4.5 text-brand-orange" />
+                    <Tag className="h-4.5 w-4.5 text-orange-700" />
                     <span>Restaurant Promotion Badges</span>
                   </h3>
                   <p className="text-[10px] font-semibold text-neutral-400 mb-5">
@@ -5376,7 +5376,7 @@ ${newTemplateBody}`
 
                       <div className="flex items-center gap-3">
                         {r.discount && r.discount !== "No discount" ? (
-                          <span className="text-[10px] font-black bg-orange-50 text-brand-orange border border-orange-200 px-3 py-1.5 rounded-xl font-mono">
+                          <span className="text-[10px] font-black bg-orange-50 text-orange-700 border border-orange-200 px-3 py-1.5 rounded-xl font-mono">
                             🏷️ {r.discount}
                           </span>
                         ) : (
@@ -5417,7 +5417,7 @@ ${newTemplateBody}`
               {/* TOP CAMPAIGN SUMMARY BAR - COMPACT */}
               <div className="bg-neutral-900 text-white rounded-2xl p-4 shadow-md border border-neutral-800 flex items-center justify-between gap-4">
                 <div className="flex items-center gap-3">
-                  <div className="p-2.5 rounded-xl bg-brand-orange/20 text-brand-orange border border-brand-orange/30">
+                  <div className="p-2.5 rounded-xl bg-brand-orange/20 text-orange-700 border border-brand-orange/30">
                     <Ticket className="h-5 w-5" />
                   </div>
                   <div>
@@ -5448,7 +5448,7 @@ ${newTemplateBody}`
                 <div className="lg:col-span-5 bg-white p-4 rounded-2xl border border-neutral-200 shadow-xs max-h-[calc(100vh-210px)] overflow-y-auto space-y-3">
                   <div className="border-b border-neutral-100 pb-2 flex items-center justify-between">
                     <h3 className="text-xs font-black uppercase tracking-wider text-neutral-900 flex items-center gap-1.5">
-                      {editingCouponId ? <Pencil className="h-3.5 w-3.5 text-blue-600" /> : <Plus className="h-3.5 w-3.5 text-brand-orange" />}
+                      {editingCouponId ? <Pencil className="h-3.5 w-3.5 text-blue-600" /> : <Plus className="h-3.5 w-3.5 text-orange-700" />}
                       <span>{editingCouponId ? `Edit Coupon: ${newCouponCode}` : "Create Promo Code"}</span>
                     </h3>
                     {editingCouponId ? (
@@ -5533,7 +5533,7 @@ ${newTemplateBody}`
 
                     {/* Grid Row 3: Discount Rules (Type, Val, Max Cap) */}
                     <div className="bg-orange-50/40 border border-orange-100 rounded-xl p-2.5 space-y-2">
-                      <div className="flex items-center justify-between text-[9px] font-black uppercase text-brand-orange border-b border-orange-100 pb-1">
+                      <div className="flex items-center justify-between text-[9px] font-black uppercase text-orange-700 border-b border-orange-100 pb-1">
                         <span>Discount Rules</span>
                         <span className="text-[8px] font-bold text-neutral-500">Val = Amount/%, Max Cap = Ceiling</span>
                       </div>
@@ -5665,7 +5665,7 @@ ${newTemplateBody}`
                             type="checkbox"
                             checked={newCouponIsActive}
                             onChange={(e) => setNewCouponIsActive(e.target.checked)}
-                            className="rounded border-neutral-300 text-brand-orange h-3.5 w-3.5"
+                            className="rounded border-neutral-300 text-orange-700 h-3.5 w-3.5"
                           />
                           <span>Active Campaign</span>
                         </label>
@@ -5674,7 +5674,7 @@ ${newTemplateBody}`
                             type="checkbox"
                             checked={newCouponIsLoyaltyReward}
                             onChange={(e) => setNewCouponIsLoyaltyReward(e.target.checked)}
-                            className="rounded border-neutral-300 text-brand-orange h-3.5 w-3.5"
+                            className="rounded border-neutral-300 text-orange-700 h-3.5 w-3.5"
                           />
                           <span>Loyalty Reward</span>
                         </label>
@@ -5726,7 +5726,7 @@ ${newTemplateBody}`
                   <div>
                     <div className="border-b border-neutral-100 pb-2 mb-3 flex items-center justify-between">
                       <h3 className="text-xs font-black uppercase tracking-wider text-neutral-900 flex items-center gap-1.5">
-                        <Sparkles className="h-3.5 w-3.5 text-brand-orange" />
+                        <Sparkles className="h-3.5 w-3.5 text-orange-700" />
                         <span>Active Vouchers Catalog ({couponsList?.length || 0})</span>
                       </h3>
                       <span className="text-[9px] font-bold text-neutral-400">Live on Apps</span>
@@ -5753,7 +5753,7 @@ ${newTemplateBody}`
 
                               <div className="pl-1.5 space-y-1 flex-1 min-w-0">
                                 <div className="flex items-center gap-1.5 flex-wrap">
-                                  <span className="font-mono text-[10px] font-black bg-orange-50 text-brand-orange border border-orange-200/70 px-2 py-0.5 rounded">
+                                  <span className="font-mono text-[10px] font-black bg-orange-50 text-orange-700 border border-orange-200/70 px-2 py-0.5 rounded">
                                     {c.code}
                                   </span>
                                   <span className="text-[8px] font-black uppercase bg-neutral-100 text-neutral-600 px-2 py-0.5 rounded-full">
@@ -5764,12 +5764,12 @@ ${newTemplateBody}`
                                   </span>
                                 </div>
 
-                                <h4 className="font-extrabold text-neutral-900 text-xs truncate group-hover:text-brand-orange transition">
+                                <h4 className="font-extrabold text-neutral-900 text-xs truncate group-hover:text-orange-700 transition">
                                   {c.title || c.bannerTitle || c.code}
                                 </h4>
 
                                 <div className="flex items-center gap-2 text-[10px] flex-wrap">
-                                  <span className="font-black text-brand-orange">
+                                  <span className="font-black text-orange-700">
                                     🏷️ {c.discount || c.discountLabel || (isPercentage ? `${c.discountValue || 0}% OFF` : `₹${c.discountValue || 0} OFF`)}
                                   </span>
                                   {c.maximumDiscount > 0 && (
@@ -5802,7 +5802,7 @@ ${newTemplateBody}`
                                     e.stopPropagation();
                                     handleOpenCouponDetail(c);
                                   }}
-                                  className="p-1.5 text-neutral-400 hover:text-brand-orange hover:bg-orange-100 rounded-lg transition cursor-pointer"
+                                  className="p-1.5 text-neutral-400 hover:text-orange-700 hover:bg-orange-100 rounded-lg transition cursor-pointer"
                                   title="View Details"
                                 >
                                   <Eye className="h-3.5 w-3.5" />
@@ -5824,7 +5824,7 @@ ${newTemplateBody}`
                         })
                       ) : (
                         <div className="p-8 text-center border border-dashed border-neutral-200 rounded-2xl space-y-2">
-                          <Ticket className="h-6 w-6 text-brand-orange mx-auto" />
+                          <Ticket className="h-6 w-6 text-orange-700 mx-auto" />
                           <h4 className="font-black text-xs text-neutral-800">No Active Vouchers</h4>
                           <p className="text-[10px] text-neutral-400">Publish your first promo code using the form.</p>
                         </div>
@@ -5846,7 +5846,7 @@ ${newTemplateBody}`
             <div className="p-6 border-b border-gray-100 flex items-center justify-between">
               <div>
                 <h4 className="font-display font-black text-base text-gray-900 uppercase tracking-wider flex items-center gap-1.5">
-                  <Ticket className="h-5 w-5 text-brand-orange" />
+                  <Ticket className="h-5 w-5 text-orange-700" />
                   <span>Promo Coupon Details</span>
                 </h4>
                 <p className="text-[10px] text-gray-400 font-semibold">
@@ -5884,7 +5884,7 @@ ${newTemplateBody}`
               <div className="grid grid-cols-2 gap-3 bg-neutral-50 p-3 rounded-2xl border border-neutral-100">
                 <div>
                   <span className="text-[9px] font-black uppercase text-gray-400 block">Promocode</span>
-                  <span className="font-mono font-black text-sm text-brand-orange uppercase">{selectedCouponForDetail.code}</span>
+                  <span className="font-mono font-black text-sm text-orange-700 uppercase">{selectedCouponForDetail.code}</span>
                 </div>
                 <div>
                   <span className="text-[9px] font-black uppercase text-gray-400 block">Campaign Category</span>
@@ -5900,7 +5900,7 @@ ${newTemplateBody}`
                 </div>
                 <div>
                   <span className="text-[9px] font-black uppercase text-gray-400 block">Discount Display Label</span>
-                  <p className="font-black text-xs text-brand-orange">{selectedCouponForDetail.discountLabel || selectedCouponForDetail.discount || "-"}</p>
+                  <p className="font-black text-xs text-orange-700">{selectedCouponForDetail.discountLabel || selectedCouponForDetail.discount || "-"}</p>
                 </div>
               </div>
 

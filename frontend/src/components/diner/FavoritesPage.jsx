@@ -104,7 +104,7 @@ export default function FavoritesPage({
   };
   return (
     <div
-      className="max-w-6xl mx-auto py-6 px-4 animate-fade-in"
+      className="max-w-[1400px] mx-auto py-1 animate-fade-in"
       id="favorites-page-main"
     >
       {/* Decorative top title section */}
@@ -132,7 +132,7 @@ export default function FavoritesPage({
             <Utensils className="h-4 w-4" />
             <span>Saved Restaurants</span>
             <span
-              className={`text-[10px] px-1.5 py-0.5 rounded-full font-black ${activeSubTab === "restaurants" ? "bg-white text-brand-orange" : "bg-gray-100 text-gray-600"}`}
+              className={`text-[11px] px-1.5 py-0.5 rounded-full font-black ${activeSubTab === "restaurants" ? "bg-white text-orange-700" : "bg-gray-100 text-gray-600"}`}
             >
               {savedRestaurants.length}
             </span>
@@ -145,7 +145,7 @@ export default function FavoritesPage({
             <Sparkles className="h-4 w-4" />
             <span>Saved Dishes</span>
             <span
-              className={`text-[10px] px-1.5 py-0.5 rounded-full font-black ${activeSubTab === "dishes" ? "bg-white text-brand-orange" : "bg-gray-100 text-gray-600"}`}
+              className={`text-[11px] px-1.5 py-0.5 rounded-full font-black ${activeSubTab === "dishes" ? "bg-white text-orange-700" : "bg-gray-100 text-gray-600"}`}
             >
               {savedDishes.length}
             </span>
@@ -157,7 +157,7 @@ export default function FavoritesPage({
       {activeSubTab === "restaurants" ? (
         /* SAVED RESTAURANTS TAB */
         savedRestaurants.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 animate-fade-in">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6 animate-fade-in">
             {savedRestaurants.map((res) => {
               const distanceStr = `${(res.coordinates.x * 0.05 + res.coordinates.y * 0.03 + 0.8).toFixed(1)} km`;
               return (
@@ -187,13 +187,13 @@ export default function FavoritesPage({
                     <div className="absolute bottom-3 right-3 bg-white/95 text-gray-900 text-xs font-extrabold px-2.5 py-1 rounded-lg shadow-sm flex items-center gap-1 backdrop-blur-sm">
                       <Star className="h-3.5 w-3.5 text-amber-500 fill-amber-500" />
                       <span>{res.rating}</span>
-                      <span className="text-[9px] text-gray-400 font-bold">
+                      <span className="text-[11px] text-gray-400 font-bold">
                         ({res.reviewsCount})
                       </span>
                     </div>
 
                     {res.isPromoBadge && (
-                      <span className="absolute top-3 left-3 bg-red-500 text-white text-[9px] font-black uppercase tracking-wider px-2 py-0.5 rounded-md">
+                      <span className="absolute top-3 left-3 bg-red-500 text-white text-[11px] font-black uppercase tracking-wider px-2 py-0.5 rounded-md">
                         {res.discount}
                       </span>
                     )}
@@ -202,7 +202,7 @@ export default function FavoritesPage({
                   {/* Body Info */}
                   <div className="p-5 flex-1 flex flex-col justify-between">
                     <div>
-                      <h4 className="font-display font-black text-lg text-gray-800 line-clamp-1 group-hover:text-brand-orange transition">
+                      <h4 className="font-display font-black text-lg text-gray-800 line-clamp-1 group-hover:text-orange-700 transition">
                         {res.name}
                       </h4>
                       <p className="text-[11px] text-gray-400 mt-0.5 truncate flex items-center gap-1">
@@ -215,7 +215,7 @@ export default function FavoritesPage({
                         {res.cuisines.map((c, idx) => (
                           <span
                             key={idx}
-                            className="text-[9px] font-extrabold text-gray-500 bg-gray-50 px-2.5 py-1 rounded-lg border border-gray-100"
+                            className="text-[11px] font-extrabold text-gray-500 bg-gray-50 px-2.5 py-1 rounded-lg border border-gray-100"
                           >
                             {c}
                           </span>
@@ -227,7 +227,7 @@ export default function FavoritesPage({
                     <div className="mt-5 space-y-3 pt-3 border-t border-gray-50">
                       <div className="flex items-center justify-between text-xs text-gray-500 font-semibold">
                         <span className="flex items-center gap-1">
-                          <Clock className="h-3.5 w-3.5 text-brand-orange shrink-0" />
+                          <Clock className="h-3.5 w-3.5 text-orange-700 shrink-0" />
                           <span>{res.deliveryTime}</span>
                         </span>
                         <span className="flex items-center gap-1">
@@ -277,7 +277,7 @@ export default function FavoritesPage({
         )
       ) : /* SAVED DISHES TAB */
       savedDishes.length > 0 ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 animate-fade-in">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 animate-fade-in">
           {savedDishes.map((dish) => (
             <div
               key={dish.id}
@@ -299,7 +299,7 @@ export default function FavoritesPage({
                 </span>
 
                 {dish.isBestseller && (
-                  <span className="absolute bottom-1.5 left-1/2 -translate-x-1/2 bg-amber-500 text-white text-[8px] font-black px-1.5 py-0.5 rounded uppercase">
+                  <span className="absolute bottom-1.5 left-1/2 -translate-x-1/2 bg-amber-500 text-white text-[11px] font-black px-1.5 py-0.5 rounded uppercase">
                     Best
                   </span>
                 )}
@@ -321,7 +321,7 @@ export default function FavoritesPage({
                     {dish.name}
                   </h4>
 
-                  <span className="font-mono font-black text-brand-orange text-xs sm:text-sm block">
+                  <span className="font-mono font-black text-orange-700 text-xs sm:text-sm block">
                     ₹ {dish.price}
                   </span>
 
@@ -332,7 +332,7 @@ export default function FavoritesPage({
                   {/* From Restaurant line */}
                   <button
                     onClick={() => handleViewRestaurant(dish.restaurantId)}
-                    className="text-[10px] text-gray-500 hover:text-brand-orange font-bold flex items-center gap-1 hover:underline"
+                    className="text-[11px] text-gray-500 hover:text-orange-700 font-bold flex items-center gap-1 hover:underline"
                   >
                     <span>From {dish.restaurantName}</span>
                     <span className="text-amber-500">
@@ -343,19 +343,19 @@ export default function FavoritesPage({
 
                 {/* Actions footer (Quick Reorder) */}
                 <div className="flex items-center justify-between border-t border-gray-50 mt-3 pt-2">
-                  <span className="text-[10px] text-gray-400 font-semibold flex items-center gap-0.5">
+                  <span className="text-[11px] text-gray-400 font-semibold flex items-center gap-0.5">
                     <Clock className="h-3.5 w-3.5 text-gray-300" />
                     <span>Delivery: {dish.deliveryTime}</span>
                   </span>
 
                   {(dish.isAvailable === false || dish.availability === false) ? (
-                    <span className="bg-neutral-100 text-neutral-400 border border-neutral-200 text-[10px] font-black uppercase tracking-wider px-3.5 py-2 rounded-xl select-none">
+                    <span className="bg-neutral-100 text-neutral-400 border border-neutral-200 text-[11px] font-black uppercase tracking-wider px-3.5 py-2 rounded-xl select-none">
                       OUT OF STOCK
                     </span>
                   ) : (
                     <button
                       onClick={() => handleQuickReorder(dish)}
-                      className="bg-brand-orange hover:bg-orange-600 text-white font-black text-[10px] uppercase tracking-wider px-3.5 py-2 rounded-xl transition shadow-xs flex items-center gap-1.5 active:scale-95"
+                      className="bg-brand-orange hover:bg-orange-600 text-white font-black text-[11px] uppercase tracking-wider px-3.5 py-2 rounded-xl transition shadow-xs flex items-center gap-1.5 active:scale-95"
                     >
                       <Plus className="h-3.5 w-3.5" />
                       <span>Quick Reorder</span>

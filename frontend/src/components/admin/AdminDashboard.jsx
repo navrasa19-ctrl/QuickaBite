@@ -1125,7 +1125,7 @@ export default function AdminDashboard({
   return (
     <>
       <div
-        className="min-h-[calc(100vh-4rem)] w-full bg-neutral-100 flex font-sans relative overflow-x-hidden"
+        className="min-h-[calc(100vh-4rem)] w-full bg-cream-base flex font-sans relative overflow-x-hidden"
         id="admin-workspace-pane"
       >
         {/* MOBILE BACKDROP OVERLAY */}
@@ -1159,9 +1159,9 @@ export default function AdminDashboard({
               {isSidebarOpen && (
                 <div className="space-y-0.5 min-w-0">
                   <h3 className="font-display font-black text-base text-neutral-900 tracking-tight leading-none truncate">
-                    QuickaBite
+                    Quickaa Bite
                   </h3>
-                  <span className="text-[9px] font-mono font-black text-brand-orange uppercase tracking-widest block">
+                  <span className="text-[9px] font-mono font-black text-orange-700 uppercase tracking-widest block">
                     Admin Portal
                   </span>
                 </div>
@@ -1292,10 +1292,10 @@ export default function AdminDashboard({
               </button>
               <div className="min-w-0">
                 <h2 className="font-display font-black text-sm sm:text-base text-neutral-900 tracking-tight flex items-center gap-2 truncate">
-                  <span>QuickaBite Administration</span>
+                  <span>Quickaa Bite administration</span>
                 </h2>
                 <p className="text-[10px] sm:text-[11px] text-neutral-500 font-medium truncate">
-                  Active View: <span className="font-bold text-brand-orange uppercase">{activeSubTab}</span>
+                  Active View: <span className="font-bold text-orange-700 uppercase">{activeSubTab}</span>
                 </p>
               </div>
             </div>
@@ -1556,7 +1556,7 @@ export default function AdminDashboard({
                         setNewResFee("0");
                       }
                     }}
-                    className="h-4 w-4 text-brand-orange focus:ring-brand-orange border-neutral-300 rounded cursor-pointer"
+                    className="h-4 w-4 text-orange-700 focus:ring-brand-orange border-neutral-300 rounded cursor-pointer"
                   />
                   <label
                     htmlFor="isFreeDeliveryOutlet"
@@ -1706,7 +1706,7 @@ export default function AdminDashboard({
                       onDragLeave={handleResDrag}
                       onDrop={handleResDrop}
                       className={`border-2 border-dashed rounded-xl p-4 text-center cursor-pointer transition flex flex-col items-center justify-center gap-1.5 ${resDragActive
-                        ? "border-brand-orange bg-orange-50/40 text-brand-orange scale-[0.99]"
+                        ? "border-brand-orange bg-orange-50/40 text-orange-700 scale-[0.99]"
                         : "border-neutral-200 bg-neutral-50/50 hover:bg-neutral-50 hover:border-orange-200 text-neutral-400"
                         }`}
                     >
@@ -1721,10 +1721,10 @@ export default function AdminDashboard({
                         htmlFor="restaurant-photo-uploader"
                         className="cursor-pointer flex flex-col items-center w-full"
                       >
-                        <Upload className="h-5 w-5 text-neutral-400 mb-1 group-hover:text-brand-orange transition" />
+                        <Upload className="h-5 w-5 text-neutral-400 mb-1 group-hover:text-orange-700 transition" />
                         <p className="text-[10px] font-bold text-neutral-600">
                           Drag & drop restaurant image or{" "}
-                          <span className="text-brand-orange underline">
+                          <span className="text-orange-700 underline">
                             browse files
                           </span>
                         </p>
@@ -1804,7 +1804,7 @@ export default function AdminDashboard({
                               updated[index].isClosed = e.target.checked;
                               setNewResOperatingHours(updated);
                             }}
-                            className="h-3 w-3 text-brand-orange focus:ring-brand-orange border-neutral-300 rounded"
+                            className="h-3 w-3 text-orange-700 focus:ring-brand-orange border-neutral-300 rounded"
                           />
                           <span className="text-[10px] font-bold text-neutral-500">
                             Closed
@@ -1821,7 +1821,7 @@ export default function AdminDashboard({
                     id="isActiveOutlet"
                     checked={newResIsActive}
                     onChange={(e) => setNewResIsActive(e.target.checked)}
-                    className="h-4 w-4 text-brand-orange focus:ring-brand-orange border-neutral-300 rounded cursor-pointer"
+                    className="h-4 w-4 text-orange-700 focus:ring-brand-orange border-neutral-300 rounded cursor-pointer"
                   />
                   <label
                     htmlFor="isActiveOutlet"
@@ -1922,7 +1922,7 @@ export default function AdminDashboard({
                     onDragLeave={handleDishDrag}
                     onDrop={handleDishDrop}
                     className={`border-2 border-dashed rounded-xl p-3 text-center cursor-pointer transition flex flex-col items-center justify-center gap-1.5 ${dishDragActive
-                      ? "border-brand-orange bg-orange-50/40 text-brand-orange scale-[0.99]"
+                      ? "border-brand-orange bg-orange-50/40 text-orange-700 scale-[0.99]"
                       : "border-neutral-200 bg-neutral-50/50 hover:bg-neutral-50 hover:border-orange-200 text-neutral-400"
                       }`}
                   >
@@ -1937,10 +1937,10 @@ export default function AdminDashboard({
                       htmlFor="dish-photo-uploader-modal"
                       className="cursor-pointer flex flex-col items-center w-full"
                     >
-                      <Upload className="h-5 w-5 text-neutral-400 mb-1 group-hover:text-brand-orange transition" />
+                      <Upload className="h-5 w-5 text-neutral-400 mb-1 group-hover:text-orange-700 transition" />
                       <p className="text-[10px] font-bold text-neutral-600">
                         Drag & drop image or{" "}
-                        <span className="text-brand-orange underline">
+                        <span className="text-orange-700 underline">
                           browse files
                         </span>
                       </p>

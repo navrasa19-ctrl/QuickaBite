@@ -356,10 +356,10 @@ export default function DeliveryLocationPicker({
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
         <div>
           <label className="text-xs font-black text-gray-700 uppercase tracking-wider flex items-center gap-1.5">
-            <MapPin className="h-4 w-4 text-brand-orange" />
+            <MapPin className="h-4 w-4 text-orange-700" />
             <span>Pin Delivery Location</span>
           </label>
-          <span className="text-[10px] text-gray-400 font-medium block">
+          <span className="text-[11px] text-gray-400 font-medium block">
             {useGoogleMaps
               ? "Drag pin or click map to set exact delivery drop-off"
               : "Interactive OpenStreetMap • Click or drag pin to adjust coordinates"}
@@ -370,7 +370,7 @@ export default function DeliveryLocationPicker({
           type="button"
           onClick={handleDetectLocation}
           disabled={isLocating}
-          className="cursor-pointer inline-flex items-center gap-1.5 px-3 py-1.5 bg-orange-50 hover:bg-orange-100 text-brand-orange border border-orange-200/80 rounded-xl text-xs font-bold transition shadow-xs self-start sm:self-auto"
+          className="cursor-pointer inline-flex items-center gap-1.5 px-3 py-1.5 bg-orange-50 hover:bg-orange-100 text-orange-700 border border-orange-200/80 rounded-xl text-xs font-bold transition shadow-xs self-start sm:self-auto"
         >
           {isLocating ? (
             <Loader2 className="h-3.5 w-3.5 animate-spin" />
@@ -483,9 +483,9 @@ export default function DeliveryLocationPicker({
                     key={idx}
                     type="button"
                     onClick={() => handleSelectSearchResult(item)}
-                    className="w-full text-left p-3 text-xs text-gray-700 hover:bg-orange-50 hover:text-brand-orange flex items-center gap-2.5 transition cursor-pointer"
+                    className="w-full text-left p-3 text-xs text-gray-700 hover:bg-orange-50 hover:text-orange-700 flex items-center gap-2.5 transition cursor-pointer"
                   >
-                    <MapPin className="h-4 w-4 shrink-0 text-brand-orange" />
+                    <MapPin className="h-4 w-4 shrink-0 text-orange-700" />
                     <span className="truncate font-medium">{item.display_name}</span>
                   </button>
                 ))}
@@ -537,15 +537,15 @@ export default function DeliveryLocationPicker({
 
             {/* Demo API Key info badge */}
             <div className="absolute top-3 left-3 right-3 z-20 pointer-events-none flex justify-between items-start gap-2">
-              <div className="bg-neutral-950/85 backdrop-blur-md px-3 py-1.5 rounded-xl border border-neutral-800 text-[10px] text-neutral-300 flex items-center gap-1.5 shadow-lg">
-                <Compass className="h-3.5 w-3.5 text-brand-orange" />
+              <div className="bg-neutral-950/85 backdrop-blur-md px-3 py-1.5 rounded-xl border border-neutral-800 text-[11px] text-neutral-300 flex items-center gap-1.5 shadow-lg">
+                <Compass className="h-3.5 w-3.5 text-orange-700" />
                 <span>OpenStreetMap Interactive Engine Active</span>
               </div>
             </div>
 
             {/* Click instruction bar */}
             <div className="absolute bottom-3 left-3 right-3 z-20 pointer-events-none bg-neutral-950/90 backdrop-blur-md px-3 py-2 rounded-xl border border-neutral-800 text-center">
-              <p className="text-[10px] text-neutral-300 font-medium">
+              <p className="text-[11px] text-neutral-300 font-medium">
                 📍 Click anywhere on the map to place your delivery pin
               </p>
             </div>
@@ -562,7 +562,7 @@ export default function DeliveryLocationPicker({
           </span>
         </div>
         {isGeocoding && (
-          <span className="flex items-center gap-1 text-brand-orange font-sans font-medium text-[10px]">
+          <span className="flex items-center gap-1 text-orange-700 font-sans font-medium text-[11px]">
             <Loader2 className="h-3 w-3 animate-spin" />
             <span>Fetching address...</span>
           </span>

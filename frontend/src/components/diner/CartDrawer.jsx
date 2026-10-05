@@ -293,11 +293,11 @@ export default function CartDrawer({
         {/* Drawer Header */}
         <div className="px-6 py-5 border-b border-gray-100 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <ShoppingBag className="h-5 w-5 text-brand-orange" />
+            <ShoppingBag className="h-5 w-5 text-orange-700" />
             <h2 className="font-display font-extrabold text-lg text-gray-800">
               Your Basket
             </h2>
-            <span className="text-xs bg-orange-100 text-brand-orange font-bold px-2 py-0.5 rounded-full">
+            <span className="text-xs bg-orange-100 text-orange-700 font-bold px-2 py-0.5 rounded-full">
               {cartItems.length} Items
             </span>
           </div>
@@ -321,7 +321,7 @@ export default function CartDrawer({
               <div className="grid grid-cols-2 bg-gray-50 p-1.5 rounded-xl border border-gray-100">
                 <button
                   onClick={() => setDeliveryType("delivery")}
-                  className={`py-2 text-xs font-bold rounded-lg transition ${deliveryType === "delivery" ? "bg-white text-brand-orange shadow-sm" : "text-gray-500 hover:text-gray-900"}`}
+                  className={`py-2 text-xs font-bold rounded-lg transition ${deliveryType === "delivery" ? "bg-white text-orange-700 shadow-sm" : "text-gray-500 hover:text-gray-900"}`}
                 >
                   Home Delivery
                 </button>
@@ -329,7 +329,7 @@ export default function CartDrawer({
 
               {/* Restaurant title card */}
               <div className="bg-orange-50/50 rounded-2xl p-4 border border-orange-100/30">
-                <span className="text-[9px] text-brand-orange font-extrabold uppercase tracking-widest block">
+                <span className="text-[11px] text-orange-700 font-extrabold uppercase tracking-widest block">
                   Ordering From
                 </span>
                 <span className="font-display font-black text-base text-gray-800 block">
@@ -424,7 +424,7 @@ export default function CartDrawer({
                         <span className="font-bold text-xs">
                           COUPON {appliedCoupon.code} APPLIED!
                         </span>
-                        <p className="text-[10px] text-emerald-600 mt-0.5">
+                        <p className="text-[11px] text-emerald-600 mt-0.5">
                           {appliedCoupon.code === "FREEDEL"
                             ? "Free delivery charge applied"
                             : `Saved ₹ ${appliedCoupon.discount} on your feast`}
@@ -470,7 +470,7 @@ export default function CartDrawer({
                         setCouponCode("WELCOME50");
                         handleApplyCoupon("WELCOME50");
                       }}
-                      className="bg-orange-50 hover:bg-orange-100 text-brand-orange text-[10px] font-bold px-2.5 py-1.5 rounded-md transition"
+                      className="bg-orange-50 hover:bg-orange-100 text-orange-700 text-[11px] font-bold px-2.5 py-1.5 rounded-md transition"
                     >
                       WELCOME50 (50% Off)
                     </button>
@@ -479,7 +479,7 @@ export default function CartDrawer({
                         setCouponCode("FOOD40");
                         handleApplyCoupon("FOOD40");
                       }}
-                      className="bg-orange-50 hover:bg-orange-100 text-brand-orange text-[10px] font-bold px-2.5 py-1.5 rounded-md transition"
+                      className="bg-orange-50 hover:bg-orange-100 text-orange-700 text-[11px] font-bold px-2.5 py-1.5 rounded-md transition"
                     >
                       FOOD40 (40% Off)
                     </button>
@@ -515,7 +515,7 @@ export default function CartDrawer({
                 {currentTip > 0 && (
                   <div className="flex justify-between text-xs text-gray-500 font-semibold">
                     <span>Delivery Tip</span>
-                    <span className="font-mono text-brand-orange">
+                    <span className="font-mono text-orange-700">
                       + ₹ {currentTip}
                     </span>
                   </div>
@@ -530,12 +530,12 @@ export default function CartDrawer({
                 )}
                 <div className="flex justify-between text-base text-gray-800 font-extrabold pt-2 border-t border-dashed border-gray-100">
                   <span>Grand Total</span>
-                  <span className="font-mono text-brand-orange">₹ {total}</span>
+                  <span className="font-mono text-orange-700">₹ {total}</span>
                 </div>
               </div>
 
               {/* Secure guarantee */}
-              <div className="bg-emerald-50/50 rounded-xl p-3 flex items-center gap-2 text-[10px] text-emerald-700 font-medium">
+              <div className="bg-emerald-50/50 rounded-xl p-3 flex items-center gap-2 text-[11px] text-emerald-700 font-medium">
                 <Info className="h-3.5 w-3.5 text-emerald-600 shrink-0" />
                 <span>
                   100% Secure Checkout. Handled professionally under premium
@@ -571,7 +571,7 @@ export default function CartDrawer({
           </>
         ) : (
           <div className="flex-1 flex flex-col items-center justify-center p-6 text-center">
-            <div className="h-20 w-20 bg-orange-50 text-brand-orange rounded-full flex items-center justify-center mb-4">
+            <div className="h-20 w-20 bg-orange-50 text-orange-700 rounded-full flex items-center justify-center mb-4">
               <ShoppingBag className="h-10 w-10" />
             </div>
             <h3 className="font-display font-extrabold text-lg text-gray-800">

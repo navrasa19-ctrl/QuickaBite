@@ -163,7 +163,7 @@ export default function ReportingDashboard({ orders = [], triggerToast }) {
     totalSpent: Number(c.totalSpent ?? c.revenue ?? 0),
   }));
 
-  const COLORS = ["#0B8A3E", "#F43F5E", "#10B981", "#3B82F6", "#8B5CF6"];
+  const COLORS = ["#FF6B35", "#F43F5E", "#10B981", "#3B82F6", "#8B5CF6"];
 
   return (
     <div className="space-y-6" id="reporting-dashboard-pane">
@@ -171,7 +171,7 @@ export default function ReportingDashboard({ orders = [], triggerToast }) {
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-white p-6 rounded-3xl border border-neutral-150">
         <div>
           <h2 className="text-lg font-black uppercase tracking-wider text-neutral-900 flex items-center gap-2">
-            <Sparkles className="h-5 w-5 text-brand-orange animate-pulse" />
+            <Sparkles className="h-5 w-5 text-orange-700 animate-pulse" />
             <span>Interactive Business Intelligence Dashboard</span>
           </h2>
           <p className="text-xs text-neutral-500 font-semibold">
@@ -231,7 +231,7 @@ export default function ReportingDashboard({ orders = [], triggerToast }) {
             value: `${totalItemsSold} Items`,
             desc: "Kitchen dispatches count",
             icon: ShoppingBag,
-            color: "text-brand-orange bg-orange-50 border-orange-100",
+            color: "text-orange-700 bg-orange-50 border-orange-100",
           },
           {
             label: "Unique Active Diners",
@@ -365,7 +365,7 @@ export default function ReportingDashboard({ orders = [], triggerToast }) {
           <div className="flex justify-between items-center">
             <div>
               <h3 className="text-xs font-black uppercase tracking-wider text-neutral-900 flex items-center gap-1">
-                <Calendar className="h-4 w-4 text-brand-orange" />
+                <Calendar className="h-4 w-4 text-orange-700" />
                 <span>Weekly Cumulative Revenue</span>
               </h3>
               <p className="text-[10px] text-neutral-400 font-semibold">
@@ -413,7 +413,7 @@ export default function ReportingDashboard({ orders = [], triggerToast }) {
                       fontWeight: "bold",
                     }}
                     itemStyle={{
-                      color: "#0B8A3E",
+                      color: "#FF6B35",
                       fontSize: "12px",
                       fontWeight: "black",
                     }}
@@ -421,7 +421,7 @@ export default function ReportingDashboard({ orders = [], triggerToast }) {
                   <Bar
                     dataKey="sales"
                     name="Revenue (₹)"
-                    fill="#0B8A3E"
+                    fill="#FF6B35"
                     radius={[6, 6, 0, 0]}
                     barSize={32}
                   >
@@ -430,7 +430,7 @@ export default function ReportingDashboard({ orders = [], triggerToast }) {
                         key={`cell-${index}`}
                         fill={
                           index === weeklySalesData.length - 1
-                            ? "#0B8A3E"
+                            ? "#FF6B35"
                             : "#CCE1D5"
                         }
                       />

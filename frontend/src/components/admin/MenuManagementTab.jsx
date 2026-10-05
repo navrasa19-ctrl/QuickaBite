@@ -624,7 +624,7 @@ export default function MenuManagementTab({
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-neutral-100 pb-5">
             <div>
               <h2 className="text-lg font-black text-neutral-900 flex items-center gap-2">
-                <Utensils className="h-5 w-5 text-brand-orange" />
+                <Utensils className="h-5 w-5 text-orange-700" />
                 <span>Operational Menu Catalog Management</span>
               </h2>
               <p className="text-xs text-neutral-400 font-semibold mt-1">
@@ -646,7 +646,7 @@ export default function MenuManagementTab({
                 onClick={onAddRestaurantClick}
                 className="px-4 py-3 bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-xs font-black rounded-2xl transition flex items-center gap-2 cursor-pointer justify-center"
               >
-                <Plus className="h-4.5 w-4.5 text-brand-orange" />
+                <Plus className="h-4.5 w-4.5 text-orange-700" />
                 <span>Add Partner Kitchen</span>
               </button>
 
@@ -657,13 +657,13 @@ export default function MenuManagementTab({
           <div className="flex border-b border-neutral-100 mb-6">
             <button
               onClick={() => setActiveCatalogTab("dishes")}
-              className={`pb-3 px-4 font-black text-xs uppercase tracking-wider border-b-2 transition ${activeCatalogTab === "dishes" ? "border-brand-orange text-brand-orange" : "border-transparent text-neutral-400 hover:text-neutral-600"}`}
+              className={`pb-3 px-4 font-black text-xs uppercase tracking-wider border-b-2 transition ${activeCatalogTab === "dishes" ? "border-brand-orange text-orange-700" : "border-transparent text-neutral-400 hover:text-neutral-600"}`}
             >
               Food Items / Recipes ({allFlattenedItems.length})
             </button>
             <button
               onClick={() => setActiveCatalogTab("kitchens")}
-              className={`pb-3 px-4 font-black text-xs uppercase tracking-wider border-b-2 transition ${activeCatalogTab === "kitchens" ? "border-brand-orange text-brand-orange" : "border-transparent text-neutral-400 hover:text-neutral-600"}`}
+              className={`pb-3 px-4 font-black text-xs uppercase tracking-wider border-b-2 transition ${activeCatalogTab === "kitchens" ? "border-brand-orange text-orange-700" : "border-transparent text-neutral-400 hover:text-neutral-600"}`}
             >
               Partner Kitchens ({restaurantsList.length})
             </button>
@@ -931,7 +931,7 @@ export default function MenuManagementTab({
                             </td>
 
                             <td className="px-6 py-4">
-                              <span className="text-[10px] font-black uppercase tracking-wider text-brand-orange bg-orange-50 px-2.5 py-1.5 rounded-xl border border-orange-100">
+                              <span className="text-[10px] font-black uppercase tracking-wider text-orange-700 bg-orange-50 px-2.5 py-1.5 rounded-xl border border-orange-100">
                                 {dish.category}
                               </span>
                             </td>
@@ -966,7 +966,7 @@ export default function MenuManagementTab({
                                   onClick={() =>
                                     handleOpenEditMode(entry.restaurantId, dish)
                                   }
-                                  className="p-2 bg-neutral-50 hover:bg-neutral-100 hover:text-brand-orange border border-neutral-200 text-neutral-500 rounded-xl transition cursor-pointer"
+                                  className="p-2 bg-neutral-50 hover:bg-neutral-100 hover:text-orange-700 border border-neutral-200 text-neutral-500 rounded-xl transition cursor-pointer"
                                   title="Edit Recipe"
                                 >
                                   <Edit2 className="h-4 w-4" />
@@ -1112,7 +1112,7 @@ export default function MenuManagementTab({
                             {res.cuisines.map((c, idx) => (
                               <span
                                 key={idx}
-                                className="text-[9px] font-black uppercase tracking-wider text-brand-orange bg-orange-50 px-2 py-1 rounded border border-orange-100/50"
+                                className="text-[9px] font-black uppercase tracking-wider text-orange-700 bg-orange-50 px-2 py-1 rounded border border-orange-100/50"
                               >
                                 {c}
                               </span>
@@ -1137,7 +1137,7 @@ export default function MenuManagementTab({
                           <div className="flex items-center justify-end gap-1.5">
                             <button
                               onClick={() => onEditRestaurantClick(res)}
-                              className="p-2 bg-neutral-50 hover:bg-neutral-100 hover:text-brand-orange border border-neutral-200 text-neutral-500 rounded-xl transition cursor-pointer"
+                              className="p-2 bg-neutral-50 hover:bg-neutral-100 hover:text-orange-700 border border-neutral-200 text-neutral-500 rounded-xl transition cursor-pointer"
                               title="Edit Kitchen Details"
                             >
                               <Edit2 className="h-4 w-4" />
@@ -1164,7 +1164,7 @@ export default function MenuManagementTab({
                 <div className="text-xs font-semibold text-neutral-500">
                   Showing Page <span className="font-black text-neutral-900">{restaurantPagination.page || restaurantPage}</span> of{" "}
                   <span className="font-black text-neutral-900">{restaurantPagination.totalPages || 1}</span> (Total{" "}
-                  <span className="font-black text-brand-orange">{restaurantPagination.total || restaurantsList.length}</span> kitchens)
+                  <span className="font-black text-orange-700">{restaurantPagination.total || restaurantsList.length}</span> kitchens)
                 </div>
                 <div className="flex items-center gap-2">
                   <button
@@ -1174,7 +1174,7 @@ export default function MenuManagementTab({
                   >
                     Previous
                   </button>
-                  <span className="text-xs font-black px-2.5 py-1 bg-orange-50 text-brand-orange border border-orange-200 rounded-lg">
+                  <span className="text-xs font-black px-2.5 py-1 bg-orange-50 text-orange-700 border border-orange-200 rounded-lg">
                     {restaurantPage}
                   </span>
                   <button
@@ -1220,7 +1220,7 @@ export default function MenuManagementTab({
               <span>Back to Catalog</span>
             </button>
             <div className="text-right">
-              <span className="text-[10px] font-black uppercase tracking-widest text-brand-orange bg-orange-50 px-2 py-0.5 rounded border border-orange-100">
+              <span className="text-[10px] font-black uppercase tracking-widest text-orange-700 bg-orange-50 px-2 py-0.5 rounded border border-orange-100">
                 Studio Mode
               </span>
             </div>
@@ -1234,7 +1234,7 @@ export default function MenuManagementTab({
             >
               <div>
                 <h3 className="text-base font-black text-neutral-900 flex items-center gap-2">
-                  <Sparkles className="h-4.5 w-4.5 text-brand-orange" />
+                  <Sparkles className="h-4.5 w-4.5 text-orange-700" />
                   <span>
                     {editingItem
                       ? "Edit Culinary Recipe"
@@ -1405,7 +1405,7 @@ export default function MenuManagementTab({
                             `Switched design image template: ${p.name}`,
                           );
                         }}
-                        className={`px-2.5 py-1.5 bg-white border rounded-xl text-[10px] font-black tracking-tight transition cursor-pointer ${itemImage === p.url ? "border-brand-orange text-brand-orange bg-orange-50/20" : "border-neutral-200 text-neutral-600 hover:bg-neutral-100"}`}
+                        className={`px-2.5 py-1.5 bg-white border rounded-xl text-[10px] font-black tracking-tight transition cursor-pointer ${itemImage === p.url ? "border-brand-orange text-orange-700 bg-orange-50/20" : "border-neutral-200 text-neutral-600 hover:bg-neutral-100"}`}
                       >
                         {p.name}
                       </button>
@@ -1426,7 +1426,7 @@ export default function MenuManagementTab({
                       onDragLeave={handleItemDrag}
                       onDrop={handleItemDrop}
                       className={`border-2 border-dashed rounded-xl p-4 text-center cursor-pointer transition flex flex-col items-center justify-center gap-1.5 ${itemDragActive
-                          ? "border-brand-orange bg-orange-50/40 text-brand-orange scale-[0.99]"
+                          ? "border-brand-orange bg-orange-50/40 text-orange-700 scale-[0.99]"
                           : "border-neutral-200 bg-neutral-50/50 hover:bg-neutral-50 hover:border-orange-200 text-neutral-400"
                         }`}
                     >
@@ -1441,10 +1441,10 @@ export default function MenuManagementTab({
                         htmlFor="dish-photo-uploader-tab"
                         className="cursor-pointer flex flex-col items-center w-full"
                       >
-                        <Upload className="h-5 w-5 text-neutral-400 mb-1 group-hover:text-brand-orange transition" />
+                        <Upload className="h-5 w-5 text-neutral-400 mb-1 group-hover:text-orange-700 transition" />
                         <p className="text-[10px] font-bold text-neutral-600">
                           Drag & drop food image or{" "}
-                          <span className="text-brand-orange underline">
+                          <span className="text-orange-700 underline">
                             browse files
                           </span>
                         </p>
@@ -1602,11 +1602,11 @@ export default function MenuManagementTab({
                   {/* Header info */}
                   <div className="border-b border-dashed border-neutral-200 pb-2.5">
                     <div className="flex items-center justify-between">
-                      <span className="text-[10px] font-black uppercase tracking-widest text-brand-orange">
+                      <span className="text-[10px] font-black uppercase tracking-widest text-orange-700">
                         {previewRestaurantName}
                       </span>
                       <span className="text-[9px] font-black text-neutral-400 flex items-center gap-0.5">
-                        <Clock className="h-2.5 w-2.5 text-brand-orange" />
+                        <Clock className="h-2.5 w-2.5 text-orange-700" />
                         <span>25 mins</span>
                       </span>
                     </div>
@@ -1663,7 +1663,7 @@ export default function MenuManagementTab({
 
                     {/* Meta category */}
                     <div className="flex justify-between items-center text-[9px] font-black uppercase tracking-wider">
-                      <span className="text-brand-orange bg-orange-50 px-2 py-0.5 rounded-md">
+                      <span className="text-orange-700 bg-orange-50 px-2 py-0.5 rounded-md">
                         {itemCategory || "Category"}
                       </span>
                       <span className="text-neutral-400">
@@ -1710,10 +1710,10 @@ export default function MenuManagementTab({
                   {/* Mock app checkout bar */}
                   <div className="bg-neutral-900 rounded-xl p-2 px-3 flex justify-between items-center text-[9px] font-black text-white shrink-0">
                     <div className="flex items-center gap-1.5">
-                      <ShoppingBag className="h-3 w-3 text-brand-orange" />
+                      <ShoppingBag className="h-3 w-3 text-orange-700" />
                       <span>1 item in cart</span>
                     </div>
-                    <span className="text-brand-orange font-bold flex items-center">
+                    <span className="text-orange-700 font-bold flex items-center">
                       <span>View Cart</span>
                       <span>→</span>
                     </span>
@@ -1723,7 +1723,7 @@ export default function MenuManagementTab({
 
               {/* Informational tips footer */}
               <div className="bg-neutral-50 border border-neutral-200 p-4 rounded-2xl flex items-start gap-2.5 text-[10px] font-semibold text-neutral-500 leading-normal">
-                <Info className="h-4.5 w-4.5 text-brand-orange shrink-0 mt-0.5" />
+                <Info className="h-4.5 w-4.5 text-orange-700 shrink-0 mt-0.5" />
                 <div className="space-y-0.5">
                   <p className="font-black text-neutral-700">
                     Studio Formatting Advice

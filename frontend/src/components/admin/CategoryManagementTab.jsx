@@ -211,7 +211,7 @@ export default function CategoryManagementTab({ triggerToast }) {
       {/* METRICS ROW */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div className="bg-white p-4 rounded-2xl border border-orange-100 shadow-soft flex items-center gap-4">
-          <div className="h-10 w-10 bg-orange-50 text-brand-orange rounded-xl flex items-center justify-center">
+          <div className="h-10 w-10 bg-orange-50 text-orange-700 rounded-xl flex items-center justify-center">
             <Layers className="h-5 w-5" />
           </div>
           <div>
@@ -256,7 +256,7 @@ export default function CategoryManagementTab({ triggerToast }) {
       {/* OUTLET FILTER & SELECTOR BAR */}
       <div className="bg-white p-3.5 rounded-2xl border border-neutral-200 shadow-2xs flex flex-col sm:flex-row items-center justify-between gap-3">
         <div className="flex items-center gap-2 text-xs font-black uppercase text-neutral-700">
-          <Grid className="h-4 w-4 text-brand-orange" />
+          <Grid className="h-4 w-4 text-orange-700" />
           <span>Filter by Partner Outlet:</span>
         </div>
         <div className="relative w-full sm:w-72">
@@ -286,7 +286,7 @@ export default function CategoryManagementTab({ triggerToast }) {
       {/* CATEGORIES GRID */}
       {loading ? (
         <div className="bg-white p-12 rounded-3xl text-center border border-neutral-100 shadow-xs">
-          <RefreshCw className="animate-spin h-8 w-8 text-brand-orange mx-auto mb-3" />
+          <RefreshCw className="animate-spin h-8 w-8 text-orange-700 mx-auto mb-3" />
           <p className="text-xs font-bold text-gray-500 uppercase tracking-wider">Loading categories studio...</p>
         </div>
       ) : categories.length === 0 ? (
@@ -397,9 +397,9 @@ export default function CategoryManagementTab({ triggerToast }) {
             <div>
               <h4 className="font-display font-black text-base text-gray-900 uppercase tracking-wider flex items-center gap-1.5">
                 {editingCategory ? (
-                  <Edit className="h-5 w-5 text-brand-orange" />
+                  <Edit className="h-5 w-5 text-orange-700" />
                 ) : (
-                  <FolderPlus className="h-5 w-5 text-brand-orange" />
+                  <FolderPlus className="h-5 w-5 text-orange-700" />
                 )}
                 <span>
                   {editingCategory ? "Edit Category Details" : "Create New Category"}

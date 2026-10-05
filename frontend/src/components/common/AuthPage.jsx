@@ -59,8 +59,8 @@ export default function AuthPage({
       title: "Handcrafted Gourmet Cooking",
       description:
         "Experience 5-star culinary mastery prepared in state-of-the-art kitchens and handcrafted to perfection by expert chefs.",
-      icon: <ChefHat className="h-16 w-16 text-brand-orange" />,
-      colorClass: "bg-orange-50 text-brand-orange border-orange-100",
+      icon: <ChefHat className="h-16 w-16 text-orange-700" />,
+      colorClass: "bg-orange-50 text-orange-700 border-orange-100",
       illustration: (
         <div className="relative w-full h-48 flex items-center justify-center">
           <motion.div
@@ -73,7 +73,7 @@ export default function AuthPage({
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             className="relative h-28 w-28 bg-white rounded-3xl shadow-xl border border-orange-100 flex items-center justify-center z-10"
           >
-            <ChefHat className="h-14 w-14 text-brand-orange" />
+            <ChefHat className="h-14 w-14 text-orange-700" />
             <motion.div
               animate={{ scale: [1, 1.2, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
@@ -368,7 +368,7 @@ export default function AuthPage({
           {/* Subtle grid pattern overlay */}
           <div
             style={{ backgroundColor: "#eb5555", color: "#ff2e2e" }}
-            className="absolute inset-0 bg-[linear-gradient(to_right,#0B8A3E_1px,transparent_1px),linear-gradient(to_bottom,#0B8A3E_1px,transparent_1px)] bg-[size:24px_24px] opacity-15"
+            className="absolute inset-0 bg-[linear-gradient(to_right,#FF6B35_1px,transparent_1px),linear-gradient(to_bottom,#FF6B35_1px,transparent_1px)] bg-[size:24px_24px] opacity-15"
           />
 
           {/* Luxury Logo Branding */}
@@ -455,7 +455,7 @@ export default function AuthPage({
 
                 {/* Header welcoming text */}
                 <div className="space-y-3">
-                  <div className="bg-orange-50 text-brand-orange font-black text-[10px] tracking-widest uppercase px-3 py-1.5 rounded-full w-fit">
+                  <div className="bg-orange-50 text-orange-700 font-black text-[11px] tracking-widest uppercase px-3 py-1.5 rounded-full w-fit">
                     Premium Dining Access
                   </div>
                   <h2 className="font-display font-black text-3xl text-neutral-900 tracking-tight leading-tight">
@@ -598,7 +598,7 @@ export default function AuthPage({
                 <form onSubmit={handleLoginSubmit} className="space-y-4">
                   {/* Phone field */}
                   <div className="space-y-1">
-                    <label className="text-[10px] font-bold uppercase tracking-wider text-neutral-400">
+                    <label className="text-[11px] font-bold uppercase tracking-wider text-neutral-400">
                       Phone Number
                     </label>
                     <div className="flex gap-2.5">
@@ -661,7 +661,7 @@ export default function AuthPage({
                   <button
                     type="button"
                     onClick={() => navigateTo("signup", "next")}
-                    className="text-brand-orange font-bold hover:underline cursor-pointer"
+                    className="text-orange-700 font-bold hover:underline cursor-pointer"
                   >
                     Sign Up
                   </button>
@@ -692,7 +692,7 @@ export default function AuthPage({
                 {/* Header text */}
                 <div className="space-y-1">
                   <h2 className="font-display font-black text-2xl text-neutral-900 tracking-tight leading-none">
-                    Join QuickaBite 🌟
+                    Join Quickaa Bite
                   </h2>
                   <p className="text-xs text-neutral-400 font-medium">
                     Set up your secure profile to unlock discount coupon
@@ -704,7 +704,7 @@ export default function AuthPage({
                 <form onSubmit={handleSignUpSubmit} className="space-y-3.5">
                   {/* Name field */}
                   <div className="space-y-1">
-                    <label className="text-[10px] font-bold uppercase tracking-wider text-neutral-400">
+                    <label className="text-[11px] font-bold uppercase tracking-wider text-neutral-400">
                       Full Name
                     </label>
                     <div className="relative">
@@ -724,7 +724,7 @@ export default function AuthPage({
 
                   {/* Phone field */}
                   <div className="space-y-1">
-                    <label className="text-[10px] font-bold uppercase tracking-wider text-neutral-400">
+                    <label className="text-[11px] font-bold uppercase tracking-wider text-neutral-400">
                       Phone Number
                     </label>
                     <div className="flex gap-2.5">
@@ -783,7 +783,7 @@ export default function AuthPage({
                   <button
                     type="button"
                     onClick={() => navigateTo("login", "prev")}
-                    className="text-brand-orange font-bold hover:underline cursor-pointer"
+                    className="text-orange-700 font-bold hover:underline cursor-pointer"
                   >
                     Log In
                   </button>
@@ -813,7 +813,7 @@ export default function AuthPage({
 
                 {/* Header icon / illustration */}
                 <div className="flex flex-col items-center text-center space-y-2 sm:space-y-4">
-                  <div className="h-12 w-12 sm:h-16 sm:w-16 bg-orange-50 rounded-full flex items-center justify-center border border-orange-100 text-brand-orange animate-pulse">
+                  <div className="h-12 w-12 sm:h-16 sm:w-16 bg-orange-50 rounded-full flex items-center justify-center border border-orange-100 text-orange-700 animate-pulse">
                     <Smartphone className="h-6 w-6 sm:h-8 sm:w-8" />
                   </div>
 
@@ -828,7 +828,7 @@ export default function AuthPage({
                         {pendingUser?.phone || "+91 9876543210"}
                       </span>{" "}
                       via{" "}
-                      <span className="text-brand-orange font-black">
+                      <span className="text-orange-700 font-black">
                         {pendingUser?.otpChannel === "whatsapp"
                           ? "WhatsApp"
                           : pendingUser?.otpChannel === "call"
@@ -861,7 +861,7 @@ export default function AuthPage({
                   </div>
 
                   {/* OTP channel reminder */}
-                  <p className="text-center text-[10px] text-neutral-400 font-semibold">
+                  <p className="text-center text-[11px] text-neutral-400 font-semibold">
                     Sent via{" "}
                     <span className="font-black text-neutral-700">
                       {pendingUser?.otpChannel === "whatsapp"
@@ -897,7 +897,7 @@ export default function AuthPage({
                     {canResendOtp ? (
                       <button
                         onClick={handleResendOtp}
-                        className="text-xs font-black text-brand-orange hover:underline cursor-pointer"
+                        className="text-xs font-black text-orange-700 hover:underline cursor-pointer"
                       >
                         Resend Code Now
                       </button>

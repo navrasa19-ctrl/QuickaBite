@@ -458,7 +458,7 @@ export default function UsersTab({ onUsersChange, triggerToast }) {
               {loading ? (
                 <tr>
                   <td colSpan={6} className="p-12 text-center text-neutral-400">
-                    <Loader2 className="h-8 w-8 mx-auto mb-2 text-brand-orange animate-spin" />
+                    <Loader2 className="h-8 w-8 mx-auto mb-2 text-orange-700 animate-spin" />
                     <p className="text-[10px] font-black uppercase tracking-widest">
                       Loading user accounts...
                     </p>
@@ -516,10 +516,10 @@ export default function UsersTab({ onUsersChange, triggerToast }) {
                           {u.restaurant && (
                             <button
                               onClick={() => handleOpenRestaurantModal(u)}
-                              className="text-[10px] font-bold text-neutral-700 hover:text-brand-orange flex items-center gap-1.5 transition cursor-pointer bg-neutral-50 hover:bg-orange-50 border border-neutral-200 px-2 py-0.5 rounded-md"
+                              className="text-[10px] font-bold text-neutral-700 hover:text-orange-700 flex items-center gap-1.5 transition cursor-pointer bg-neutral-50 hover:bg-orange-50 border border-neutral-200 px-2 py-0.5 rounded-md"
                               title="Click to Change Assigned Restaurant"
                             >
-                              <Building2 className="h-3 w-3 text-brand-orange shrink-0" />
+                              <Building2 className="h-3 w-3 text-orange-700 shrink-0" />
                               <span>{getRestaurantName(u.restaurant)}</span>
                             </button>
                           )}
@@ -936,7 +936,7 @@ export default function UsersTab({ onUsersChange, triggerToast }) {
 
         {loadingSingleUser ? (
           <div className="p-8 text-center text-neutral-400">
-            <Loader2 className="h-6 w-6 mx-auto mb-2 text-brand-orange animate-spin" />
+            <Loader2 className="h-6 w-6 mx-auto mb-2 text-orange-700 animate-spin" />
             <p className="text-[10px] font-black uppercase tracking-widest">
               Fetching user data...
             </p>
@@ -980,7 +980,7 @@ export default function UsersTab({ onUsersChange, triggerToast }) {
                 <span className="text-[10px] font-black text-neutral-400 uppercase">
                   Role
                 </span>
-                <span className="font-bold uppercase text-brand-orange">
+                <span className="font-bold uppercase text-orange-700">
                   {selectedUser.role}
                 </span>
               </div>

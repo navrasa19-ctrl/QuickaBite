@@ -162,7 +162,7 @@ export default function DriversTab({ onDriversChange, triggerToast }) {
       {/* DRIVERS CARDS GRID */}
       {loading ? (
         <div className="text-center py-16 bg-white border border-dashed border-neutral-200 rounded-3xl space-y-3">
-          <Loader2 className="h-8 w-8 text-brand-orange animate-spin mx-auto" />
+          <Loader2 className="h-8 w-8 text-orange-700 animate-spin mx-auto" />
           <p className="text-xs font-bold text-neutral-600 uppercase tracking-wider">Loading Fleet Directory...</p>
         </div>
       ) : filteredDrivers.length === 0 ? (

@@ -354,7 +354,7 @@ export default function SearchPage({
     }
     return (
       <div className="bg-white p-10 rounded-3xl border border-neutral-100 text-center space-y-3 my-6 shadow-sm max-w-4xl mx-auto">
-        <div className="h-16 w-16 bg-orange-50 rounded-2xl flex items-center justify-center mx-auto text-brand-orange">
+        <div className="h-16 w-16 bg-orange-50 rounded-2xl flex items-center justify-center mx-auto text-orange-700">
           <Search className="h-8 w-8 animate-bounce" />
         </div>
         <h4 className="font-display font-black text-lg text-gray-900">
@@ -369,7 +369,7 @@ export default function SearchPage({
 
   return (
     <div
-      className="space-y-6 max-w-4xl mx-auto py-2 animate-fade-in"
+      className="space-y-6 max-w-6xl mx-auto py-2 animate-fade-in"
       id="search-viewport"
     >
       {/* Header Title */}
@@ -412,14 +412,14 @@ export default function SearchPage({
               }}
               className="w-full pl-11 pr-12 py-3.5 bg-gray-50 border border-gray-100 focus:border-brand-orange/40 rounded-2xl text-sm placeholder-gray-400 text-gray-800 focus:ring-2 focus:ring-brand-orange/10 outline-none transition"
             />
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-brand-orange" />
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-orange-700" />
             {searchQuery && (
               <button
                 onClick={() => {
                   setSearchQuery("");
                   setShowSuggestions(false);
                 }}
-                className="absolute right-4 top-1/2 -translate-y-1/2 text-xs font-bold text-gray-400 hover:text-brand-orange transition cursor-pointer"
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-xs font-bold text-gray-400 hover:text-orange-700 transition cursor-pointer"
               >
                 Clear
               </button>
@@ -441,7 +441,7 @@ export default function SearchPage({
           searchQuery.trim().length > 0 &&
           searchSuggestions.length > 0 && (
             <div className="absolute left-4 right-4 top-[calc(100%-8px)] z-30 bg-white border border-gray-100 rounded-2xl shadow-xl p-3 space-y-1">
-              <div className="text-[10px] font-bold text-gray-400 uppercase tracking-wider px-2 py-1">
+              <div className="text-[11px] font-bold text-gray-400 uppercase tracking-wider px-2 py-1">
                 Suggestions
               </div>
               {searchSuggestions.map((suggestion, index) => (
@@ -450,7 +450,7 @@ export default function SearchPage({
                   onClick={() => {
                     handleSelectSearchQuery(suggestion);
                   }}
-                  className="w-full text-left px-3 py-2 text-xs hover:bg-orange-50/50 hover:text-brand-orange rounded-xl transition font-medium flex items-center justify-between cursor-pointer"
+                  className="w-full text-left px-3 py-2 text-xs hover:bg-orange-50/50 hover:text-orange-700 rounded-xl transition font-medium flex items-center justify-between cursor-pointer"
                 >
                   <span>{suggestion}</span>
                   <ChevronRight className="h-3 w-3 opacity-40" />
@@ -462,7 +462,7 @@ export default function SearchPage({
         {/* Advanced Filter Sub-Bar */}
         <div className="pt-2 border-t border-gray-100/60">
           <div className="flex items-center gap-1.5 text-xs font-bold text-gray-500 mb-2">
-            <SlidersHorizontal className="h-3.5 w-3.5 text-brand-orange shrink-0" />
+            <SlidersHorizontal className="h-3.5 w-3.5 text-orange-700 shrink-0" />
             <span>Customize Your Search Filters</span>
           </div>
 
@@ -584,7 +584,7 @@ export default function SearchPage({
             <div className="bg-white border border-gray-100 rounded-premium p-5 space-y-3 shadow-soft">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-black text-gray-400 uppercase tracking-wider flex items-center gap-1">
-                  <RotateCcw className="h-3.5 w-3.5 text-brand-orange" />
+                  <RotateCcw className="h-3.5 w-3.5 text-orange-700" />
                   Recent Searches
                 </span>
                 <button
@@ -613,7 +613,7 @@ export default function SearchPage({
           {/* Trending dishes */}
           <div className="bg-white border border-gray-100 rounded-premium p-5 space-y-3 shadow-soft">
             <span className="text-xs font-black text-gray-400 uppercase tracking-wider flex items-center gap-1">
-              <Sparkles className="h-3.5 w-3.5 text-brand-orange" />
+              <Sparkles className="h-3.5 w-3.5 text-orange-700" />
               Trending Dishes Right Now
             </span>
             <div className="flex flex-wrap gap-2">
@@ -660,7 +660,7 @@ export default function SearchPage({
                       referrerPolicy="no-referrer"
                     />
                   </div>
-                  <span className="text-[10px] font-extrabold text-gray-600 truncate max-w-full text-center group-hover:text-brand-orange transition">
+                  <span className="text-[11px] font-extrabold text-gray-600 truncate max-w-full text-center group-hover:text-orange-700 transition">
                     {cuis.name}
                   </span>
                 </button>
@@ -678,7 +678,7 @@ export default function SearchPage({
         >
           <div className="space-y-3">
             <div className="h-5 bg-neutral-200 rounded-full w-40" />
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
               {[1, 2].map((i) => (
                 <div
                   key={i}
@@ -696,7 +696,7 @@ export default function SearchPage({
           </div>
           <div className="space-y-3 pt-2">
             <div className="h-5 bg-neutral-200 rounded-full w-40" />
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
               {[1, 2].map((i) => (
                 <div
                   key={i}
@@ -719,13 +719,13 @@ export default function SearchPage({
           <div className="space-y-3">
             <h3 className="font-display font-black text-base text-gray-900 flex items-center justify-between">
               <span>Delicious Dishes Match</span>
-              <span className="text-xs bg-brand-orange/10 text-brand-orange px-2.5 py-1 rounded-full font-extrabold">
+              <span className="text-xs bg-brand-orange/10 text-orange-700 px-2.5 py-1 rounded-full font-extrabold">
                 {searchedDishes.length} items
               </span>
             </h3>
 
             {searchedDishes.length > 0 ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
                 {searchedDishes.map((dish) => (
                   <div
                     key={dish.id || dish._id}
@@ -762,14 +762,14 @@ export default function SearchPage({
                     <div className="min-w-0 flex-1 flex flex-col justify-between">
                       <div>
                         <div className="flex items-center justify-between gap-1">
-                          <h4 className="font-bold text-gray-800 text-xs sm:text-sm truncate group-hover:text-brand-orange transition-colors">
+                          <h4 className="font-bold text-gray-800 text-xs sm:text-sm truncate group-hover:text-orange-700 transition-colors">
                             {dish.name}
                           </h4>
-                          <span className="font-mono font-extrabold text-brand-orange text-xs shrink-0">
+                          <span className="font-mono font-extrabold text-orange-700 text-xs shrink-0">
                             ₹ {dish.price}
                           </span>
                         </div>
-                        <p className="text-[10px] text-gray-400 line-clamp-1 mt-0.5">
+                        <p className="text-[11px] text-gray-400 line-clamp-1 mt-0.5">
                           {dish.description}
                         </p>
 
@@ -787,7 +787,7 @@ export default function SearchPage({
                               });
                             }
                           }}
-                          className="text-[10px] text-gray-500 hover:text-brand-orange font-semibold flex items-center gap-1 mt-1 hover:underline cursor-pointer"
+                          className="text-[11px] text-gray-500 hover:text-orange-700 font-semibold flex items-center gap-1 mt-1 hover:underline cursor-pointer"
                         >
                           <span>from {dish.restaurantName}</span>
                           <span className="text-amber-500 font-bold flex items-center">
@@ -797,13 +797,13 @@ export default function SearchPage({
                       </div>
 
                       <div className="flex items-center justify-between mt-1">
-                        <span className="text-[9px] font-bold text-gray-400 flex items-center gap-1">
-                          <Clock className="h-3 w-3 text-brand-orange shrink-0" />
+                        <span className="text-[11px] font-bold text-gray-400 flex items-center gap-1">
+                          <Clock className="h-3 w-3 text-orange-700 shrink-0" />
                           <span>{dish.deliveryTime}</span>
                         </span>
                         {dish.isAvailable === false ||
                           dish.availability === false ? (
-                          <span className="bg-neutral-100 text-neutral-400 border border-neutral-200 text-[9px] font-black px-2.5 py-1 rounded-lg select-none uppercase tracking-wider">
+                          <span className="bg-neutral-100 text-neutral-400 border border-neutral-200 text-[11px] font-black px-2.5 py-1 rounded-lg select-none uppercase tracking-wider">
                             OUT OF STOCK
                           </span>
                         ) : (
@@ -816,7 +816,7 @@ export default function SearchPage({
                                 dish,
                               );
                             }}
-                            className="bg-brand-orange hover:bg-orange-600 text-white font-extrabold text-[10px] px-3 py-1 rounded-lg transition shadow-xs flex items-center gap-1 cursor-pointer"
+                            className="bg-brand-orange hover:bg-orange-600 text-white font-extrabold text-[11px] px-3 py-1 rounded-lg transition shadow-xs flex items-center gap-1 cursor-pointer"
                           >
                             <Plus className="h-3 w-3" />
                             <span>Add to Basket</span>
@@ -844,7 +844,7 @@ export default function SearchPage({
             </h3>
 
             {searchedRestaurants.length > 0 ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
                 {searchedRestaurants.map((res) => (
                   <div
                     key={res.id}
@@ -858,7 +858,7 @@ export default function SearchPage({
                         className="h-full w-full object-cover transform group-hover:scale-105 transition"
                       />
                       {res.discount && (
-                        <span className="absolute bottom-1 right-1 bg-brand-orange text-white text-[8px] font-extrabold px-1.5 py-0.5 rounded">
+                        <span className="absolute bottom-1 right-1 bg-brand-orange text-white text-[11px] font-extrabold px-1.5 py-0.5 rounded">
                           {res.discount}
                         </span>
                       )}
@@ -867,7 +867,7 @@ export default function SearchPage({
                     <div className="min-w-0 flex-1 flex flex-col justify-between">
                       <div>
                         <div className="flex items-center justify-between">
-                          <h4 className="font-bold text-gray-800 text-xs sm:text-sm truncate group-hover:text-brand-orange transition">
+                          <h4 className="font-bold text-gray-800 text-xs sm:text-sm truncate group-hover:text-orange-700 transition">
                             {res.name}
                           </h4>
                           <div className="flex items-center gap-0.5 text-amber-500 shrink-0 font-extrabold text-xs ml-2">
@@ -875,25 +875,25 @@ export default function SearchPage({
                             <span>{res.rating}</span>
                           </div>
                         </div>
-                        <p className="text-[10px] text-gray-400 truncate mt-0.5">
+                        <p className="text-[11px] text-gray-400 truncate mt-0.5">
                           {res.cuisines.join(", ")}
                         </p>
-                        <p className="text-[9px] text-gray-400 truncate mt-0.5">
+                        <p className="text-[11px] text-gray-400 truncate mt-0.5">
                           {res.address}
                         </p>
                       </div>
 
-                      <div className="flex items-center justify-between text-[10px] font-semibold mt-2">
+                      <div className="flex items-center justify-between text-[11px] font-semibold mt-2">
                         <span className="flex items-center gap-1 text-gray-500">
-                          <Clock className="h-3.5 w-3.5 text-brand-orange" />
+                          <Clock className="h-3.5 w-3.5 text-orange-700" />
                           {res.deliveryTime}
                         </span>
                         {res.isFreeDelivery ? (
-                          <span className="text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded text-[8px] font-bold">
+                          <span className="text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded text-[11px] font-bold">
                             Free Delivery
                           </span>
                         ) : (
-                          <span className="text-gray-600 bg-gray-50 px-2 py-0.5 rounded text-[8px] font-bold">
+                          <span className="text-gray-600 bg-gray-50 px-2 py-0.5 rounded text-[11px] font-bold">
                             ₹{res.deliveryFee} Delivery
                           </span>
                         )}
@@ -965,7 +965,7 @@ export default function SearchPage({
             onClick={(e) => e.stopPropagation()}
           >
             <div className="space-y-2">
-              <span className="text-brand-orange font-black text-xs uppercase tracking-widest block animate-pulse">
+              <span className="text-orange-700 font-black text-xs uppercase tracking-widest block animate-pulse">
                 QuikaBite Audio Engine
               </span>
               <h3 className="font-display font-black text-2xl text-gray-900">

@@ -269,7 +269,7 @@ const MenuItemCard = React.memo(function MenuItemCard({
           </div>
 
           {item.isBestseller && (
-            <span className="bg-amber-50 text-amber-700 text-[9px] font-black px-2 py-0.5 rounded-md flex items-center gap-0.5 uppercase tracking-wider border border-amber-100">
+            <span className="bg-amber-50 text-amber-700 text-[11px] font-black px-2 py-0.5 rounded-md flex items-center gap-0.5 uppercase tracking-wider border border-amber-100">
               <Star className="h-2.5 w-2.5 fill-amber-500 text-amber-500" />
               <span>Bestseller</span>
             </span>
@@ -305,14 +305,14 @@ const MenuItemCard = React.memo(function MenuItemCard({
         <div className="flex items-center gap-2 mt-2 justify-center w-full">
           <div className="w-[86px]">
             {isOutOfStock ? (
-              <div className="w-full bg-neutral-100 text-neutral-400 border border-neutral-200 text-[9px] font-black py-1.5 rounded-lg shadow-xs text-center select-none uppercase tracking-wider">
+              <div className="w-full bg-neutral-100 text-neutral-400 border border-neutral-200 text-[11px] font-black py-1.5 rounded-lg shadow-xs text-center select-none uppercase tracking-wider">
                 OUT OF STOCK
               </div>
             ) : quantityInCart > 0 ? (
-              <div className="bg-white border border-brand-orange text-brand-orange flex items-center justify-between px-1 py-0.5 rounded-lg shadow-md font-bold text-xs transition-all transform active:scale-95">
+              <div className="bg-white border border-brand-orange text-orange-700 flex items-center justify-between px-1 py-0.5 rounded-lg shadow-md font-bold text-xs transition-all transform active:scale-95">
                 <button
                   onClick={() => onRemoveFromCart(restaurantId, item.id || item._id)}
-                  className="px-1.5 py-0.5 hover:bg-orange-50 rounded text-brand-orange font-bold transition text-xs active:scale-90 cursor-pointer"
+                  className="px-1.5 py-0.5 hover:bg-orange-50 rounded text-orange-700 font-bold transition text-xs active:scale-90 cursor-pointer"
                 >
                   <Minus className="h-3 w-3" />
                 </button>
@@ -321,7 +321,7 @@ const MenuItemCard = React.memo(function MenuItemCard({
                 </span>
                 <button
                   onClick={() => onAddToCart(restaurantId, restaurantName, item)}
-                  className="px-1.5 py-0.5 hover:bg-orange-50 rounded text-brand-orange font-bold transition text-xs active:scale-90 cursor-pointer"
+                  className="px-1.5 py-0.5 hover:bg-orange-50 rounded text-orange-700 font-bold transition text-xs active:scale-90 cursor-pointer"
                 >
                   <Plus className="h-3 w-3" />
                 </button>
@@ -329,7 +329,7 @@ const MenuItemCard = React.memo(function MenuItemCard({
             ) : (
               <button
                 onClick={() => onAddToCart(restaurantId, restaurantName, item)}
-                className="cursor-pointer w-full bg-white text-brand-orange hover:bg-orange-50 active:bg-orange-100 border border-orange-200 text-[10px] font-black py-1 px-2.5 rounded-lg shadow-md transition-all active:scale-95 flex items-center justify-center gap-1"
+                className="cursor-pointer w-full bg-white text-orange-700 hover:bg-orange-50 active:bg-orange-100 border border-orange-200 text-[11px] font-black py-1 px-2.5 rounded-lg shadow-md transition-all active:scale-95 flex items-center justify-center gap-1"
               >
                 ADD +
               </button>
@@ -1085,8 +1085,8 @@ export default function RestaurantDetailModal({
             </h2>
           </div>
           <div className="flex items-center gap-3">
-            <span className="bg-orange-50 text-brand-orange text-xs font-black px-3 py-1 rounded-full flex items-center gap-1.5 border border-orange-200/60 shadow-2xs">
-              <ShoppingBag className="h-3.5 w-3.5 text-brand-orange" />
+            <span className="bg-orange-50 text-orange-700 text-xs font-black px-3 py-1 rounded-full flex items-center gap-1.5 border border-orange-200/60 shadow-2xs">
+              <ShoppingBag className="h-3.5 w-3.5 text-orange-700" />
               <span>{totalCartCount} Cart Items (₹{totalCartCost.toFixed(2)})</span>
             </span>
           </div>
@@ -1107,7 +1107,7 @@ export default function RestaurantDetailModal({
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
               <div className="absolute bottom-3 left-4 right-4 text-white">
-                <span className="bg-brand-orange text-white text-[10px] font-black uppercase px-2.5 py-0.5 rounded-full inline-block mb-1 shadow-sm">
+                <span className="bg-brand-orange text-white text-[11px] font-black uppercase px-2.5 py-0.5 rounded-full inline-block mb-1 shadow-sm">
                   {restaurant.discount || "SPECIAL PROMO"}
                 </span>
                 <h1 className="font-display font-black text-xl sm:text-2xl leading-tight">
@@ -1123,18 +1123,18 @@ export default function RestaurantDetailModal({
             <div className="p-4 bg-white border-b border-gray-100 space-y-2.5 text-xs text-gray-600 shrink-0">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <span className="font-extrabold text-brand-orange bg-orange-50 border border-orange-200/60 px-2.5 py-1 rounded-lg text-xs flex items-center gap-1.5 shadow-2xs">
-                    <ShoppingBag className="h-3.5 w-3.5 text-brand-orange" />
+                  <span className="font-extrabold text-orange-700 bg-orange-50 border border-orange-200/60 px-2.5 py-1 rounded-lg text-xs flex items-center gap-1.5 shadow-2xs">
+                    <ShoppingBag className="h-3.5 w-3.5 text-orange-700" />
                     <span>{totalCartCount} Items in Cart</span>
                   </span>
                 </div>
-                <div className="flex items-center gap-1.5 text-emerald-600 font-extrabold bg-emerald-50 px-2 py-0.5 rounded-md text-[10px]">
+                <div className="flex items-center gap-1.5 text-emerald-600 font-extrabold bg-emerald-50 px-2 py-0.5 rounded-md text-[11px]">
                   <span>OPEN NOW</span>
                 </div>
               </div>
               <div className="flex items-center justify-between pt-1 border-t border-gray-50 text-[11px]">
                 <span className="flex items-center gap-1 text-gray-500 font-semibold">
-                  <Clock className="h-3.5 w-3.5 text-brand-orange" />
+                  <Clock className="h-3.5 w-3.5 text-orange-700" />
                   {restaurant.deliveryTime}
                 </span>
                 <span className="text-gray-400 font-medium">📍 {restaurant.address || "Downtown, Dubai"}</span>
@@ -1144,7 +1144,7 @@ export default function RestaurantDetailModal({
             {/* Coupons & Offers Section */}
             <div className="p-4 bg-white border-b border-gray-100 space-y-2">
               <div className="flex items-center gap-1.5 text-xs font-black text-gray-500 uppercase tracking-wider">
-                <Ticket className="h-4 w-4 text-brand-orange" />
+                <Ticket className="h-4 w-4 text-orange-700" />
                 <span>Available Offers &amp; Coupons</span>
               </div>
               <div className="flex gap-2.5 overflow-x-auto pb-1 no-scrollbar">
@@ -1171,8 +1171,8 @@ export default function RestaurantDetailModal({
                       >
                         <div>
                           <div className="flex items-center justify-between gap-1">
-                            <span className="font-black text-[11px] text-brand-orange">{subtitle}</span>
-                            <span className="text-[9px] font-black px-1.5 py-0.5 rounded bg-white border border-orange-200 text-orange-700">
+                            <span className="font-black text-[11px] text-orange-700">{subtitle}</span>
+                            <span className="text-[11px] font-black px-1.5 py-0.5 rounded bg-white border border-orange-200 text-orange-700">
                               {isCopied ? "✓ COPIED" : coupon.code}
                             </span>
                           </div>
@@ -1188,14 +1188,14 @@ export default function RestaurantDetailModal({
             <div className="p-4 space-y-3 bg-white border-b border-gray-100">
               <div className="flex items-center justify-between">
                 <h3 className="font-display font-black text-xs uppercase tracking-wider text-gray-800 flex items-center gap-1.5">
-                  <ShoppingBag className="h-4 w-4 text-brand-orange" />
+                  <ShoppingBag className="h-4 w-4 text-orange-700" />
                   <span>Your Cart Items</span>
-                  <span className="bg-brand-orange text-white text-[10px] font-black px-2 py-0.5 rounded-full">
+                  <span className="bg-brand-orange text-white text-[11px] font-black px-2 py-0.5 rounded-full">
                     {totalCartCount}
                   </span>
                 </h3>
                 {totalCartCount > 0 && (
-                  <span className="text-xs font-black text-brand-orange">
+                  <span className="text-xs font-black text-orange-700">
                     ₹{totalCartCost.toFixed(2)}
                   </span>
                 )}
@@ -1222,7 +1222,7 @@ export default function RestaurantDetailModal({
                             <h4 className="text-xs font-bold text-gray-900 truncate">
                               {dish.name}
                             </h4>
-                            <p className="text-[10px] text-gray-400 font-medium">
+                            <p className="text-[11px] text-gray-400 font-medium">
                               ₹{dish.price} x {cartItem.quantity}
                             </p>
                           </div>

@@ -197,7 +197,7 @@ export default function ReelPlayer({
           className="absolute top-4 left-4 z-20 flex items-center gap-2"
           onClick={(e) => e.stopPropagation()}
         >
-          <div className="flex items-center gap-1.5 bg-red-600 text-white text-[10px] font-extrabold tracking-widest uppercase px-2 py-1 rounded-md animate-pulse">
+          <div className="flex items-center gap-1.5 bg-red-600 text-white text-[11px] font-extrabold tracking-widest uppercase px-2 py-1 rounded-md animate-pulse">
             <span className="h-1.5 w-1.5 rounded-full bg-white" />
             <span>LIVE SHOWCASE</span>
           </div>
@@ -285,7 +285,7 @@ export default function ReelPlayer({
             id="reel-order-cta-box"
           >
             <div className="min-w-0">
-              <span className="text-[10px] text-orange-400 uppercase font-black tracking-widest">
+              <span className="text-[11px] text-orange-400 uppercase font-black tracking-widest">
                 Reel Exclusive Deal
               </span>
               <h4 className="font-bold text-sm text-white truncate">
@@ -310,7 +310,7 @@ export default function ReelPlayer({
         {/* Swiping Indicator / Mobile instruction at very bottom */}
         <div
           onClick={handleNext}
-          className="bg-black/40 text-center py-2 text-[10px] text-gray-400 cursor-pointer hover:text-white transition uppercase tracking-widest font-bold z-10 border-t border-white/5"
+          className="bg-black/40 text-center py-2 text-[11px] text-gray-400 cursor-pointer hover:text-white transition uppercase tracking-widest font-bold z-10 border-t border-white/5"
         >
           Click here or tap sidebar to Next Reel ➔
         </div>

@@ -32,7 +32,7 @@ export default function CartConflictModal({
       onClick={handleOverlayClick}
     >
       <div className="bg-white border border-gray-100 rounded-premium p-6 sm:p-8 max-w-md w-full shadow-2xl text-center space-y-6 cursor-default" onClick={(e) => e.stopPropagation()}>
-        <div className="h-14 w-14 bg-orange-100 text-brand-orange rounded-full flex items-center justify-center mx-auto text-2xl">
+        <div className="h-14 w-14 bg-orange-100 text-orange-700 rounded-full flex items-center justify-center mx-auto text-2xl">
           ⚠️
         </div>
         <div className="space-y-2">
