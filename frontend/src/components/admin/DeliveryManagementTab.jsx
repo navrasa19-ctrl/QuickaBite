@@ -183,7 +183,7 @@ export default function DeliveryManagementTab({ orders, setOrders, triggerToast 
       onClick={() => {
         setSelectedOrderId(itemId);
       }}
-      className={`w-full text-left p-4 rounded-2xl border-2 transition cursor-pointer flex items-center justify-between gap-3 ${isSelected ? "bg-neutral-950 border-neutral-950 text-white shadow-md" : "bg-neutral-50 hover:bg-neutral-100 border-neutral-100 text-neutral-800"}`}
+      className={`w-full text-left p-4 rounded-2xl border-2 transition cursor-pointer flex items-center justify-between gap-3 ${isSelected ? "bg-brand-dark border-neutral-950 text-white shadow-md" : "bg-neutral-50 hover:bg-neutral-100 border-neutral-100 text-neutral-800"}`}
     >
                     <div className="space-y-1.5 flex-1 min-w-0">
                       <div className="flex items-center gap-1.5">
@@ -216,7 +216,7 @@ export default function DeliveryManagementTab({ orders, setOrders, triggerToast 
               <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 border-b border-neutral-100 pb-4">
                 <div>
                   <div className="flex items-center gap-2">
-                    <span className="text-[10px] font-black uppercase bg-neutral-950 text-white px-2.5 py-1 rounded-md">
+                    <span className="text-[10px] font-black uppercase bg-brand-dark text-white px-2.5 py-1 rounded-md">
                       {selectedDelivery.deliveryPartner || "Standard"} Integration
                     </span>
                     <span className="font-mono text-xs font-black text-neutral-400">#{selectedDelivery.id || selectedDelivery._id || selectedDelivery.orderNumber}</span>
@@ -359,7 +359,7 @@ export default function DeliveryManagementTab({ orders, setOrders, triggerToast 
               {
     /* Map visualizer */
   }
-              <div className="h-32 bg-neutral-950 rounded-2xl relative overflow-hidden border-2 border-neutral-950 shadow-inner flex items-center justify-center">
+              <div className="h-32 bg-brand-dark rounded-2xl relative overflow-hidden border-2 border-neutral-950 shadow-inner flex items-center justify-center">
                 {
     /* Simulated Grid Map Background */
   }

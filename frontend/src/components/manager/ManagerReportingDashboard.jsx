@@ -771,7 +771,7 @@ export default function ManagerReportingDashboard({ triggerToast }) {
       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 bg-neutral-900/90 border border-neutral-800 p-6 rounded-3xl backdrop-blur-xl shadow-2xl">
         <div>
           <div className="flex items-center gap-3 mb-1">
-            <h1 className="text-2xl font-bold tracking-tight bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400 bg-clip-text text-transparent">
+            <h1 className="text-2xl font-bold tracking-tight text-white">
               Manager Performance & Reporting
             </h1>
 
@@ -791,14 +791,14 @@ export default function ManagerReportingDashboard({ triggerToast }) {
             title="Refresh Reporting Data"
           >
             <RefreshCw
-              className={`w-4 h-4 ${loading ? "animate-spin text-emerald-400" : ""}`}
+              className={`w-4 h-4 ${loading ? "animate-spin text-orange-400" : ""}`}
             />
           </button>
 
           <button
             onClick={handleExportCSV}
             disabled={loading || !statsData}
-            className="flex items-center gap-2 px-4 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-semibold rounded-xl transition-all shadow-lg shadow-emerald-950/40 border border-emerald-500/40 active:scale-95 disabled:opacity-50"
+            className="flex items-center gap-2 px-4 py-2.5 bg-brand-orange hover:bg-orange-600 text-white text-sm font-semibold rounded-xl transition-all shadow-lg shadow-emerald-950/40 border border-emerald-500/40 active:scale-95 disabled:opacity-50"
           >
             <FileSpreadsheet className="w-4 h-4" />
             Export CSV Report
@@ -810,7 +810,7 @@ export default function ManagerReportingDashboard({ triggerToast }) {
       <div className="bg-neutral-900/70 border border-neutral-800/80 p-4 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div className="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-none">
           <span className="text-xs font-semibold text-neutral-400 uppercase tracking-wider flex items-center gap-1.5 mr-2">
-            <Filter className="w-3.5 h-3.5 text-emerald-400" /> Filter:
+            <Filter className="w-3.5 h-3.5 text-orange-400" /> Filter:
           </span>
           {[
             { id: "all", label: "All Time", api: "ManagerReportDashboard" },
@@ -836,7 +836,7 @@ export default function ManagerReportingDashboard({ triggerToast }) {
               key={item.id}
               onClick={() => setActiveFilter(item.id)}
               className={`px-3.5 py-1.5 text-xs font-medium rounded-xl whitespace-nowrap transition-all border ${activeFilter === item.id
-                ? "bg-emerald-500/20 border-emerald-500/50 text-emerald-300 shadow-md shadow-emerald-950/30"
+                ? "bg-orange-500/20 border-orange-500/60 text-orange-300"
                 : "bg-neutral-800/60 border-neutral-700/40 text-neutral-400 hover:bg-neutral-800 hover:text-neutral-200"
                 }`}
             >
@@ -860,7 +860,7 @@ export default function ManagerReportingDashboard({ triggerToast }) {
                   startDate: e.target.value,
                 }))
               }
-              className="bg-neutral-800 border border-neutral-700 text-neutral-200 text-xs rounded-xl px-3 py-1.5 focus:outline-none focus:border-emerald-500"
+              className="bg-neutral-800 border border-neutral-700 text-neutral-200 text-xs rounded-xl px-3 py-1.5 focus:outline-none focus:border-orange-500"
             />
             <span className="text-neutral-500 text-xs">to</span>
             <input
@@ -869,11 +869,11 @@ export default function ManagerReportingDashboard({ triggerToast }) {
               onChange={(e) =>
                 setCustomRange((prev) => ({ ...prev, endDate: e.target.value }))
               }
-              className="bg-neutral-800 border border-neutral-700 text-neutral-200 text-xs rounded-xl px-3 py-1.5 focus:outline-none focus:border-emerald-500"
+              className="bg-neutral-800 border border-neutral-700 text-neutral-200 text-xs rounded-xl px-3 py-1.5 focus:outline-none focus:border-orange-500"
             />
             <button
               type="submit"
-              className="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-medium rounded-xl transition-all"
+              className="px-3 py-1.5 bg-brand-orange hover:bg-orange-600 text-white text-xs font-medium rounded-xl transition-all"
             >
               Apply
             </button>
@@ -884,7 +884,7 @@ export default function ManagerReportingDashboard({ triggerToast }) {
       {/* Loading Skeleton */}
       {loading && !statsData && (
         <div className="p-12 text-center bg-neutral-900/60 border border-neutral-800 rounded-3xl">
-          <RefreshCw className="w-8 h-8 text-emerald-400 animate-spin mx-auto mb-3" />
+          <RefreshCw className="w-8 h-8 text-orange-400 animate-spin mx-auto mb-3" />
           <p className="text-neutral-300 text-sm font-medium">
             Fetching dashboard statistics...
           </p>
@@ -938,7 +938,7 @@ export default function ManagerReportingDashboard({ triggerToast }) {
                 <span className="text-[10px] font-bold text-neutral-400 uppercase tracking-wider">
                   Total Orders
                 </span>
-                <div className="p-2 bg-cyan-500/10 rounded-xl border border-cyan-500/20 text-cyan-400">
+                <div className="p-2 bg-orange-500/10 rounded-xl border border-orange-500/20 text-orange-400">
                   <ShoppingBag className="w-4 h-4" />
                 </div>
               </div>
@@ -946,7 +946,7 @@ export default function ManagerReportingDashboard({ triggerToast }) {
                 {kpis.totalOrders}
               </div>
               <p className="text-[10px] text-neutral-400 mt-1 flex items-center gap-1">
-                <CheckCircle2 className="w-3 h-3 text-cyan-400" />
+                <CheckCircle2 className="w-3 h-3 text-orange-400" />
                 {kpis.completedOrders} delivered, {kpis.activeOrders} pending
               </p>
             </div>
@@ -1094,7 +1094,7 @@ export default function ManagerReportingDashboard({ triggerToast }) {
             <div className="bg-neutral-900/80 border border-neutral-800 p-6 rounded-3xl backdrop-blur-xl shadow-xl flex flex-col justify-between">
               <div>
                 <h3 className="text-base font-bold text-white flex items-center gap-2 mb-1">
-                  <PieIcon className="w-4 h-4 text-cyan-400" /> Category
+                  <PieIcon className="w-4 h-4 text-orange-400" /> Category
                   Breakdown
                 </h3>
                 <p className="text-xs text-neutral-400 mb-4">
@@ -1210,7 +1210,7 @@ export default function ManagerReportingDashboard({ triggerToast }) {
                         />
                         <YAxis
                           yAxisId="left"
-                          stroke="#f97316"
+                          stroke="#FF6B35"
                           fontSize={11}
                           tickFormatter={(val) => `₹${val}`}
                         />
@@ -1239,7 +1239,7 @@ export default function ManagerReportingDashboard({ triggerToast }) {
                           yAxisId="left"
                           dataKey="totalRevenue"
                           name="Revenue (₹)"
-                          fill="#f97316"
+                          fill="#FF6B35"
                           radius={[8, 8, 0, 0]}
                           barSize={36}
                         />
@@ -1342,7 +1342,7 @@ export default function ManagerReportingDashboard({ triggerToast }) {
                           <span className="text-neutral-400 text-[8px] font-bold uppercase block">
                             Qty Sold
                           </span>
-                          <span className="font-black text-cyan-400">
+                          <span className="font-black text-orange-400">
                             {vb.quantitySold || 0}
                           </span>
                         </div>

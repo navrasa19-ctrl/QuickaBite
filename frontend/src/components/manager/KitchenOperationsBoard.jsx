@@ -773,7 +773,7 @@ export default function KitchenOperationsBoard({
   return (
     <div className="space-y-6" id="kitchen-workspace-viewport">
       {/* 1. PROFESSIONAL KITCHEN HUD PANEL */}
-      <div className="bg-neutral-950 border-2 border-neutral-900 rounded-3xl p-6 relative overflow-hidden shadow-2xl text-white">
+      <div className="bg-brand-dark border-2 border-neutral-900 rounded-3xl p-6 relative overflow-hidden shadow-2xl text-white">
         <div className="absolute top-0 right-0 w-96 h-96 bg-brand-orange/10 rounded-full blur-3xl -mr-24 -mt-24 pointer-events-none" />
 
         <div className="flex flex-col xl:flex-row xl:items-center justify-between gap-6 relative z-10">
@@ -1143,7 +1143,7 @@ export default function KitchenOperationsBoard({
                   className="bg-white border-4 border-neutral-950 rounded-3xl w-full max-w-2xl overflow-hidden shadow-2xl flex flex-col max-h-[90vh] text-neutral-900"
                   onClick={(e) => e.stopPropagation()}
                 >
-                  <div className="bg-neutral-950 text-white p-6 relative">
+                  <div className="bg-brand-dark text-white p-6 relative">
                     <div className="absolute top-0 right-0 w-48 h-48 bg-orange-600/10 rounded-full blur-2xl pointer-events-none" />
                     <div className="flex items-start justify-between relative z-10">
                       <div>
@@ -1326,7 +1326,7 @@ export default function KitchenOperationsBoard({
                   className="bg-white border-4 border-neutral-950 rounded-3xl w-full max-w-xl overflow-hidden shadow-2xl flex flex-col text-neutral-900"
                   onClick={(e) => e.stopPropagation()}
                 >
-                  <div className="bg-neutral-950 text-white p-6 relative">
+                  <div className="bg-brand-dark text-white p-6 relative">
                     <div className="absolute top-0 right-0 w-32 h-32 bg-sky-600/10 rounded-full blur-2xl pointer-events-none" />
                     <div className="flex items-start justify-between relative z-10">
                       <div>

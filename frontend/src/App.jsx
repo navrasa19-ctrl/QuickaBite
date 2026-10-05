@@ -797,7 +797,7 @@ function AppContent() {
         </Suspense>
         {toast && (
           <div
-            className="fixed bottom-10 left-1/2 -translate-x-1/2 z-[9999] bg-gray-950 text-white font-black text-xs px-6 py-4 rounded-full shadow-2xl flex items-center gap-2 border border-neutral-800 animate-slide-up"
+            className="fixed inset-x-0 mx-auto w-fit max-w-[calc(100vw-2rem)] bottom-24 xl:bottom-8 z-[9999] bg-brand-dark text-white font-semibold text-sm px-5 py-3 rounded-xl shadow-xl flex items-center gap-2 animate-slide-up"
             id="auth-toast-banner"
           >
             <span>{toast}</span>
@@ -1192,7 +1192,7 @@ function AppContent() {
         {/* 8. Beautiful Toast Banner */}
         {toast && (
           <div
-            className="fixed bottom-20 left-1/2 -translate-x-1/2 z-[9999] bg-gray-900 text-white font-bold text-xs px-5 py-3.5 rounded-full shadow-2xl flex items-center gap-2 border border-gray-800 animate-slide-up"
+            className="fixed inset-x-0 mx-auto w-fit max-w-[calc(100vw-2rem)] bottom-24 xl:bottom-8 z-[9999] bg-brand-dark text-white font-semibold text-sm px-5 py-3 rounded-xl shadow-xl flex items-center gap-2 animate-slide-up"
             id="toast-banner"
           >
             <span className="text-orange-700 text-sm font-black">✦</span>

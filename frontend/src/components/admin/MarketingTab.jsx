@@ -48,6 +48,8 @@ export default function MarketingTab({
   saveOffersToStorage,
 }) {
   const [localActiveSubTab, setLocalActiveSubTab] = useState("coupons");
+  // Campaign send log (setLogs is used by the send/clear handlers below)
+  const [, setLogs] = useState([]);
   const activeSubTab = (propActiveSubTab && propActiveSubTab !== "marketing" && propActiveSubTab !== "overview") ? propActiveSubTab : "coupons";
   const setActiveSubTab = propSetActiveSubTab || setLocalActiveSubTab;
 
@@ -1946,7 +1948,7 @@ ${newTemplateBody}`
                       return (
                         <div
                           key={seg.id}
-                          className={`group w-full px-3 py-2.5 rounded-xl text-xs font-bold flex items-center justify-between transition cursor-pointer ${isSel ? "bg-neutral-950 text-white" : "bg-neutral-50 text-neutral-700 hover:bg-neutral-100/80"}`}
+                          className={`group w-full px-3 py-2.5 rounded-xl text-xs font-bold flex items-center justify-between transition cursor-pointer ${isSel ? "bg-brand-dark text-white" : "bg-neutral-50 text-neutral-700 hover:bg-neutral-100/80"}`}
                           onClick={() => setSelectedSegmentId(seg.id)}
                         >
                           <span className="truncate">{seg.name}</span>
@@ -2069,7 +2071,7 @@ ${newTemplateBody}`
 
                       <button
                         type="submit"
-                        className="w-full bg-neutral-950 hover:bg-neutral-900 text-white font-black py-2 rounded-xl text-xs transition cursor-pointer"
+                        className="w-full bg-brand-dark hover:bg-neutral-900 text-white font-black py-2 rounded-xl text-xs transition cursor-pointer"
                       >
                         Save Smart Segment
                       </button>
@@ -2085,7 +2087,7 @@ ${newTemplateBody}`
                   <div className="flex flex-wrap gap-1">
                     <button
                       onClick={() => setContactActiveFilterTag("All")}
-                      className={`px-2 py-1 rounded-lg text-[9px] font-black uppercase tracking-wider transition ${contactActiveFilterTag === "All" ? "bg-neutral-950 text-white" : "bg-neutral-100 text-neutral-500 hover:bg-neutral-200"}`}
+                      className={`px-2 py-1 rounded-lg text-[9px] font-black uppercase tracking-wider transition ${contactActiveFilterTag === "All" ? "bg-brand-dark text-white" : "bg-neutral-100 text-neutral-500 hover:bg-neutral-200"}`}
                     >
                       All Tags
                     </button>
@@ -2093,7 +2095,7 @@ ${newTemplateBody}`
                       <button
                         key={tag}
                         onClick={() => setContactActiveFilterTag(tag)}
-                        className={`px-2 py-1 rounded-lg text-[9px] font-black uppercase tracking-wider transition ${contactActiveFilterTag === tag ? "bg-neutral-950 text-white" : "bg-neutral-100 text-neutral-500 hover:bg-neutral-200"}`}
+                        className={`px-2 py-1 rounded-lg text-[9px] font-black uppercase tracking-wider transition ${contactActiveFilterTag === tag ? "bg-brand-dark text-white" : "bg-neutral-100 text-neutral-500 hover:bg-neutral-200"}`}
                       >
                         {tag}
                       </button>
@@ -2123,7 +2125,7 @@ ${newTemplateBody}`
                           setShowAddContactForm(!showAddContactForm);
                           setShowBulkImportForm(false);
                         }}
-                        className={`px-2.5 py-1.5 rounded-lg text-[10px] font-black uppercase tracking-wider transition cursor-pointer border flex items-center gap-1 ${showAddContactForm ? "bg-neutral-950 text-white border-neutral-950" : "bg-neutral-50 text-neutral-700 border-neutral-200 hover:bg-neutral-100"}`}
+                        className={`px-2.5 py-1.5 rounded-lg text-[10px] font-black uppercase tracking-wider transition cursor-pointer border flex items-center gap-1 ${showAddContactForm ? "bg-brand-dark text-white border-neutral-950" : "bg-neutral-50 text-neutral-700 border-neutral-200 hover:bg-neutral-100"}`}
                       >
                         <Plus className="h-3.5 w-3.5" />
                         <span>Add</span>
@@ -2133,7 +2135,7 @@ ${newTemplateBody}`
                           setShowBulkImportForm(!showBulkImportForm);
                           setShowAddContactForm(false);
                         }}
-                        className={`px-2.5 py-1.5 rounded-lg text-[10px] font-black uppercase tracking-wider transition cursor-pointer border flex items-center gap-1 ${showBulkImportForm ? "bg-neutral-950 text-white border-neutral-950" : "bg-neutral-50 text-neutral-700 border-neutral-200 hover:bg-neutral-100"}`}
+                        className={`px-2.5 py-1.5 rounded-lg text-[10px] font-black uppercase tracking-wider transition cursor-pointer border flex items-center gap-1 ${showBulkImportForm ? "bg-brand-dark text-white border-neutral-950" : "bg-neutral-50 text-neutral-700 border-neutral-200 hover:bg-neutral-100"}`}
                       >
                         <Database className="h-3.5 w-3.5" />
                         <span>Bulk</span>
@@ -2255,7 +2257,7 @@ ${newTemplateBody}`
 
                       <button
                         onClick={handleBulkImport}
-                        className="w-full bg-neutral-950 hover:bg-neutral-900 text-white font-black py-2 rounded-lg text-xs transition cursor-pointer"
+                        className="w-full bg-brand-dark hover:bg-neutral-900 text-white font-black py-2 rounded-lg text-xs transition cursor-pointer"
                       >
                         Bulk Import List
                       </button>
@@ -2521,7 +2523,7 @@ ${newTemplateBody}`
                             onClick={() =>
                               handleAddTagToContact(activeContact.id, crmNewTag)
                             }
-                            className="bg-neutral-950 hover:bg-neutral-900 text-white font-extrabold px-3 rounded-lg text-xs transition"
+                            className="bg-brand-dark hover:bg-neutral-900 text-white font-extrabold px-3 rounded-lg text-xs transition"
                           >
                             + Add
                           </button>
@@ -2609,7 +2611,7 @@ ${newTemplateBody}`
                             type="button"
                             onClick={() => handleSendCrmMessage(activeContact)}
                             disabled={!activeContact.optIn}
-                            className={`w-full font-black py-2 rounded-lg text-xs transition flex items-center justify-center gap-1.5 cursor-pointer ${activeContact.optIn ? "bg-neutral-950 hover:bg-neutral-900 text-white shadow-xs" : "bg-neutral-100 text-neutral-400 cursor-not-allowed border border-neutral-200"}`}
+                            className={`w-full font-black py-2 rounded-lg text-xs transition flex items-center justify-center gap-1.5 cursor-pointer ${activeContact.optIn ? "bg-brand-dark hover:bg-neutral-900 text-white shadow-xs" : "bg-neutral-100 text-neutral-400 cursor-not-allowed border border-neutral-200"}`}
                           >
                             <Send className="h-3.5 w-3.5" />
                             <span>
@@ -3138,7 +3140,7 @@ ${newTemplateBody}`
                         {/* SUBMIT */}
                         <button
                           type="submit"
-                          className="w-full bg-neutral-950 hover:bg-neutral-900 text-white font-black py-3 rounded-xl text-xs transition cursor-pointer flex items-center justify-center gap-1.5 shadow-xs"
+                          className="w-full bg-brand-dark hover:bg-neutral-900 text-white font-black py-3 rounded-xl text-xs transition cursor-pointer flex items-center justify-center gap-1.5 shadow-xs"
                         >
                           <FileText className="h-4 w-4 text-orange-400" />
                           <span>Register & Approve with Meta</span>
@@ -3653,7 +3655,7 @@ ${newTemplateBody}`
                       <button
                         key={st}
                         onClick={() => setLeadFilterStatus(st)}
-                        className={`px-3 py-1 rounded-full text-[9.5px] font-bold transition ${leadFilterStatus === st ? "bg-neutral-950 text-white" : "bg-neutral-50 text-neutral-600 hover:bg-neutral-100"}`}
+                        className={`px-3 py-1 rounded-full text-[9.5px] font-bold transition ${leadFilterStatus === st ? "bg-brand-dark text-white" : "bg-neutral-50 text-neutral-600 hover:bg-neutral-100"}`}
                       >
                         {st === "all" ? "All Statuses" : st}
                       </button>
@@ -4615,7 +4617,7 @@ ${newTemplateBody}`
 
                     <button
                       type="submit"
-                      className="w-full bg-neutral-950 hover:bg-neutral-900 text-white font-black py-2.5 rounded-xl text-xs transition cursor-pointer flex items-center justify-center gap-1.5 shadow-xs"
+                      className="w-full bg-brand-dark hover:bg-neutral-900 text-white font-black py-2.5 rounded-xl text-xs transition cursor-pointer flex items-center justify-center gap-1.5 shadow-xs"
                     >
                       <Cpu className="h-4 w-4 text-orange-400" />
                       <span>Create Visual Flow</span>

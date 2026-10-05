@@ -171,9 +171,23 @@ export const managerService = {
     // Top selling items aggregator
     const itemMap = {};
     const brandMap = {};
+    const virtualBrandMap = {};
     filteredOrders.forEach((o) => {
       const items = Array.isArray(o.items) ? o.items : [{ name: o.item || "Standard Order Item", qty: o.qty || 1, price: o.price || o.total || 0 }];
       const brand = o.restaurantName || o.brand || "QuikaBite Main Kitchen";
+
+      if (!virtualBrandMap[brand]) {
+        virtualBrandMap[brand] = {
+          brandId: o.restaurantId || o.brandId || brand,
+          brandName: brand,
+          totalOrders: 0,
+          itemsSold: 0,
+          totalRevenue: 0,
+          dishMap: {},
+        };
+      }
+      virtualBrandMap[brand].totalOrders += 1;
+      virtualBrandMap[brand].totalRevenue += Number(o.total || o.totalAmount || o.price || 0);
 
       items.forEach((it) => {
         const name = it.name || it.title || "Custom Dish";

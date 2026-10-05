@@ -303,35 +303,35 @@ const MenuItemCard = React.memo(function MenuItemCard({
 
         {/* Actions row */}
         <div className="flex items-center gap-2 mt-2 justify-center w-full">
-          <div className="w-[86px]">
+          <div className="w-[104px]">
             {isOutOfStock ? (
               <div className="w-full bg-neutral-100 text-neutral-400 border border-neutral-200 text-[11px] font-black py-1.5 rounded-lg shadow-xs text-center select-none uppercase tracking-wider">
                 OUT OF STOCK
               </div>
             ) : quantityInCart > 0 ? (
-              <div className="bg-white border border-brand-orange text-orange-700 flex items-center justify-between px-1 py-0.5 rounded-lg shadow-md font-bold text-xs transition-all transform active:scale-95">
+              <div className="bg-white border border-brand-orange text-orange-700 flex items-center justify-between rounded-xl font-bold text-sm transition-all">
                 <button
                   onClick={() => onRemoveFromCart(restaurantId, item.id || item._id)}
-                  className="px-1.5 py-0.5 hover:bg-orange-50 rounded text-orange-700 font-bold transition text-xs active:scale-90 cursor-pointer"
+                  className="h-10 w-9 flex items-center justify-center hover:bg-orange-50 rounded-lg text-orange-700 font-bold transition cursor-pointer"
                 >
-                  <Minus className="h-3 w-3" />
+                  <Minus className="h-4 w-4" />
                 </button>
                 <span className="font-black text-gray-800">
                   {quantityInCart}
                 </span>
                 <button
                   onClick={() => onAddToCart(restaurantId, restaurantName, item)}
-                  className="px-1.5 py-0.5 hover:bg-orange-50 rounded text-orange-700 font-bold transition text-xs active:scale-90 cursor-pointer"
+                  className="h-10 w-9 flex items-center justify-center hover:bg-orange-50 rounded-lg text-orange-700 font-bold transition cursor-pointer"
                 >
-                  <Plus className="h-3 w-3" />
+                  <Plus className="h-4 w-4" />
                 </button>
               </div>
             ) : (
               <button
                 onClick={() => onAddToCart(restaurantId, restaurantName, item)}
-                className="cursor-pointer w-full bg-white text-orange-700 hover:bg-orange-50 active:bg-orange-100 border border-orange-200 text-[11px] font-black py-1 px-2.5 rounded-lg shadow-md transition-all active:scale-95 flex items-center justify-center gap-1"
+                className="cursor-pointer w-full bg-white text-orange-700 hover:bg-orange-50 active:bg-orange-100 border border-orange-200 text-sm font-bold h-10 px-3 rounded-xl transition-all active:scale-95 flex items-center justify-center gap-1"
               >
-                ADD +
+                Add
               </button>
             )}
           </div>
@@ -1093,9 +1093,9 @@ export default function RestaurantDetailModal({
         </div>
 
         {/* Split Screen 2-Column Layout */}
-        <div className="flex-1 flex flex-col md:flex-row overflow-hidden">
+        <div className="flex-1 min-h-0 flex flex-col md:flex-row overflow-y-auto md:overflow-hidden">
           {/* LEFT COLUMN: Restaurant Banner, Details, Quick Stats, Offers/Coupons & Reviews */}
-          <div className="w-full md:w-5/12 lg:w-4/12 border-r border-gray-100 flex flex-col overflow-y-auto bg-gray-50/30 scrollbar-thin">
+          <div className="w-full md:w-5/12 lg:w-4/12 border-r border-gray-100 flex flex-col md:overflow-y-auto bg-gray-50/30 scrollbar-thin shrink-0 md:shrink [&>*]:shrink-0">
             {/* Restaurant Banner Image */}
             <div className="relative h-48 sm:h-56 bg-neutral-100 shrink-0">
               <img
@@ -1257,7 +1257,7 @@ export default function RestaurantDetailModal({
           </div>
 
           {/* RIGHT COLUMN: Full Menu & Interactive Cart */}
-          <div className="w-full md:w-7/12 lg:w-8/12 flex flex-col h-full bg-white overflow-hidden">
+          <div className="w-full md:w-7/12 lg:w-8/12 flex flex-col md:h-full bg-white md:overflow-hidden">
             {/* Search & Category Filter Header */}
             <div className="p-4 border-b border-gray-100 space-y-3 bg-white shrink-0">
               <div className="flex flex-col sm:flex-row gap-3 items-center justify-between">
@@ -1309,7 +1309,7 @@ export default function RestaurantDetailModal({
             </div>
 
             {/* Menu Items List */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-4 scrollbar-thin">
+            <div className="flex-1 md:overflow-y-auto p-4 space-y-4 scrollbar-thin">
               {filteredMenu.length === 0 ? (
                 <div className="text-center py-16 text-gray-400 text-xs font-semibold">
                   No matching dishes found in menu.

@@ -56,9 +56,9 @@ export default function AuthPage({
   };
   const slides = [
     {
-      title: "Handcrafted Gourmet Cooking",
+      title: "Fast, fresh and delivered",
       description:
-        "Experience 5-star culinary mastery prepared in state-of-the-art kitchens and handcrafted to perfection by expert chefs.",
+        "Order from your favourite kitchens and follow every step from kitchen to doorstep.",
       icon: <ChefHat className="h-16 w-16 text-orange-700" />,
       colorClass: "bg-orange-50 text-orange-700 border-orange-100",
       illustration: (
@@ -364,11 +364,10 @@ export default function AuthPage({
       {/* Auth Card Container */}
       <div className="w-full max-w-5xl bg-white rounded-[40px] shadow-2xl border border-gray-100 overflow-hidden grid grid-cols-1 lg:grid-cols-12 relative z-10 min-h-[620px] max-h-[850px]">
         {/* LEFT COLUMN: Premium Dynamic Visual Onboarding (Hidden on mobile/tablet) */}
-        <div className="hidden lg:flex lg:col-span-6 bg-gradient-to-br from-neutral-900 via-neutral-950 to-orange-950 p-10 flex-col justify-between text-white relative overflow-hidden border-r border-neutral-800">
+        <div className="hidden lg:flex lg:col-span-6 bg-brand-dark p-10 flex-col justify-between text-white relative overflow-hidden border-r border-neutral-800">
           {/* Subtle grid pattern overlay */}
           <div
-            style={{ backgroundColor: "#eb5555", color: "#ff2e2e" }}
-            className="absolute inset-0 bg-[linear-gradient(to_right,#FF6B35_1px,transparent_1px),linear-gradient(to_bottom,#FF6B35_1px,transparent_1px)] bg-[size:24px_24px] opacity-15"
+            className="absolute inset-0 bg-[linear-gradient(to_right,#FF6B35_1px,transparent_1px),linear-gradient(to_bottom,#FF6B35_1px,transparent_1px)] bg-[size:24px_24px] opacity-[0.07]"
           />
 
           {/* Luxury Logo Branding */}
@@ -400,7 +399,6 @@ export default function AuthPage({
                 {/* Onboarding text */}
                 <div className="space-y-2 max-w-sm mx-auto">
                   <h3
-                    style={{ backgroundColor: "#b90000" }}
                     className="font-display font-black text-xl tracking-tight text-white"
                   >
                     {slides[carouselIndex].title}
@@ -456,14 +454,13 @@ export default function AuthPage({
                 {/* Header welcoming text */}
                 <div className="space-y-3">
                   <div className="bg-orange-50 text-orange-700 font-black text-[11px] tracking-widest uppercase px-3 py-1.5 rounded-full w-fit">
-                    Premium Dining Access
+                    Welcome to Quickaa Bite
                   </div>
                   <h2 className="font-display font-black text-3xl text-neutral-900 tracking-tight leading-tight">
-                    Embark on a Culinary Journey
+                    Hungry? Let's get you something delicious.
                   </h2>
                   <p className="text-xs text-neutral-400 font-medium leading-relaxed">
-                    Create your secure fine-dining account or log in to track
-                    coordinates, redeem chef gifts, and check order dispatches.
+                    Log in or create an account to order faster, track your food live and save your favourite meals.
                   </p>
                 </div>
 
@@ -484,8 +481,7 @@ export default function AuthPage({
                 <div className="space-y-3 shrink-0">
                   <button
                     onClick={() => navigateTo("login", "next")}
-                    style={{ backgroundColor: "#099535" }}
-                    className="w-full text-white font-black py-3.5 sm:py-4 px-5 sm:px-6 rounded-2xl transition shadow-lg hover:shadow-xl flex items-center justify-center gap-2 cursor-pointer text-xs sm:text-sm shrink-0"
+                    className="w-full bg-brand-orange hover:bg-orange-600 text-white font-bold min-h-12 py-3 px-5 sm:px-6 rounded-xl transition flex items-center justify-center gap-2 cursor-pointer text-xs sm:text-sm shrink-0"
                   >
                     <span>Log In to Account</span>
                     <ArrowRight className="h-4 w-4" />
@@ -556,8 +552,8 @@ export default function AuthPage({
                     }}
                     style={{
                       backgroundColor:
-                        selectedRole === "user" ? "#2d8404" : void 0,
-                      borderColor: selectedRole === "user" ? "#2d8404" : void 0,
+                        selectedRole === "user" ? "#FF6B35" : void 0,
+                      borderColor: selectedRole === "user" ? "#FF6B35" : void 0,
                     }}
                     className={`flex-1 py-2 rounded-xl text-[11px] font-black tracking-wide transition-all flex items-center justify-center gap-1.5 cursor-pointer ${selectedRole === "user" ? "bg-brand-orange text-white shadow-xs border border-brand-orange" : "text-neutral-400 hover:text-neutral-600"}`}
                   >
@@ -637,8 +633,8 @@ export default function AuthPage({
                   <button
                     type="submit"
                     disabled={isLoading}
-                    style={{ backgroundColor: "#1c6c29", opacity: isLoading ? 0.65 : 1 }}
-                    className="w-full text-white font-black py-4 px-6 rounded-2xl transition shadow-lg hover:shadow-xl hover:shadow-neutral-950/15 flex items-center justify-center gap-2 cursor-pointer text-xs mt-2 disabled:cursor-not-allowed"
+                    style={{ backgroundColor: "#FF6B35", opacity: isLoading ? 0.65 : 1 }}
+                    className="w-full text-white font-black py-4 px-6 rounded-2xl transition flex items-center justify-center gap-2 cursor-pointer text-sm mt-2 disabled:cursor-not-allowed"
                   >
                     {isLoading ? (
                       <>
@@ -762,7 +758,7 @@ export default function AuthPage({
                   <button
                     type="submit"
                     disabled={isLoading}
-                    className="w-full bg-neutral-950 hover:bg-neutral-900 disabled:opacity-60 disabled:cursor-not-allowed text-white font-black py-3.5 px-6 rounded-2xl transition shadow-lg hover:shadow-xl hover:shadow-neutral-950/15 flex items-center justify-center gap-2 cursor-pointer text-xs"
+                    className="w-full bg-brand-orange hover:bg-orange-600 disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold min-h-12 py-3 px-6 rounded-xl transition hover:shadow-neutral-950/15 flex items-center justify-center gap-2 cursor-pointer text-xs"
                   >
                     {isLoading ? (
                       <>
@@ -819,7 +815,7 @@ export default function AuthPage({
 
                   <div className="space-y-1 sm:space-y-1.5">
                     <h2 className="font-display font-black text-xl sm:text-2xl text-neutral-900 tracking-tight leading-none">
-                      Verify OTP Identity 🔐
+                      Verify your number
                     </h2>
                     <p className="text-[11px] sm:text-xs text-neutral-400 font-medium max-w-sm leading-relaxed">
                       For secure multi-factor gourmet auth, enter the 6-digit
@@ -880,7 +876,7 @@ export default function AuthPage({
                   <button
                     onClick={handleOtpVerify}
                     disabled={isLoading}
-                    className="w-full bg-neutral-950 hover:bg-neutral-900 disabled:opacity-60 disabled:cursor-not-allowed text-white font-black py-3.5 sm:py-4 px-6 rounded-2xl transition shadow-lg hover:shadow-xl hover:shadow-neutral-950/15 flex items-center justify-center gap-2 cursor-pointer text-xs"
+                    className="w-full bg-brand-orange hover:bg-orange-600 disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold min-h-12 py-3 px-6 rounded-xl transition flex items-center justify-center gap-2 cursor-pointer text-xs"
                   >
                     {isLoading ? (
                       <span>Verifying…</span>

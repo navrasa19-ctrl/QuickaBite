@@ -1060,7 +1060,7 @@ export default function CheckoutPage({
             contact: currentUser.phone,
           },
           theme: {
-            color: "#FF6B00",
+            color: "#FF6B35",
           },
           modal: {
             ondismiss: async function () {
@@ -1099,7 +1099,7 @@ export default function CheckoutPage({
     delay: `${Math.random() * 4}s`,
     duration: `${2.5 + Math.random() * 3}s`,
     color: [
-      "#F97316",
+      "#FF6B35",
       "#10B981",
       "#3B82F6",
       "#F59E0B",
@@ -1324,8 +1324,8 @@ export default function CheckoutPage({
           left: 0;
           right: 0;
           height: 3px;
-          background-color: #F97316;
-          box-shadow: 0 0 10px #F97316;
+          background-color: #FF6B35;
+          box-shadow: 0 0 10px #FF6B35;
           animation: laser-sweep 2s infinite ease-in-out;
         }
       `}</style>

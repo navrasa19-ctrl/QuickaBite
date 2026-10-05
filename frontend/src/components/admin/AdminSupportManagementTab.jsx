@@ -140,7 +140,7 @@ export default function AdminSupportManagementTab() {
   return (
     <div className="space-y-6 text-neutral-900 font-sans">
       {/* Header Banner */}
-      <div className="bg-neutral-950 border border-neutral-800 p-6 sm:p-8 rounded-3xl text-white space-y-4 shadow-xl">
+      <div className="bg-brand-dark border border-neutral-800 p-6 sm:p-8 rounded-3xl text-white space-y-4 shadow-xl">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div>
             <h2 className="text-2xl font-display font-black text-white flex items-center gap-2.5 tracking-tight">
@@ -212,7 +212,7 @@ export default function AdminSupportManagementTab() {
         <div className="bg-white border border-neutral-200 rounded-3xl shadow-xs overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs text-neutral-800">
-              <thead className="bg-neutral-950 text-white uppercase tracking-wider text-[11px] font-black border-b border-neutral-800">
+              <thead className="bg-brand-dark text-white uppercase tracking-wider text-[11px] font-black border-b border-neutral-800">
                 <tr>
                   <th className="p-4 sm:px-6">Ticket / Order</th>
                   <th className="p-4">Customer</th>
@@ -266,7 +266,7 @@ export default function AdminSupportManagementTab() {
         <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm animate-fade-in">
           <div className="bg-white border border-neutral-200 rounded-3xl w-full max-w-3xl max-h-[85vh] overflow-hidden flex flex-col shadow-2xl my-auto animate-scale-in">
             {/* Modal Header */}
-            <div className="p-6 border-b border-neutral-800 bg-neutral-950 text-white flex items-center justify-between">
+            <div className="p-6 border-b border-neutral-800 bg-brand-dark text-white flex items-center justify-between">
               <div>
                 <h3 className="text-lg font-display font-black text-white flex items-center gap-2">
                   <Award className="w-5 h-5 text-orange-700" />

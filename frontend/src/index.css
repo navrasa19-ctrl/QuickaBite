@@ -97,7 +97,7 @@ body {
 }
 
 /* Sentence case for UI labels (brand typography rule) and calmer tracking */
-.uppercase { text-transform: none !important; }
+.uppercase { text-transform: capitalize !important; }
 .tracking-widest, .tracking-wider { letter-spacing: 0.01em !important; }
 
 .font-black { font-weight: 800 !important; }
@@ -275,11 +275,11 @@ body {
 @keyframes slide-up {
   from {
     opacity: 0;
-    transform: translateX(-50%) translateY(16px);
+    transform: translateY(16px);
   }
   to {
     opacity: 1;
-    transform: translateX(-50%) translateY(0);
+    transform: translateY(0);
   }
 }
 

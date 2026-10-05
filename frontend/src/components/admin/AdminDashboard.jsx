@@ -86,7 +86,9 @@ export default function AdminDashboard({
     }
   }, [adminSubTab]);
   const [showLogoutConfirm, setShowLogoutConfirm] = useState(false);
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(
+    () => typeof window === "undefined" || window.innerWidth >= 1024,
+  );
   const { user, logout } = useAuth();
   const adminName = user?.fullName || user?.name || "Executive Admin";
   const adminEmail = user?.email || "admin@quickabite.com";

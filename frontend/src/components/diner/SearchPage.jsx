@@ -23,7 +23,7 @@ import {
 } from "react-icons/fa6";
 import { MdRestaurant } from "react-icons/md";
 import { POPULAR_CUISINES } from "../../data";
-import { extractImageUrl } from "../../api/dinerService";
+import { dinerService, extractImageUrl } from "../../api/dinerService";
 
 export default function SearchPage({
   searchQuery,

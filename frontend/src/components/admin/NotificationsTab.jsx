@@ -500,7 +500,7 @@ export default function NotificationsTab({ notifications, setNotifications, trig
           }
           <button
             type="submit"
-            className="w-full bg-neutral-950 hover:bg-neutral-900 text-white font-black py-3 rounded-xl text-xs transition mt-2 cursor-pointer flex items-center justify-center gap-2 shadow-xs"
+            className="w-full bg-brand-dark hover:bg-neutral-900 text-white font-black py-3 rounded-xl text-xs transition mt-2 cursor-pointer flex items-center justify-center gap-2 shadow-xs"
           >
             <Send className="h-4 w-4 text-orange-400" />
             <span>{isScheduled ? "Schedule Outbound Campaign" : "Dispatch Live Broadcast"}</span>
@@ -518,7 +518,7 @@ export default function NotificationsTab({ notifications, setNotifications, trig
         {
           /* INTERACTIVE MOBILE PREVIEW FRAME */
         }
-        <div className="bg-neutral-950 p-4 rounded-3xl border-4 border-neutral-800 shadow-2xl relative overflow-hidden" style={{ minHeight: "190px" }}>
+        <div className="bg-brand-dark p-4 rounded-3xl border-4 border-neutral-800 shadow-2xl relative overflow-hidden" style={{ minHeight: "190px" }}>
           {
             /* Phone Notch */
           }

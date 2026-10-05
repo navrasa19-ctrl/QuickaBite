@@ -293,7 +293,7 @@ export default function ManagerIssueManagementTab({ restaurantId }) {
                   </div>
                   <button
                     onClick={() => handleInspectIssue(issue)}
-                    className="px-5 py-2.5 bg-neutral-950 hover:bg-brand-orange text-white rounded-2xl text-xs font-black flex items-center gap-2 transition-all duration-200 cursor-pointer shadow-md shadow-neutral-950/10 group-hover:scale-102"
+                    className="px-5 py-2.5 bg-brand-dark hover:bg-brand-orange text-white rounded-2xl text-xs font-black flex items-center gap-2 transition-all duration-200 cursor-pointer shadow-md shadow-neutral-950/10 group-hover:scale-102"
                   >
                     <Eye className="w-4 h-4 text-brand-orange group-hover:text-white transition-colors" />
                     <span>Inspect &amp; Action</span>
@@ -313,7 +313,7 @@ export default function ManagerIssueManagementTab({ restaurantId }) {
             <div className="px-6 py-3.5 border-b border-neutral-200 flex items-center justify-between bg-white/95 backdrop-blur-md shrink-0 shadow-xs h-14">
               <div className="max-w-7xl mx-auto w-full flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="h-8 w-8 bg-neutral-950 text-brand-orange rounded-xl flex items-center justify-center font-black shadow-xs">
+                  <div className="h-8 w-8 bg-brand-dark text-brand-orange rounded-xl flex items-center justify-center font-black shadow-xs">
                     <FileText className="w-4.5 h-4.5 text-orange-700" />
                   </div>
                   <div>

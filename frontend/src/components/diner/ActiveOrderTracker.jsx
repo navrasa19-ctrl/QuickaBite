@@ -174,7 +174,7 @@ export default function ActiveOrderTracker({ order, onClose, triggerToast }) {
         {
           /* Delivery Route Path dashed line */
         }
-        <path d="M 150,110 L 510,215" fill="none" stroke="#ea580c" strokeWidth="4" strokeLinecap="round" strokeDasharray="8 8" className="animate-pulse" />
+        <path d="M 150,110 L 510,215" fill="none" stroke="#E8551F" strokeWidth="4" strokeLinecap="round" strokeDasharray="8 8" className="animate-pulse" />
 
         {
           /* Local Streets */

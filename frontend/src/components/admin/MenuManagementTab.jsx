@@ -684,7 +684,6 @@ export default function MenuManagementTab({
                       onChange={(e) => {
                         const val = e.target.value;
                         setSelectedResId(val);
-                        setSelectedItemIds([]);
                       }}
                       className="w-full bg-neutral-50 border border-neutral-200 hover:border-neutral-300 rounded-xl px-3 py-2.5 text-xs font-bold text-neutral-800 outline-none focus:ring-2 focus:ring-brand-orange/20 cursor-pointer appearance-none"
                     >
@@ -709,7 +708,6 @@ export default function MenuManagementTab({
                       value={activeCategory}
                       onChange={(e) => {
                         setActiveCategory(e.target.value);
-                        setSelectedItemIds([]);
                       }}
                       className="w-full bg-neutral-50 border border-neutral-200 hover:border-neutral-300 rounded-xl px-3 py-2.5 text-xs font-bold text-neutral-800 outline-none focus:ring-2 focus:ring-brand-orange/20 cursor-pointer appearance-none"
                     >
@@ -936,7 +934,7 @@ export default function MenuManagementTab({
                               </span>
                             </td>
 
-                            <td className="px-6 py-4 font-mono font-black text-neutral-900 text-xs">
+                            <td className="px-6 py-4 font-mono font-black text-neutral-900 text-xs whitespace-nowrap">
                               ₹ {dish.price.toFixed(2)}
                             </td>
 
@@ -949,10 +947,10 @@ export default function MenuManagementTab({
                                     isAvailable,
                                   )
                                 }
-                                className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-[10px] font-black uppercase tracking-wider transition cursor-pointer ${isAvailable ? "bg-emerald-50 text-emerald-600 border-emerald-200 hover:bg-emerald-100" : "bg-red-50 text-red-500 border-red-200 hover:bg-red-100"}`}
+                                className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-[11px] font-black whitespace-nowrap transition cursor-pointer ${isAvailable ? "bg-emerald-50 text-emerald-600 border-emerald-200 hover:bg-emerald-100" : "bg-red-50 text-red-500 border-red-200 hover:bg-red-100"}`}
                               >
                                 <span
-                                  className={`h-1.5 w-1.5 rounded-full ${isAvailable ? "bg-emerald-500 animate-pulse" : "bg-red-500"}`}
+                                  className={`h-1.5 w-1.5 rounded-full ${isAvailable ? "bg-emerald-500" : "bg-red-500"}`}
                                 />
                                 <span>
                                   {isAvailable ? "In Stock" : "Out of Stock"}

@@ -495,23 +495,23 @@ export default function OrderManagementTab({
   const getStatusRibbonMeta = (status) => {
     switch (status) {
       case "all":
-        return { label: "All Orders", icon: Sparkles, iconBg: "bg-black text-white", iconColor: "text-white", activeBg: "bg-black text-white", border: "border-black" };
+        return { label: "All Orders", icon: Sparkles, iconBg: "bg-brand-dark text-white", iconColor: "text-white", activeBg: "bg-brand-dark text-white", border: "border-black" };
       case "received":
-        return { label: "Received", icon: Clock, iconBg: "bg-black text-white", iconColor: "text-white", activeBg: "bg-black text-white", border: "border-black" };
+        return { label: "Received", icon: Clock, iconBg: "bg-brand-dark text-white", iconColor: "text-white", activeBg: "bg-brand-dark text-white", border: "border-black" };
       case "accepted":
-        return { label: "Accepted", icon: CheckCircle2, iconBg: "bg-black text-white", iconColor: "text-white", activeBg: "bg-black text-white", border: "border-black" };
+        return { label: "Accepted", icon: CheckCircle2, iconBg: "bg-brand-dark text-white", iconColor: "text-white", activeBg: "bg-brand-dark text-white", border: "border-black" };
       case "preparing":
-        return { label: "Preparing", icon: Utensils, iconBg: "bg-black text-white", iconColor: "text-white", activeBg: "bg-black text-white", border: "border-black" };
+        return { label: "Preparing", icon: Utensils, iconBg: "bg-brand-dark text-white", iconColor: "text-white", activeBg: "bg-brand-dark text-white", border: "border-black" };
       case "ready":
-        return { label: "Ready", icon: CheckCircle2, iconBg: "bg-black text-white", iconColor: "text-white", activeBg: "bg-black text-white", border: "border-black" };
+        return { label: "Ready", icon: CheckCircle2, iconBg: "bg-brand-dark text-white", iconColor: "text-white", activeBg: "bg-brand-dark text-white", border: "border-black" };
       case "dispatched":
-        return { label: "Dispatched", icon: Truck, iconBg: "bg-black text-white", iconColor: "text-white", activeBg: "bg-black text-white", border: "border-black" };
+        return { label: "Dispatched", icon: Truck, iconBg: "bg-brand-dark text-white", iconColor: "text-white", activeBg: "bg-brand-dark text-white", border: "border-black" };
       case "delivered":
-        return { label: "Delivered", icon: CheckCircle2, iconBg: "bg-black text-white", iconColor: "text-white", activeBg: "bg-black text-white", border: "border-black" };
+        return { label: "Delivered", icon: CheckCircle2, iconBg: "bg-brand-dark text-white", iconColor: "text-white", activeBg: "bg-brand-dark text-white", border: "border-black" };
       case "rejected":
-        return { label: "Rejected", icon: AlertCircle, iconBg: "bg-black text-white", iconColor: "text-white", activeBg: "bg-black text-white", border: "border-black" };
+        return { label: "Rejected", icon: AlertCircle, iconBg: "bg-brand-dark text-white", iconColor: "text-white", activeBg: "bg-brand-dark text-white", border: "border-black" };
       default:
-        return { label: status, icon: Clock, iconBg: "bg-black text-white", iconColor: "text-white", activeBg: "bg-black text-white", border: "border-black" };
+        return { label: status, icon: Clock, iconBg: "bg-brand-dark text-white", iconColor: "text-white", activeBg: "bg-brand-dark text-white", border: "border-black" };
     }
   };
 
@@ -578,7 +578,7 @@ export default function OrderManagementTab({
     else if (rawPayMethod !== "cod") payMethodLabel = rawPayMethod.toUpperCase();
 
     let payStatusLabel = rawPayStatus.toUpperCase();
-    let payStatusBadge = "bg-black text-white border border-black font-black";
+    let payStatusBadge = "bg-brand-dark text-white border border-black font-black";
     if (rawPayStatus === "pending") {
       payStatusBadge = "bg-white text-black border-2 border-black font-extrabold";
     } else if (rawPayStatus === "failed" || rawPayStatus === "rejected") {
@@ -625,7 +625,7 @@ export default function OrderManagementTab({
             key={status}
             className={`p-3.5 border rounded-2xl flex flex-col justify-between h-20 shadow-xs transition text-left ${
               isSelected
-                ? "bg-black text-white border-black shadow-md scale-[1.02]"
+                ? "bg-brand-dark text-white border-black shadow-md scale-[1.02]"
                 : "bg-white text-black border-neutral-200"
             }`}
           >
@@ -918,7 +918,7 @@ export default function OrderManagementTab({
                 key={pg}
                 onClick={() => setCurrentPage(pg)}
                 className={`w-8 h-8 rounded-xl text-xs font-black transition cursor-pointer ${pg === currentPage
-                  ? "bg-black text-white shadow-xs"
+                  ? "bg-brand-dark text-white shadow-xs"
                   : "bg-neutral-50 hover:bg-neutral-100 text-neutral-700 border border-neutral-200"
                   }`}
               >

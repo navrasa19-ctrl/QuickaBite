@@ -417,7 +417,7 @@ export default function HomePage({
         <div className="flex items-center justify-between">
           <div>
             <h3 className="font-display font-black text-l sm:text-2xl md:text-3xl text-gray-900 tracking-tight flex items-center gap-2">
-              <span>Offers &amp; Deals For You</span>
+              <span>Offers and deals for you</span>
             </h3>
             <p className="text-xs text-gray-500 font-medium">Claim exclusive discount promo codes &amp; save on your meal</p>
           </div>
@@ -432,7 +432,7 @@ export default function HomePage({
           )}
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6">
           {(liveCoupons.length > 0 ? liveCoupons.slice(0, 3) : OFFER_CARDS.slice(0, 3)).map((coupon, i) => {
             let title = coupon.title || coupon.code || "SPECIAL OFFER";
             let subtitle = coupon.desc || "";

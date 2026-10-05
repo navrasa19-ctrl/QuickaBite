@@ -47,7 +47,7 @@ export default function ManagerDashboard({
       >
         <div className="page-container py-5 lg:py-6 space-y-5">
           {/* Quick Header actions like Logout for manager */}
-          <div className="flex justify-between items-center bg-neutral-950 text-white rounded-2xl p-4 border border-neutral-800 shadow-lg">
+          <div className="flex justify-between items-center bg-brand-dark text-white rounded-2xl p-4 border border-neutral-800 shadow-lg">
             <div className="flex items-center gap-2">
               <ChefHat className="h-6 w-6 text-orange-700 animate-pulse" />
               <span className="font-black tracking-wider text-[10px] uppercase text-neutral-200">
@@ -68,7 +68,7 @@ export default function ManagerDashboard({
           <div className="bg-white p-1.5 rounded-2xl shadow-xs border border-neutral-150 flex gap-1 items-center overflow-x-auto">
             <button
               onClick={() => navigate("/manager/kitchen")}
-              className={`flex-1 py-2.5 px-4 rounded-xl font-black text-xs uppercase tracking-wider transition flex items-center justify-center gap-2 cursor-pointer shrink-0 ${managerSubTab === "kitchen" ? "bg-neutral-950 text-white shadow-xs" : "text-neutral-500 hover:text-neutral-800 hover:bg-neutral-50"}`}
+              className={`flex-1 py-2.5 px-4 rounded-xl font-black text-xs uppercase tracking-wider transition flex items-center justify-center gap-2 cursor-pointer shrink-0 ${managerSubTab === "kitchen" ? "bg-brand-dark text-white shadow-xs" : "text-neutral-500 hover:text-neutral-800 hover:bg-neutral-50"}`}
             >
               <ChefHat className="h-4 w-4" />
               <span>Kitchen Operations</span>
@@ -76,7 +76,7 @@ export default function ManagerDashboard({
 
             <button
               onClick={() => navigate("/manager/tickets")}
-              className={`flex-1 py-2.5 px-4 rounded-xl font-black text-xs uppercase tracking-wider transition flex items-center justify-center gap-2 cursor-pointer shrink-0 ${managerSubTab === "issues" ? "bg-neutral-950 text-white shadow-xs" : "text-neutral-500 hover:text-neutral-800 hover:bg-neutral-50"}`}
+              className={`flex-1 py-2.5 px-4 rounded-xl font-black text-xs uppercase tracking-wider transition flex items-center justify-center gap-2 cursor-pointer shrink-0 ${managerSubTab === "issues" ? "bg-brand-dark text-white shadow-xs" : "text-neutral-500 hover:text-neutral-800 hover:bg-neutral-50"}`}
             >
               <Ticket className="h-4 w-4 text-amber-400" />
               <span>Support Tickets</span>
@@ -84,7 +84,7 @@ export default function ManagerDashboard({
 
             <button
               onClick={() => navigate("/manager/reports")}
-              className={`flex-1 py-2.5 px-4 rounded-xl font-black text-xs uppercase tracking-wider transition flex items-center justify-center gap-2 cursor-pointer shrink-0 ${managerSubTab === "reports" ? "bg-neutral-950 text-white shadow-xs" : "text-neutral-500 hover:text-neutral-800 hover:bg-neutral-50"}`}
+              className={`flex-1 py-2.5 px-4 rounded-xl font-black text-xs uppercase tracking-wider transition flex items-center justify-center gap-2 cursor-pointer shrink-0 ${managerSubTab === "reports" ? "bg-brand-dark text-white shadow-xs" : "text-neutral-500 hover:text-neutral-800 hover:bg-neutral-50"}`}
             >
               <Sparkles className="h-4 w-4" />
               <span>Reporting</span>
@@ -105,7 +105,7 @@ export default function ManagerDashboard({
           )}
 
           {managerSubTab === "reports" && (
-            <div className="bg-neutral-950 text-white rounded-3xl p-5 border border-neutral-800 shadow-2xl">
+            <div className="bg-brand-dark text-white rounded-3xl p-5 border border-neutral-800 shadow-2xl">
               <ManagerReportingDashboard triggerToast={triggerToast} />
             </div>
           )}

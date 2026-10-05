@@ -399,7 +399,7 @@ export default function ShoppingCartPage({
             <div className="bg-gradient-to-r from-orange-50 to-amber-50 border border-orange-100 rounded-3xl p-6 flex items-center justify-between shadow-xs">
               <div className="space-y-1">
                 <span className="text-[11px] text-orange-700 font-black uppercase tracking-wider block">
-                  Gourmet Feast From
+                  Ordering from
                 </span>
                 <h2 className="font-display font-black text-xl text-gray-900">
                   {restaurantName}
@@ -498,13 +498,11 @@ export default function ShoppingCartPage({
               <div className="flex items-center gap-1.5">
                 <span className="text-base">📝</span>
                 <h3 className="font-display font-extrabold text-base text-gray-800">
-                  Add Special Instructions
+                  Add instructions
                 </h3>
               </div>
               <p className="text-xs text-gray-400 leading-normal">
-                Have culinary preferences or delivery directives? (e.g., "Make
-                it mild spicy", "Leave on the white table near lobby door", "Do
-                not ring bell").
+                Any requests for the kitchen or rider? (e.g. "Make it mild" or "Do not ring the bell").
               </p>
               <textarea
                 value={instructions}
