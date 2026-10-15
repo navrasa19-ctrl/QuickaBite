@@ -83,6 +83,7 @@ export const authService = {
 
       localStorage.setItem("globaleats_is_logged_in", "true");
       localStorage.setItem("globaleats_user_role", role);
+      localStorage.setItem("globaleats_profile_info", JSON.stringify(profile));
 
       // Seed admin users cache if not present
       if (!localStorage.getItem("globaleats_users")) {
@@ -194,6 +195,7 @@ export const authService = {
 
       localStorage.setItem("globaleats_is_logged_in", "true");
       localStorage.setItem("globaleats_user_role", role);
+      localStorage.setItem("globaleats_profile_info", JSON.stringify(profile));
 
       // Seed users cache
       if (!localStorage.getItem("globaleats_users")) {
@@ -320,7 +322,16 @@ export const authService = {
   // -------------------------------------------------------------------------
   async getProfile() {
     if (USE_MOCK) {
-      return this.getCurrentUser().profile;
+      const { isLoggedIn, role, profile } = this.getCurrentUser();
+      if (profile || !isLoggedIn) return profile;
+      // Logged in but the profile cache is missing (older session): rebuild a basic one
+      const fallback = { ...buildMockProfile("", "Guest user", role), email: "" };
+      try {
+        localStorage.setItem("globaleats_profile_info", JSON.stringify(fallback));
+      } catch (e) {
+        // ignore storage errors
+      }
+      return fallback;
     }
 
     try {
@@ -393,6 +404,11 @@ export const authService = {
   async updateProfile(profile) {
     if (USE_MOCK) {
       await new Promise((resolve) => setTimeout(resolve, 200));
+      try {
+        localStorage.setItem("globaleats_profile_info", JSON.stringify(profile));
+      } catch (e) {
+        // ignore storage errors
+      }
       return profile;
     } else {
       const payload = {

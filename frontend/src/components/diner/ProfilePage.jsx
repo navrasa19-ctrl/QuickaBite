@@ -106,7 +106,8 @@ export default function ProfilePage({
     payments,
     setPayments: savePaymentsContext,
     notifPrefs,
-    setNotifPrefs: saveNotifPrefsContext
+    setNotifPrefs: saveNotifPrefsContext,
+    setProfile,
   } = useAuth();
   const { setFavorites } = useFavorites();
   const [activeSection, setActiveSection] = useState(getInitialSection);
@@ -169,6 +170,25 @@ export default function ProfilePage({
   const [expandedFaq, setExpandedFaq] = useState(null);
   const [showLogoutConfirm, setShowLogoutConfirm] = useState(false);
 
+  const [profileTimedOut, setProfileTimedOut] = useState(false);
+  const [profileRetrying, setProfileRetrying] = useState(false);
+  useEffect(() => {
+    if (profile) {
+      setProfileTimedOut(false);
+      return undefined;
+    }
+    const timer = setTimeout(() => setProfileTimedOut(true), 6000);
+    return () => clearTimeout(timer);
+  }, [profile]);
+  const retryProfile = async () => {
+    setProfileRetrying(true);
+    try {
+      const fresh = await authService.getProfile();
+      if (fresh) setProfile(fresh);
+    } finally {
+      setProfileRetrying(false);
+    }
+  };
   const [isAddingAddress, setIsAddingAddress] = useState(false);
   const [newAddrLabel, setNewAddrLabel] = useState("Home");
   const [newAddrDetail, setNewAddrDetail] = useState("");
@@ -425,7 +445,40 @@ export default function ProfilePage({
     },
   ];
   if (!profile) {
-    return null;
+    return (
+      <div className="max-w-md mx-auto text-center py-16 px-4 space-y-5" role="status">
+        {!profileTimedOut ? (
+          <>
+            <div className="mx-auto h-10 w-10 border-4 border-orange-500/20 border-t-orange-500 rounded-full animate-spin" />
+            <p className="text-sm font-semibold text-gray-600">Loading your profile...</p>
+          </>
+        ) : (
+          <>
+            <h2 className="text-xl font-extrabold text-gray-900">
+              We couldn't load your profile
+            </h2>
+            <p className="text-sm text-gray-500">
+              Check your connection and try again. If this keeps happening, log in again.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center pt-1">
+              <button
+                onClick={retryProfile}
+                disabled={profileRetrying}
+                className="h-12 px-6 rounded-xl bg-brand-orange hover:bg-orange-600 disabled:opacity-60 text-white font-bold text-sm transition cursor-pointer"
+              >
+                {profileRetrying ? "Trying..." : "Try again"}
+              </button>
+              <button
+                onClick={handleLogout}
+                className="h-12 px-6 rounded-xl border border-gray-200 bg-white hover:bg-gray-50 text-gray-800 font-bold text-sm transition cursor-pointer"
+              >
+                Log in again
+              </button>
+            </div>
+          </>
+        )}
+      </div>
+    );
   }
 
   return (
